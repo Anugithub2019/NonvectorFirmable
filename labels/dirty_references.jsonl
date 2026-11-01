@@ -1,0 +1,200 @@
+{"id": "ref_001", "reference": "WRL TRANSPORT PTY LTD", "kind": "exact", "expected_key": "abn:21653147810", "expected_name": "WRL TRANSPORT PTY LTD"}
+{"id": "ref_002", "reference": "contract manufacturing professionals pty ltd", "kind": "lower", "expected_key": "abn:77609588383", "expected_name": "CONTRACT MANUFACTURING PROFESSIONALS PTY LTD"}
+{"id": "ref_003", "reference": "Nettbuild", "kind": "no_legal_form", "expected_key": "abn:53603019003", "expected_name": "NETTBUILD PTY LTD"}
+{"id": "ref_004", "reference": "Atherley Investments PCy Ltd", "kind": "typo", "expected_key": "acn:088167266", "expected_name": "Atherley Investments Pty Ltd"}
+{"id": "ref_005", "reference": "Private Ancillary Fund 1623474-G7J0K1", "kind": "abn_spaced", "expected_key": "src:data.gov.au:acnc-register:rowhash:130c7dc8fac7900b", "expected_name": "Private Ancillary Fund 1623474-G7J0K1"}
+{"id": "ref_006", "reference": "Bedgerebong P&C Association", "kind": "acn_only", "expected_key": "abn:78535775480", "expected_name": "Bedgerebong P&C Association"}
+{"id": "ref_007", "reference": "Oberthur Primary School P&C Assoc", "kind": "abbrev", "expected_key": "abn:53161985602", "expected_name": "Oberthur Primary School P&C Assoc"}
+{"id": "ref_008", "reference": "RMD INDUSTRIES PTY LTD (VIC)", "kind": "extra_words", "expected_key": "acn:004313937", "expected_name": "RMD INDUSTRIES PTY LTD"}
+{"id": "ref_009", "reference": "BA WEIR PTY LTD", "kind": "trading_or_former", "expected_key": "abn:14091826747", "expected_name": "BA WEIR PTY LTD"}
+{"id": "ref_010", "reference": "UNIVERSAL BUYERS AGENTS NSW PTY LTD", "kind": "exact", "expected_key": "abn:84657278790", "expected_name": "UNIVERSAL BUYERS AGENTS NSW PTY LTD"}
+{"id": "ref_011", "reference": "hunt company pty ltd", "kind": "lower", "expected_key": "abn:71610856730", "expected_name": "HUNT COMPANY PTY LTD"}
+{"id": "ref_012", "reference": "Greenlight Construction Qld", "kind": "no_legal_form", "expected_key": "abn:51014899398", "expected_name": "Greenlight Construction QLD PTY LTD"}
+{"id": "ref_013", "reference": "DAGPTY LTD", "kind": "typo", "expected_key": "abn:66631750215", "expected_name": "DA PTY LTD"}
+{"id": "ref_014", "reference": "86 986 095 718", "kind": "abn_spaced", "expected_key": "abn:86986095718", "expected_name": "The Guest & Partners Charitable Trust"}
+{"id": "ref_015", "reference": "ACN 612 741 385", "kind": "acn_only", "expected_key": "acn:612741385", "expected_name": "ABI INTERIORS PTY LTD"}
+{"id": "ref_016", "reference": "BNI CONSULTING AND INVESTMENTS P/L", "kind": "abbrev", "expected_key": "acn:119237375", "expected_name": "BNI CONSULTING AND INVESTMENTS PTY LTD"}
+{"id": "ref_017", "reference": "JENKIN PROJECTS AND ENGINEERING PTY LTD (QLD)", "kind": "extra_words", "expected_key": "abn:44666124545", "expected_name": "JENKIN PROJECTS AND ENGINEERING PTY LTD"}
+{"id": "ref_018", "reference": "AD & MHM PRASSER - JONES", "kind": "trading_or_former", "expected_key": "abn:71299100479", "expected_name": "A.D PRASSER-JONES & M.A PRASSER-JONES & The Trustee for The Balleroy Trust"}
+{"id": "ref_019", "reference": "Mt Carmel College", "kind": "exact", "expected_key": "abn:32359023154", "expected_name": "Mt Carmel College"}
+{"id": "ref_020", "reference": "jh bi pty ltd", "kind": "lower", "expected_key": "abn:78662233436", "expected_name": "JH BI PTY LTD"}
+{"id": "ref_021", "reference": "Kingaroy Mall", "kind": "no_legal_form", "expected_key": "abn:50056291377", "expected_name": "KINGAROY MALL PTY LTD"}
+{"id": "ref_022", "reference": "LEGACY GUARDIAN INTEZNATIONAL PTY LTD", "kind": "typo", "expected_key": "abn:47607457063", "expected_name": "LEGACY GUARDIAN INTERNATIONAL PTY LTD"}
+{"id": "ref_023", "reference": "Vanguard Index Australian Property Securities Fund", "kind": "abn_spaced", "expected_key": "acn:090995494", "expected_name": "Vanguard Index Australian Property Securities Fund"}
+{"id": "ref_024", "reference": "ACN 670 395 696", "kind": "acn_only", "expected_key": "abn:32670395696", "expected_name": "PINKER PLANT HIRE PTY LTD"}
+{"id": "ref_025", "reference": "Callide Valley Presbyterian Church - Biloela", "kind": "abbrev", "expected_key": "abn:74866526337", "expected_name": "Callide Valley Presbyterian Church - Biloela"}
+{"id": "ref_026", "reference": "DYMOCKS BOOK ARCADE PTY LTD (NSW)", "kind": "extra_words", "expected_key": "acn:000009441", "expected_name": "DYMOCKS BOOK ARCADE PTY LTD"}
+{"id": "ref_027", "reference": "The Trustee For The Marlene Smith Charitable Trust", "kind": "trading_or_former", "expected_key": "abn:87939653638", "expected_name": "The Trustee For The Marlene Smith Charitable Trust"}
+{"id": "ref_028", "reference": "HAYWARD DEVELOPMENTS PTY LTD", "kind": "exact", "expected_key": "abn:26150686687", "expected_name": "HAYWARD DEVELOPMENTS PTY LTD"}
+{"id": "ref_029", "reference": "burleigh pie pty ltd", "kind": "lower", "expected_key": "acn:628838684", "expected_name": "BURLEIGH PIE PTY LTD"}
+{"id": "ref_030", "reference": "Huntsman Trust", "kind": "no_legal_form", "expected_key": "abn:76591698076", "expected_name": "The Trustee for Huntsman Trust"}
+{"id": "ref_031", "reference": "Seaford Wsl Sub-Branch Inc", "kind": "typo", "expected_key": "abn:29019119373", "expected_name": "Seaford Rsl Sub-Branch Inc"}
+{"id": "ref_032", "reference": "40 631 874 050", "kind": "abn_spaced", "expected_key": "abn:40631874050", "expected_name": "MYGLOBALCFO PTY LTD"}
+{"id": "ref_033", "reference": "Officeworks Superstores Pty Ltd", "kind": "acn_only", "expected_key": "src:qld:queensland-government-contracts-directory-awarded-contracts:rowhash:b4b5f981d8d2e2dd", "expected_name": "Officeworks Superstores Pty Ltd"}
+{"id": "ref_034", "reference": "The Trustee For Flores Village Partners Overseas Aid Fund", "kind": "abbrev", "expected_key": "abn:44341913211", "expected_name": "The Trustee For Flores Village Partners Overseas Aid Fund"}
+{"id": "ref_035", "reference": "National Australia Day Council (ACT)", "kind": "extra_words", "expected_key": "abn:76050300626", "expected_name": "National Australia Day Council"}
+{"id": "ref_036", "reference": "iSEE Care Australia Ltd", "kind": "trading_or_former", "expected_key": "abn:38360328549", "expected_name": "iSEE Care Australia Ltd"}
+{"id": "ref_037", "reference": "RAFFLETIX HOLDINGS PTY LTD", "kind": "exact", "expected_key": "abn:24623531340", "expected_name": "RAFFLETIX HOLDINGS PTY LTD"}
+{"id": "ref_038", "reference": "tonkin & mann investment fund enduring family superannuation fund", "kind": "lower", "expected_key": "abn:27978349661", "expected_name": "TONKIN & MANN INVESTMENT FUND ENDURING FAMILY SUPERANNUATION FUND"}
+{"id": "ref_039", "reference": "Green Park Kindergarten", "kind": "no_legal_form", "expected_key": "abn:28468358734", "expected_name": "Green Park Kindergarten Inc"}
+{"id": "ref_040", "reference": "Hosking Homes PTY BTD", "kind": "typo", "expected_key": "abn:84693656263", "expected_name": "Hosking Homes PTY LTD"}
+{"id": "ref_041", "reference": "85 637 227 153", "kind": "abn_spaced", "expected_key": "abn:85637227153", "expected_name": "CPO ARCHITECTS PTY LTD"}
+{"id": "ref_042", "reference": "ACN 629 792 810", "kind": "acn_only", "expected_key": "acn:629792810", "expected_name": "EG GROUP AUSTRALIA PTY LTD"}
+{"id": "ref_043", "reference": "Linc Plumbing P/L", "kind": "abbrev", "expected_key": "abn:99672681300", "expected_name": "Linc Plumbing Pty Ltd"}
+{"id": "ref_044", "reference": "NORTH CLOUD PTY LTD (NSW)", "kind": "extra_words", "expected_key": "acn:615406721", "expected_name": "NORTH CLOUD PTY LTD"}
+{"id": "ref_045", "reference": "LIFECORP PTY. LTD.", "kind": "trading_or_former", "expected_key": "acn:003829874", "expected_name": "LIFECORP PTY. LTD."}
+{"id": "ref_046", "reference": "BERILBY PTY. LIMITED", "kind": "exact", "expected_key": "abn:29010624638", "expected_name": "BERILBY PTY. LIMITED"}
+{"id": "ref_047", "reference": "sabella pty. ltd.", "kind": "lower", "expected_key": "abn:12099631035", "expected_name": "SABELLA PTY. LTD."}
+{"id": "ref_048", "reference": "Full Gospel Family Fellowship Bourke", "kind": "no_legal_form", "expected_key": "abn:57216571368", "expected_name": "Full Gospel Family Fellowship (Bourke) Incorporated"}
+{"id": "ref_049", "reference": "36Y61 PTY LTD", "kind": "typo", "expected_key": "abn:22690570257", "expected_name": "36061 PTY LTD"}
+{"id": "ref_050", "reference": "Blackrock Multi Alternatives Growth Fund (Aust)", "kind": "abn_spaced", "expected_key": "lei:529900KXB4PN1FLWTQ66", "expected_name": "Blackrock Multi Alternatives Growth Fund (Aust)"}
+{"id": "ref_051", "reference": "THE TRUSTEE FOR AMPHIS LIGHTING", "kind": "acn_only", "expected_key": "abn:18217827903", "expected_name": "THE TRUSTEE FOR AMPHIS LIGHTING"}
+{"id": "ref_052", "reference": "EDWARDS GAAS P/L", "kind": "abbrev", "expected_key": "abn:34673275191", "expected_name": "EDWARDS GAAS PTY LTD"}
+{"id": "ref_053", "reference": "Aldesta Heron Island Pty Ltd (Australia)", "kind": "extra_words", "expected_key": "src:qld:queensland-government-contracts-directory-awarded-contracts:rowhash:91285c749b8c44b9", "expected_name": "Aldesta Heron Island Pty Ltd"}
+{"id": "ref_054", "reference": "LAC MEXICO OPERATIONS PTY LTD", "kind": "trading_or_former", "expected_key": "abn:40667662366", "expected_name": "LAC MEXICO OPERATIONS PTY LTD"}
+{"id": "ref_055", "reference": "Coolibah Shade Private Ancillary Fund", "kind": "exact", "expected_key": "abn:98241674775", "expected_name": "Coolibah Shade Private Ancillary Fund"}
+{"id": "ref_056", "reference": "cove carpentry & maintenance pty ltd", "kind": "lower", "expected_key": "abn:53693526966", "expected_name": "COVE CARPENTRY & MAINTENANCE PTY LTD"}
+{"id": "ref_057", "reference": "Institution Of Engineers", "kind": "no_legal_form", "expected_key": "abn:63020415510", "expected_name": "The Institution of Engineers Australia"}
+{"id": "ref_058", "reference": "UcaR- Rockingham Parish", "kind": "typo", "expected_key": "abn:52076781848", "expected_name": "Uca - Rockingham Parish"}
+{"id": "ref_059", "reference": "76 086 154 461", "kind": "abn_spaced", "expected_key": "abn:76086154461", "expected_name": "Dorrigo RSL sub-Branch (RSL NSW)"}
+{"id": "ref_060", "reference": "Ability Homes Australia Ltd", "kind": "acn_only", "expected_key": "abn:77627744085", "expected_name": "Ability Homes Australia Ltd"}
+{"id": "ref_061", "reference": "BAYSIDE TAX & ADVISORY P/L", "kind": "abbrev", "expected_key": "abn:39694265186", "expected_name": "BAYSIDE TAX & ADVISORY PTY LTD"}
+{"id": "ref_062", "reference": "SOW INVESTMENTS PTY LTD (VIC)", "kind": "extra_words", "expected_key": "acn:670895575", "expected_name": "SOW INVESTMENTS PTY LTD"}
+{"id": "ref_063", "reference": "WALTER SCOTT GLOBAL EQUITY NO. 2 FUND", "kind": "trading_or_former", "expected_key": "acn:636432678", "expected_name": "WALTER SCOTT GLOBAL EQUITY NO. 2 FUND"}
+{"id": "ref_064", "reference": "Choral Edge Inc.", "kind": "exact", "expected_key": "abn:90908600865", "expected_name": "Choral Edge Inc."}
+{"id": "ref_065", "reference": "the trustee for the anderson family trust", "kind": "lower", "expected_key": "abn:26547845596", "expected_name": "The Trustee for The Anderson Family Trust"}
+{"id": "ref_066", "reference": "Digital Sign Solutions", "kind": "no_legal_form", "expected_key": "abn:34112472830", "expected_name": "DIGITAL SIGN SOLUTIONS PTY LTD"}
+{"id": "ref_067", "reference": "RRIA FOUNDATION LIMPTED", "kind": "typo", "expected_key": "abn:22681629925", "expected_name": "RRIA FOUNDATION LIMITED"}
+{"id": "ref_068", "reference": "INTEGRA ENERGY GROUP PTY. LTD.", "kind": "abn_spaced", "expected_key": "acn:149558181", "expected_name": "INTEGRA ENERGY GROUP PTY. LTD."}
+{"id": "ref_069", "reference": "SOUTH CAULFIELD JEWISH OUTREACH LIMITED", "kind": "acn_only", "expected_key": "abn:37669095621", "expected_name": "SOUTH CAULFIELD JEWISH OUTREACH LIMITED"}
+{"id": "ref_070", "reference": "Coltvale P/L", "kind": "abbrev", "expected_key": "abn:83005776232", "expected_name": "Coltvale Pty Ltd"}
+{"id": "ref_071", "reference": "The Trustee For Palyku Charitable Trust (WA)", "kind": "extra_words", "expected_key": "abn:80163462083", "expected_name": "The Trustee For Palyku Charitable Trust"}
+{"id": "ref_072", "reference": "Rigby Relining PTY LTD", "kind": "trading_or_former", "expected_key": "abn:56693640747", "expected_name": "Rigby Relining PTY LTD"}
+{"id": "ref_073", "reference": "Sila Overseas Aid & Development Fund", "kind": "exact", "expected_key": "abn:63043514933", "expected_name": "Sila Overseas Aid & Development Fund"}
+{"id": "ref_074", "reference": "llanarth pastoral company pty ltd", "kind": "lower", "expected_key": "acn:102301726", "expected_name": "Llanarth Pastoral Company Pty Ltd"}
+{"id": "ref_075", "reference": "Compare Market", "kind": "no_legal_form", "expected_key": "abn:83117323378", "expected_name": "COMPARE THE MARKET PTY LTD"}
+{"id": "ref_076", "reference": "EAU-DE-VIE SPEAKEASX PTY LTD", "kind": "typo", "expected_key": "src:nsw:liquor-licence-premises-list-as-at-8-feb-2021:LIQH440010034", "expected_name": "EAU-DE-VIE SPEAKEASY PTY LTD"}
+{"id": "ref_077", "reference": "15 993 442 008", "kind": "abn_spaced", "expected_key": "abn:15993442008", "expected_name": "Nyangatjatjara Aboriginal Corporation"}
+{"id": "ref_078", "reference": "ACN 126 373 420", "kind": "acn_only", "expected_key": "abn:74126373420", "expected_name": "DOWN ST PROPERTY PTY LTD"}
+{"id": "ref_079", "reference": "Ohrsom Limited", "kind": "abbrev", "expected_key": "abn:38615423740", "expected_name": "Ohrsom Limited"}
+{"id": "ref_080", "reference": "BRELAZ PTY LTD (QLD)", "kind": "extra_words", "expected_key": "abn:50606114069", "expected_name": "BRELAZ PTY LTD"}
+{"id": "ref_081", "reference": "MATCHMASTER COMMUNICATIONS PTY LIMITED", "kind": "trading_or_former", "expected_key": "acn:000236000", "expected_name": "MATCHMASTER COMMUNICATIONS PTY LIMITED"}
+{"id": "ref_082", "reference": "ZOUGA ENTERPRISES PTY LTD", "kind": "exact", "expected_key": "acn:121313031", "expected_name": "ZOUGA ENTERPRISES PTY LTD"}
+{"id": "ref_083", "reference": "temora u3a incorporated", "kind": "lower", "expected_key": "abn:91309854453", "expected_name": "TEMORA U3A INCORPORATED"}
+{"id": "ref_084", "reference": "Ferntree Gully Angliss Hospital Auxiliary", "kind": "no_legal_form", "expected_key": "abn:25246803799", "expected_name": "Ferntree Gully Angliss Hospital Auxiliary"}
+{"id": "ref_085", "reference": "THE TRUSTEM FOR DAVID HUSOY SUPERANNUATION FUND", "kind": "typo", "expected_key": "abn:55156037192", "expected_name": "THE TRUSTEE FOR DAVID HUSOY SUPERANNUATION FUND"}
+{"id": "ref_086", "reference": "Bay Predo's Lechon Cebu", "kind": "abn_spaced", "expected_key": "src:nsw:liquor-licence-premises-list-as-at-8-feb-2021:LIQO660035430", "expected_name": "JUMBO CHICKEN PTY LTD"}
+{"id": "ref_087", "reference": "ACN 678 614 232", "kind": "acn_only", "expected_key": "abn:21678614232", "expected_name": "CRAFT PG GROUP PTY LTD"}
+{"id": "ref_088", "reference": "PLATA GROUP P/L", "kind": "abbrev", "expected_key": "abn:13669038813", "expected_name": "PLATA GROUP PTY LTD"}
+{"id": "ref_089", "reference": "BALEC GROUP PTY LTD (QLD)", "kind": "extra_words", "expected_key": "acn:607083330", "expected_name": "BALEC GROUP PTY LTD"}
+{"id": "ref_090", "reference": "Elite Youth and Development Inc", "kind": "trading_or_former", "expected_key": "abn:45805124632", "expected_name": "Elite Youth and Development Inc"}
+{"id": "ref_091", "reference": "UFR TECHNOLOGY PTY LTD", "kind": "exact", "expected_key": "abn:32628907059", "expected_name": "UFR TECHNOLOGY PTY LTD"}
+{"id": "ref_092", "reference": "staunch pty ltd", "kind": "lower", "expected_key": "abn:35669575580", "expected_name": "STAUNCH PTY LTD"}
+{"id": "ref_093", "reference": "Outback Reno S", "kind": "no_legal_form", "expected_key": "abn:13149040639", "expected_name": "OUTBACK RENO'S PTY LTD"}
+{"id": "ref_094", "reference": "ANDROMEDA AUSTRALIA SUBCO PTY SIMITED", "kind": "typo", "expected_key": "acn:684354265", "expected_name": "ANDROMEDA AUSTRALIA SUBCO PTY LIMITED"}
+{"id": "ref_095", "reference": "90 848 840 707", "kind": "abn_spaced", "expected_key": "abn:90848840707", "expected_name": "Redemptoris Mater Sydney Incorporated"}
+{"id": "ref_096", "reference": "MJ DANN GROUP PTY LTD", "kind": "acn_only", "expected_key": "abn:46168696339", "expected_name": "MJ DANN GROUP PTY LTD"}
+{"id": "ref_097", "reference": "SALAMANDER CAPITAL P/L", "kind": "abbrev", "expected_key": "acn:166212540", "expected_name": "SALAMANDER CAPITAL PTY LTD"}
+{"id": "ref_098", "reference": "SOCIAL EVENTS FUNCTION CENTER PTY LTD (NSW)", "kind": "extra_words", "expected_key": "src:nsw:liquor-licence-premises-list-as-at-8-feb-2021:LIQO624008113", "expected_name": "SOCIAL EVENTS FUNCTION CENTER PTY LTD"}
+{"id": "ref_099", "reference": "WM POOL - EQUITIES TRUST NO. 37", "kind": "trading_or_former", "expected_key": "abn:93198816994", "expected_name": "WM POOL - EQUITIES TRUST NO. 37"}
+{"id": "ref_100", "reference": "Victorian Council for Civil Liberties Inc", "kind": "exact", "expected_key": "abn:23236210735", "expected_name": "Victorian Council for Civil Liberties Inc"}
+{"id": "ref_101", "reference": "riverside marine services pty ltd", "kind": "lower", "expected_key": "acn:165608033", "expected_name": "Riverside Marine Services Pty Ltd"}
+{"id": "ref_102", "reference": "Cranbrook Primary School Parents And Citizens", "kind": "no_legal_form", "expected_key": "abn:94726726205", "expected_name": "Cranbrook Primary School Parents & Citizens Association Inc."}
+{"id": "ref_103", "reference": "MULFUMBIMBY EX-SERVICES CLUB LTD", "kind": "typo", "expected_key": "src:nsw:liquor-licence-premises-list-as-at-8-feb-2021:LIQC300239713", "expected_name": "MULLUMBIMBY EX-SERVICES CLUB LTD"}
+{"id": "ref_104", "reference": "PAUNCEFOTE PTY LTD", "kind": "abn_spaced", "expected_key": "acn:632533816", "expected_name": "PAUNCEFOTE PTY LTD"}
+{"id": "ref_105", "reference": "The Jakob Frenkiel Charitable Trust", "kind": "acn_only", "expected_key": "abn:75462385238", "expected_name": "The Jakob Frenkiel Charitable Trust"}
+{"id": "ref_106", "reference": "DOOR2DOOR TRANSPORT SERVICES P/L", "kind": "abbrev", "expected_key": "abn:75686312309", "expected_name": "DOOR2DOOR TRANSPORT SERVICES PTY LTD"}
+{"id": "ref_107", "reference": "ROMAN CATHOLIC BISHOP OF GERALDTON AS THE OPERATOR OF A PBI (WA)", "kind": "extra_words", "expected_key": "abn:80155946746", "expected_name": "ROMAN CATHOLIC BISHOP OF GERALDTON AS THE OPERATOR OF A PBI"}
+{"id": "ref_108", "reference": "Peninsula Dragonflys Inc.", "kind": "trading_or_former", "expected_key": "abn:22450112253", "expected_name": "Peninsula Dragonflys Inc."}
+{"id": "ref_109", "reference": "PWR HYBRID EQUIPMENT PTY LTD", "kind": "exact", "expected_key": "abn:66677575263", "expected_name": "PWR HYBRID EQUIPMENT PTY LTD"}
+{"id": "ref_110", "reference": "alfred home improvements (qld) pty ltd", "kind": "lower", "expected_key": "abn:32644359866", "expected_name": "ALFRED HOME IMPROVEMENTS (QLD) PTY LTD"}
+{"id": "ref_111", "reference": "Taylor Jade Heather", "kind": "no_legal_form", "expected_key": "abn:36251153231", "expected_name": "TAYLOR, JADE HEATHER"}
+{"id": "ref_112", "reference": "GAZEBO MANAGEMENS PTY LTD", "kind": "typo", "expected_key": "acn:009176050", "expected_name": "GAZEBO MANAGEMENT PTY LTD"}
+{"id": "ref_113", "reference": "46 635 944 839", "kind": "abn_spaced", "expected_key": "abn:46635944839", "expected_name": "Suncoast Essential Services Pty Ltd"}
+{"id": "ref_114", "reference": "ACN 620 999 466", "kind": "acn_only", "expected_key": "acn:620999466", "expected_name": "OPTIMAL FINANCIAL GROUP PTY LTD"}
+{"id": "ref_115", "reference": "Vets for Compassion Incorporated", "kind": "abbrev", "expected_key": "abn:48102463744", "expected_name": "Vets for Compassion Incorporated"}
+{"id": "ref_116", "reference": "Watersprings Faith Church Ltd (QLD)", "kind": "extra_words", "expected_key": "abn:72081069301", "expected_name": "Watersprings Faith Church Ltd"}
+{"id": "ref_117", "reference": "Uca - Ashburton", "kind": "trading_or_former", "expected_key": "abn:53330682449", "expected_name": "Uca - Ashburton"}
+{"id": "ref_118", "reference": "Mackay Presbyterian Church", "kind": "exact", "expected_key": "abn:16102688122", "expected_name": "Mackay Presbyterian Church"}
+{"id": "ref_119", "reference": "all saints anglican parish nundle", "kind": "lower", "expected_key": "abn:86297791614", "expected_name": "All Saints Anglican Parish Nundle"}
+{"id": "ref_120", "reference": "Aspire Capital Investments", "kind": "no_legal_form", "expected_key": "acn:607986818", "expected_name": "ASPIRE CAPITAL INVESTMENTS PTY LTD"}
+{"id": "ref_121", "reference": "Fernhill Tavern PoIt Macquarie Pty Ltd", "kind": "typo", "expected_key": "src:nsw:liquor-licence-premises-list-as-at-8-feb-2021:LIQH424004498", "expected_name": "Fernhill Tavern Port Macquarie Pty Ltd"}
+{"id": "ref_122", "reference": "65 527 935 955", "kind": "abn_spaced", "expected_key": "abn:65527935955", "expected_name": "Coram Deo Charitable Trust"}
+{"id": "ref_123", "reference": "ACN 600 670 915", "kind": "acn_only", "expected_key": "acn:600670915", "expected_name": "STADTMILLER INVESTMENTS PTY LTD"}
+{"id": "ref_124", "reference": "SHAKESPEARE CAIRNS OASIS BUSINESS", "kind": "abbrev", "expected_key": "src:qld:queensland-government-contracts-directory-awarded-contracts:rowhash:fdff4dbaedaaea31", "expected_name": "SHAKESPEARE CAIRNS OASIS BUSINESS"}
+{"id": "ref_125", "reference": "ECOTOURISM AUSTRALIA LIMITED (QLD)", "kind": "extra_words", "expected_key": "abn:92909103274", "expected_name": "ECOTOURISM AUSTRALIA LIMITED"}
+{"id": "ref_126", "reference": "Cannaponics Limited", "kind": "trading_or_former", "expected_key": "acn:637439153", "expected_name": "Cannaponics Limited"}
+{"id": "ref_127", "reference": "JD GALEA PAINTING PTY LTD", "kind": "exact", "expected_key": "abn:79671042121", "expected_name": "JD GALEA PAINTING PTY LTD"}
+{"id": "ref_128", "reference": "fresh four pty ltd", "kind": "lower", "expected_key": "abn:43618884174", "expected_name": "FRESH FOUR PTY LTD"}
+{"id": "ref_129", "reference": "Easy Cool Air", "kind": "no_legal_form", "expected_key": "abn:73628903113", "expected_name": "Easy Cool Air Pty Ltd"}
+{"id": "ref_130", "reference": "VICTIMS OW BONDI RECOVERY COMMITTEE LIMITED", "kind": "typo", "expected_key": "abn:91694101703", "expected_name": "VICTIMS OF BONDI RECOVERY COMMITTEE LIMITED"}
+{"id": "ref_131", "reference": "36 595 985 826", "kind": "abn_spaced", "expected_key": "abn:36595985826", "expected_name": "The Spiritual Assembly Of The Baha'Is Of Cockburn"}
+{"id": "ref_132", "reference": "ACN 010 244 238", "kind": "acn_only", "expected_key": "abn:14010244238", "expected_name": "SAUVA PTY. LIMITED."}
+{"id": "ref_133", "reference": "STELNO LOGISTICS SERVICES P/L", "kind": "abbrev", "expected_key": "acn:603087118", "expected_name": "STELNO LOGISTICS SERVICES PTY LTD"}
+{"id": "ref_134", "reference": "SCOUGALL ENTERPRISES PTY LTD (QLD)", "kind": "extra_words", "expected_key": "acn:164208584", "expected_name": "SCOUGALL ENTERPRISES PTY LTD"}
+{"id": "ref_135", "reference": "GRIST CAPITAL PTY LTD", "kind": "trading_or_former", "expected_key": "abn:86685461054", "expected_name": "GRIST CAPITAL PTY LTD"}
+{"id": "ref_136", "reference": "URBAN DIRECT WHOLESALE PTY LTD", "kind": "exact", "expected_key": "acn:608304945", "expected_name": "URBAN DIRECT WHOLESALE PTY LTD"}
+{"id": "ref_137", "reference": "newmont nol pty limited", "kind": "lower", "expected_key": "acn:009221505", "expected_name": "NEWMONT NOL PTY LIMITED"}
+{"id": "ref_138", "reference": "Hg Construction Qld", "kind": "no_legal_form", "expected_key": "abn:35659479740", "expected_name": "HG CONSTRUCTION (QLD) PTY LTD"}
+{"id": "ref_139", "reference": "Tweed Heads Community Pre-School IncorporKted", "kind": "typo", "expected_key": "abn:68137050348", "expected_name": "Tweed Heads Community Pre-School Incorporated"}
+{"id": "ref_140", "reference": "30 669 678 497", "kind": "abn_spaced", "expected_key": "abn:30669678497", "expected_name": "E-DIGITAL MARKETING AGENCY PTY LTD"}
+{"id": "ref_141", "reference": "ACN 645 464 508", "kind": "acn_only", "expected_key": "abn:90645464508", "expected_name": "ADVANCED AIR SOLUTIONS PTY LTD"}
+{"id": "ref_142", "reference": "71 HASTINGS STREET P/L", "kind": "abbrev", "expected_key": "abn:90669402886", "expected_name": "71 HASTINGS STREET PTY LTD"}
+{"id": "ref_143", "reference": "Show Me The Way Incorporated (NSW)", "kind": "extra_words", "expected_key": "abn:52267505507", "expected_name": "Show Me The Way Incorporated"}
+{"id": "ref_144", "reference": "DE MARTINI & SON PTY LTD", "kind": "trading_or_former", "expected_key": "abn:65061881249", "expected_name": "DE MARTINI & SON PTY LTD"}
+{"id": "ref_145", "reference": "The Trustee for KT Extra Fund", "kind": "exact", "expected_key": "abn:45522186593", "expected_name": "The Trustee for KT Extra Fund"}
+{"id": "ref_146", "reference": "c & a trading pty ltd", "kind": "lower", "expected_key": "acn:637583576", "expected_name": "C & A TRADING PTY LTD"}
+{"id": "ref_147", "reference": "Beepz Car Rental", "kind": "no_legal_form", "expected_key": "abn:28625144569", "expected_name": "BEEPZ CAR RENTAL PTY LTD"}
+{"id": "ref_148", "reference": "SYNERGAG PTY LTD", "kind": "typo", "expected_key": "acn:120444868", "expected_name": "SYNERGIG PTY LTD"}
+{"id": "ref_149", "reference": "FIT TRENDZ PTY LTD", "kind": "abn_spaced", "expected_key": "acn:603195991", "expected_name": "FIT TRENDZ PTY LTD"}
+{"id": "ref_150", "reference": "ACN 624 031 689", "kind": "acn_only", "expected_key": "abn:45624031689", "expected_name": "ANTHONY HATCHMAN CONCRETING PTY LTD"}
+{"id": "ref_151", "reference": "LUNARIS WEALTH P/L", "kind": "abbrev", "expected_key": "abn:84641250839", "expected_name": "LUNARIS WEALTH PTY LTD"}
+{"id": "ref_152", "reference": "HARDY ROAD INVESTMENTS PTY LTD (Australia)", "kind": "extra_words", "expected_key": "acn:122892728", "expected_name": "HARDY ROAD INVESTMENTS PTY LTD"}
+{"id": "ref_153", "reference": "Exant Employment", "kind": "trading_or_former", "expected_key": "abn:56158971012", "expected_name": "EXANT EMPLOYMENT PTY LTD"}
+{"id": "ref_154", "reference": "SOTERO & CO PTY LTD", "kind": "exact", "expected_key": "abn:53698448921", "expected_name": "SOTERO & CO PTY LTD"}
+{"id": "ref_155", "reference": "the trustee for ds capital growth fund", "kind": "lower", "expected_key": "abn:24358251668", "expected_name": "The Trustee for DS Capital Growth Fund"}
+{"id": "ref_156", "reference": "Cancer Council Of Western", "kind": "no_legal_form", "expected_key": "abn:15190821561", "expected_name": "Cancer Council Of Western Australia (Inc)"}
+{"id": "ref_157", "reference": "The Trustee for The WY Bamily Trust", "kind": "typo", "expected_key": "abn:68846649682", "expected_name": "The Trustee for The WY Family Trust"}
+{"id": "ref_158", "reference": "PERPETUAL INCOME SHARE FUND", "kind": "abn_spaced", "expected_key": "acn:093446256", "expected_name": "PERPETUAL INCOME SHARE FUND"}
+{"id": "ref_159", "reference": "Good Shepherd Lutheran Church Harristown", "kind": "acn_only", "expected_key": "abn:80110892537", "expected_name": "Good Shepherd Lutheran Church Harristown"}
+{"id": "ref_160", "reference": "DSPS (QLD) P/L", "kind": "abbrev", "expected_key": "acn:600420906", "expected_name": "DSPS (QLD) PTY LTD"}
+{"id": "ref_161", "reference": "PASSION SUPPORT CARE PTY LTD (QLD)", "kind": "extra_words", "expected_key": "abn:25651934075", "expected_name": "PASSION SUPPORT CARE PTY LTD"}
+{"id": "ref_162", "reference": "GLENN SEXTON PTY LTD", "kind": "trading_or_former", "expected_key": "abn:22119150864", "expected_name": "GLENN SEXTON PTY LTD"}
+{"id": "ref_163", "reference": "MCINTYRE FAMILY CO PTY LTD", "kind": "exact", "expected_key": "abn:48010820738", "expected_name": "MCINTYRE FAMILY CO PTY LTD"}
+{"id": "ref_164", "reference": "lash n tweezers australia pty ltd", "kind": "lower", "expected_key": "abn:11659956797", "expected_name": "LASH N TWEEZERS AUSTRALIA PTY LTD"}
+{"id": "ref_165", "reference": "Ingot Foundry Marine Engineering", "kind": "no_legal_form", "expected_key": "acn:101583233", "expected_name": "INGOT - FOUNDRY MARINE ENGINEERING PTY LTD"}
+{"id": "ref_166", "reference": "The TrusteX for Asia Core AU (CN) Trust", "kind": "typo", "expected_key": "abn:87270393654", "expected_name": "The Trustee for Asia Core AU (CN) Trust"}
+{"id": "ref_167", "reference": "88 688 296 586", "kind": "abn_spaced", "expected_key": "abn:88688296586", "expected_name": "MAALT INDUSTRIAL INVESTMENTS GROUP PTY LTD"}
+{"id": "ref_168", "reference": "ANGLICAN PARISH OF GOONDIWINDI", "kind": "acn_only", "expected_key": "abn:26624594754", "expected_name": "The Corporation Of The Synod Of The Diocese Of Brisbane"}
+{"id": "ref_169", "reference": "Hinterland Wildlife Rescue and Rehabilitation Inc.", "kind": "abbrev", "expected_key": "abn:93882637317", "expected_name": "Hinterland Wildlife Rescue and Rehabilitation Inc."}
+{"id": "ref_170", "reference": "The Richard Wagner Society Of Southaustralia Inc (SA)", "kind": "extra_words", "expected_key": "abn:17163964669", "expected_name": "The Richard Wagner Society Of Southaustralia Inc"}
+{"id": "ref_171", "reference": "Moyola Aged Care Inc.", "kind": "trading_or_former", "expected_key": "abn:80586414745", "expected_name": "Moyola Aged Care Inc."}
+{"id": "ref_172", "reference": "BMT COMMERCIAL AUSTRALIA PTY LTD", "kind": "exact", "expected_key": "abn:54010830421", "expected_name": "BMT COMMERCIAL AUSTRALIA PTY LTD"}
+{"id": "ref_173", "reference": "sarah gaff smsf pty ltd", "kind": "lower", "expected_key": "acn:663405490", "expected_name": "SARAH GAFF SMSF PTY LTD"}
+{"id": "ref_174", "reference": "Graeme John And Carol Ann Broadbent", "kind": "no_legal_form", "expected_key": "src:qld:queensland-government-contracts-directory-awarded-contracts:rowhash:77f475931937954b", "expected_name": "GRAEME JOHN & CAROL ANN BROADBENT"}
+{"id": "ref_175", "reference": "THE TRUSTEE FOR AUSTRALIAN EDHICAL MULTI-MANAGER GLOBAL FIXED INTEREST FUND", "kind": "typo", "expected_key": "abn:89281703661", "expected_name": "THE TRUSTEE FOR AUSTRALIAN ETHICAL MULTI-MANAGER GLOBAL FIXED INTEREST FUND"}
+{"id": "ref_176", "reference": "95 133 550 599", "kind": "abn_spaced", "expected_key": "abn:95133550599", "expected_name": "NEXUS HOSPITALITY MANAGEMENT PTY LTD"}
+{"id": "ref_177", "reference": "Uca - Woolgoolga", "kind": "acn_only", "expected_key": "abn:38173610282", "expected_name": "Uca - Woolgoolga"}
+{"id": "ref_178", "reference": "Minumbra Lancewood P/L", "kind": "abbrev", "expected_key": "acn:156281711", "expected_name": "Minumbra Lancewood Pty Ltd"}
+{"id": "ref_179", "reference": "PMI ASHGROVE PTY LTD (QLD)", "kind": "extra_words", "expected_key": "abn:52643475361", "expected_name": "PMI ASHGROVE PTY LTD"}
+{"id": "ref_180", "reference": "The Trustee for RTL Marrickville Property Trust", "kind": "trading_or_former", "expected_key": "abn:94620640148", "expected_name": "The Trustee for RTL Marrickville Property Trust"}
+{"id": "ref_181", "reference": "WEISMANTEL HEAVY HAULAGE PTY LTD", "kind": "exact", "expected_key": "acn:600386641", "expected_name": "WEISMANTEL HEAVY HAULAGE PTY LTD"}
+{"id": "ref_182", "reference": "gallipoli barracks community centre inc", "kind": "lower", "expected_key": "abn:39368910224", "expected_name": "Gallipoli Barracks Community Centre Inc"}
+{"id": "ref_183", "reference": "Sri Venkateswara Educational Building Trust", "kind": "no_legal_form", "expected_key": "abn:40417868836", "expected_name": "Sri Venkateswara Educational Building Trust"}
+{"id": "ref_184", "reference": "Barro Oroup", "kind": "typo", "expected_key": "src:qld:queensland-government-contracts-directory-awarded-contracts:rowhash:76bcb7a55d7553ab", "expected_name": "Barro Group"}
+{"id": "ref_185", "reference": "92 984 346 200", "kind": "abn_spaced", "expected_key": "abn:92984346200", "expected_name": "St George College Inc"}
+{"id": "ref_186", "reference": "ACN 007 229 290", "kind": "acn_only", "expected_key": "acn:007229290", "expected_name": "WHOLESALE WINE SERVICES PTY. LTD."}
+{"id": "ref_187", "reference": "WIDE OPEN INVESTMENTS P/L", "kind": "abbrev", "expected_key": "acn:657636256", "expected_name": "WIDE OPEN INVESTMENTS PTY LTD"}
+{"id": "ref_188", "reference": "The Spiritual Assembly of the Baha'is of East Fremantle (WA)", "kind": "extra_words", "expected_key": "abn:29932081168", "expected_name": "The Spiritual Assembly of the Baha'is of East Fremantle"}
+{"id": "ref_189", "reference": "Kettleworth & Fane Brokerage #0", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_190", "reference": "Kettleworth & Fane Brokerage #1", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_191", "reference": "Quokka Street Dental Trust #2", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_192", "reference": "Blue Ocelot Mining NL #3", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_193", "reference": "Tessellate Bricks & Co #4", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_194", "reference": "Fennel & Fig Catering Qld #5", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_195", "reference": "Grey Heron Aquaculture Ltd #6", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_196", "reference": "Tessellate Bricks & Co #7", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_197", "reference": "Tessellate Bricks & Co #8", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_198", "reference": "Pindari Vortex Holdings #9", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_199", "reference": "Pindari Vortex Holdings #10", "kind": "absent", "expected_key": null, "expected_name": null}
+{"id": "ref_200", "reference": "Grey Heron Aquaculture Ltd #11", "kind": "absent", "expected_key": null, "expected_name": null}

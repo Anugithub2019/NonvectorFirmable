@@ -1,0 +1,39 @@
+{
+  "records": 555547,
+  "links": 555546,
+  "abstentions": 139479,
+  "parties": 352368,
+  "jev_calls": 25,
+  "secs_exact": 5.8,
+  "secs_semantic": 9.2,
+  "secs_singletons": 0.4,
+  "secs_persist": 5.6,
+  "blocking": {
+    "pending": 149143,
+    "indexed": 406404,
+    "blocks": 296396,
+    "largest_block": 8122,
+    "records_with_candidates": 44088,
+    "skipped_oversize_blocks": 38520
+  },
+  "scorer_down": false,
+  "cached_pairs_used": 58749,
+  "match_types": {
+    "exact_abn": 345605,
+    "singleton": 110551,
+    "exact_acn": 43109,
+    "name_exact_norm_same_source": 28927,
+    "bridge_abr_acn": 14034,
+    "name_exact_norm": 8936,
+    "exact_lei": 3655,
+    "name_semantic": 729
+  },
+  "abstain_reasons": {
+    "person_name_only": 96068,
+    "below_threshold": 34423,
+    "no_candidate_in_block": 8964,
+    "no_usable_name": 23,
+    "identifier_conflict": 1
+  },
+  "secs_total": 21.2
+}

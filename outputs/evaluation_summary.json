@@ -1,0 +1,911 @@
+{
+ "precision": {
+  "by_match_type": {
+   "bridge_abr_acn": {
+    "labelled": 25,
+    "correct": 25,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 25,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.867,
+    "precision_pro_only": 1.0
+   },
+   "name_exact_norm_same_source": {
+    "labelled": 13,
+    "correct": 12,
+    "incorrect": 0,
+    "unresolved": 1,
+    "pro_same": 13,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 0.923,
+    "wilson95_lower_on_decided": 0.757,
+    "precision_pro_only": 1.0
+   },
+   "exact_abn": {
+    "labelled": 21,
+    "correct": 21,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 21,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.845,
+    "precision_pro_only": 1.0
+   },
+   "exact_lei": {
+    "labelled": 6,
+    "correct": 6,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 6,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.61,
+    "precision_pro_only": 1.0
+   },
+   "name_semantic": {
+    "labelled": 8,
+    "correct": 7,
+    "incorrect": 0,
+    "unresolved": 1,
+    "pro_same": 7,
+    "pro_different": 1,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 0.875,
+    "wilson95_lower_on_decided": 0.646,
+    "precision_pro_only": 0.875
+   },
+   "name_exact_norm": {
+    "labelled": 8,
+    "correct": 4,
+    "incorrect": 0,
+    "unresolved": 4,
+    "pro_same": 8,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 0.5,
+    "wilson95_lower_on_decided": 0.51,
+    "precision_pro_only": 1.0
+   },
+   "exact_acn": {
+    "labelled": 7,
+    "correct": 7,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 7,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.646,
+    "precision_pro_only": 1.0
+   }
+  },
+  "by_source_pair": {
+   "data.gov.au:asic-afs-licensee \u2194 local:asic-companies-slice": {
+    "labelled": 10,
+    "correct": 10,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 10,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.722,
+    "precision_pro_only": 1.0
+   },
+   "qld:qbcc-licensed-contractors-register \u2194 qld:qbcc-licensed-contractors-register": {
+    "labelled": 10,
+    "correct": 10,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 10,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.722,
+    "precision_pro_only": 1.0
+   },
+   "qld:queensland-government-contracts-directory-awarded-contracts \u2194 qld:queensland-government-contracts-directory-awarded-contracts": {
+    "labelled": 6,
+    "correct": 6,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 6,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.61,
+    "precision_pro_only": 1.0
+   },
+   "local:gleif-lei-au \u2194 local:abr-slice": {
+    "labelled": 4,
+    "correct": 4,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 4,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.51,
+    "precision_pro_only": 1.0
+   },
+   "local:gleif-relationships \u2194 local:gleif-relationships": {
+    "labelled": 4,
+    "correct": 4,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 4,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.51,
+    "precision_pro_only": 1.0
+   },
+   "nsw:liquor-licence-premises-list-as-at-8-feb-2021 \u2194 nsw:liquor-licence-premises-list-as-at-8-feb-2021": {
+    "labelled": 3,
+    "correct": 2,
+    "incorrect": 0,
+    "unresolved": 1,
+    "pro_same": 3,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 0.667,
+    "wilson95_lower_on_decided": 0.342,
+    "precision_pro_only": 1.0
+   },
+   "local:abr-slice \u2194 local:asic-companies-slice": {
+    "labelled": 5,
+    "correct": 5,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 5,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.566,
+    "precision_pro_only": 1.0
+   },
+   "data.gov.au:asic-banned-disqualified-org \u2194 local:abr-slice": {
+    "labelled": 5,
+    "correct": 5,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 5,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.566,
+    "precision_pro_only": 1.0
+   },
+   "nsw:liquor-licence-premises-list-as-at-8-feb-2021 \u2194 local:gleif-lei-au": {
+    "labelled": 3,
+    "correct": 0,
+    "incorrect": 0,
+    "unresolved": 3,
+    "pro_same": 2,
+    "pro_different": 1,
+    "precision_on_decided": null,
+    "share_correct_all_labelled": 0.0,
+    "wilson95_lower_on_decided": null,
+    "precision_pro_only": 0.667
+   },
+   "qld:ehp-suitable-operator-register-sor-for-environmentally-relevant-activities-eras \u2194 qld:qbcc-licensed-contractors-register": {
+    "labelled": 3,
+    "correct": 2,
+    "incorrect": 0,
+    "unresolved": 1,
+    "pro_same": 3,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 0.667,
+    "wilson95_lower_on_decided": 0.342,
+    "precision_pro_only": 1.0
+   },
+   "nsw:liquor-licence-premises-list-as-at-8-feb-2021 \u2194 data.gov.au:acnc-register": {
+    "labelled": 2,
+    "correct": 2,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 2,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.342,
+    "precision_pro_only": 1.0
+   },
+   "data.gov.au:asic-banned-disqualified-org \u2194 local:asic-companies-slice": {
+    "labelled": 1,
+    "correct": 1,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 1,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.207,
+    "precision_pro_only": 1.0
+   },
+   "qld:queensland-government-contracts-directory-awarded-contracts \u2194 local:abr-slice": {
+    "labelled": 1,
+    "correct": 1,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 1,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.207,
+    "precision_pro_only": 1.0
+   },
+   "qld:ehp-suitable-operator-register-sor-for-environmentally-relevant-activities-eras \u2194 local:gleif-lei-au": {
+    "labelled": 2,
+    "correct": 1,
+    "incorrect": 0,
+    "unresolved": 1,
+    "pro_same": 2,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 0.5,
+    "wilson95_lower_on_decided": 0.207,
+    "precision_pro_only": 1.0
+   },
+   "data.gov.au:asic-credit-licensee \u2194 local:asic-companies-slice": {
+    "labelled": 3,
+    "correct": 3,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 3,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.438,
+    "precision_pro_only": 1.0
+   },
+   "local:gleif-relationships \u2194 local:gleif-lei-au": {
+    "labelled": 3,
+    "correct": 3,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 3,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.438,
+    "precision_pro_only": 1.0
+   },
+   "local:asic-companies-slice \u2194 local:asic-companies-slice": {
+    "labelled": 5,
+    "correct": 5,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 5,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.566,
+    "precision_pro_only": 1.0
+   },
+   "qld:queensland-government-contracts-directory-awarded-contracts \u2194 local:gleif-lei-au": {
+    "labelled": 2,
+    "correct": 2,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 2,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.342,
+    "precision_pro_only": 1.0
+   },
+   "qld:ehp-suitable-operator-register-sor-for-environmentally-relevant-activities-eras \u2194 local:asic-companies-slice": {
+    "labelled": 1,
+    "correct": 1,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 1,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.207,
+    "precision_pro_only": 1.0
+   },
+   "local:asic-companies-slice \u2194 data.gov.au:asic-afs-licensee": {
+    "labelled": 1,
+    "correct": 1,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 1,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.207,
+    "precision_pro_only": 1.0
+   },
+   "qld:qbcc-licensed-contractors-register \u2194 local:asic-companies-slice": {
+    "labelled": 4,
+    "correct": 4,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 4,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.51,
+    "precision_pro_only": 1.0
+   },
+   "qld:queensland-government-contracts-directory-awarded-contracts \u2194 qld:ehp-suitable-operator-register-sor-for-environmentally-relevant-activities-eras": {
+    "labelled": 1,
+    "correct": 1,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 1,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.207,
+    "precision_pro_only": 1.0
+   },
+   "qld:queensland-government-contracts-directory-awarded-contracts \u2194 local:asic-companies-slice": {
+    "labelled": 1,
+    "correct": 1,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 1,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.207,
+    "precision_pro_only": 1.0
+   },
+   "qld:queensland-government-contracts-directory-awarded-contracts \u2194 qld:qbcc-licensed-contractors-register": {
+    "labelled": 2,
+    "correct": 2,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 2,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.342,
+    "precision_pro_only": 1.0
+   },
+   "local:gleif-lei-au \u2194 local:gleif-relationships": {
+    "labelled": 3,
+    "correct": 3,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 3,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.438,
+    "precision_pro_only": 1.0
+   },
+   "local:asic-companies-slice \u2194 local:abr-slice": {
+    "labelled": 2,
+    "correct": 2,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 2,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.342,
+    "precision_pro_only": 1.0
+   },
+   "local:gleif-lei-au \u2194 local:asic-companies-slice": {
+    "labelled": 1,
+    "correct": 1,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 1,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.207,
+    "precision_pro_only": 1.0
+   }
+  },
+  "by_tier": {
+   "tier2 \u2192 tier1": {
+    "labelled": 21,
+    "correct": 21,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 21,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.845,
+    "precision_pro_only": 1.0
+   },
+   "tier3 \u2192 tier3": {
+    "labelled": 27,
+    "correct": 25,
+    "incorrect": 0,
+    "unresolved": 2,
+    "pro_same": 27,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 0.926,
+    "wilson95_lower_on_decided": 0.867,
+    "precision_pro_only": 1.0
+   },
+   "tier2 \u2192 tier2": {
+    "labelled": 10,
+    "correct": 10,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 10,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.722,
+    "precision_pro_only": 1.0
+   },
+   "tier1 \u2192 tier1": {
+    "labelled": 12,
+    "correct": 12,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 12,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.757,
+    "precision_pro_only": 1.0
+   },
+   "tier3 \u2192 tier2": {
+    "labelled": 7,
+    "correct": 3,
+    "incorrect": 0,
+    "unresolved": 4,
+    "pro_same": 6,
+    "pro_different": 1,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 0.429,
+    "wilson95_lower_on_decided": 0.438,
+    "precision_pro_only": 0.857
+   },
+   "tier3 \u2192 tier1": {
+    "labelled": 10,
+    "correct": 10,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 10,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.722,
+    "precision_pro_only": 1.0
+   },
+   "tier1 \u2192 tier2": {
+    "labelled": 1,
+    "correct": 1,
+    "incorrect": 0,
+    "unresolved": 0,
+    "pro_same": 1,
+    "pro_different": 0,
+    "precision_on_decided": 1.0,
+    "share_correct_all_labelled": 1.0,
+    "wilson95_lower_on_decided": 0.207,
+    "precision_pro_only": 1.0
+   }
+  },
+  "population": {
+   "exact_abn": 345605,
+   "exact_acn": 43109,
+   "exact_lei": 3655,
+   "bridge_abr_acn": 14034,
+   "name_exact_norm": 8936,
+   "name_semantic": 729,
+   "name_exact_norm_same_source": 28927
+  },
+  "n_labelled": 88
+ },
+ "recall": {
+  "n": 150,
+  "index_size": 555547,
+  "blocks": 347295,
+  "candidate_recall": 0.913,
+  "ranking_accuracy_given_candidate": 0.985,
+  "acceptance_recall": 0.887,
+  "false_accept_rate": 0.0,
+  "threshold": 0.85,
+  "jev_calls": 118,
+  "failure_stages": {
+   "ok": 133,
+   "not_in_candidates": 13,
+   "below_threshold": 2,
+   "ranked_below_other": 2
+  }
+ },
+ "coverage": {
+  "data.gov.au:acnc-register": {
+   "tier": 3,
+   "records": 66341,
+   "with_identifier": 65905,
+   "pct": 99.3,
+   "abn": 65905,
+   "acn": 0,
+   "lei": 0
+  },
+  "data.gov.au:asic-afs-licensee": {
+   "tier": 2,
+   "records": 6541,
+   "with_identifier": 6540,
+   "pct": 100.0,
+   "abn": 6344,
+   "acn": 196,
+   "lei": 0
+  },
+  "data.gov.au:asic-banned-disqualified-org": {
+   "tier": 2,
+   "records": 15,
+   "with_identifier": 15,
+   "pct": 100.0,
+   "abn": 0,
+   "acn": 15,
+   "lei": 0
+  },
+  "data.gov.au:asic-credit-licensee": {
+   "tier": 3,
+   "records": 4308,
+   "with_identifier": 4239,
+   "pct": 98.4,
+   "abn": 3846,
+   "acn": 393,
+   "lei": 0
+  },
+  "data.gov.au:asic-liquidator": {
+   "tier": 2,
+   "records": 662,
+   "with_identifier": 0,
+   "pct": 0.0,
+   "abn": 0,
+   "acn": 0,
+   "lei": 0
+  },
+  "local:abr-slice": {
+   "tier": 1,
+   "records": 64484,
+   "with_identifier": 64484,
+   "pct": 100.0,
+   "abn": 64484,
+   "acn": 60858,
+   "lei": 0
+  },
+  "local:asic-companies-slice": {
+   "tier": 1,
+   "records": 80188,
+   "with_identifier": 80188,
+   "pct": 100.0,
+   "abn": 78600,
+   "acn": 80188,
+   "lei": 0
+  },
+  "local:gleif-lei-au": {
+   "tier": 2,
+   "records": 53604,
+   "with_identifier": 53604,
+   "pct": 100.0,
+   "abn": 14125,
+   "acn": 36787,
+   "lei": 53604
+  },
+  "local:gleif-relationships": {
+   "tier": 2,
+   "records": 6489,
+   "with_identifier": 6489,
+   "pct": 100.0,
+   "abn": 0,
+   "acn": 0,
+   "lei": 6489
+  },
+  "nsw:liquor-licence-premises-list-as-at-8-feb-2021": {
+   "tier": 3,
+   "records": 18747,
+   "with_identifier": 0,
+   "pct": 0.0,
+   "abn": 0,
+   "acn": 0,
+   "lei": 0
+  },
+  "qld:ehp-suitable-operator-register-sor-for-environmentally-relevant-activities-eras": {
+   "tier": 3,
+   "records": 15128,
+   "with_identifier": 8222,
+   "pct": 54.3,
+   "abn": 300,
+   "acn": 7922,
+   "lei": 0
+  },
+  "qld:qbcc-licensed-contractors-register": {
+   "tier": 3,
+   "records": 205535,
+   "with_identifier": 116718,
+   "pct": 56.8,
+   "abn": 112001,
+   "acn": 48237,
+   "lei": 0
+  },
+  "qld:queensland-government-contracts-directory-awarded-contracts": {
+   "tier": 3,
+   "records": 45752,
+   "with_identifier": 0,
+   "pct": 0.0,
+   "abn": 0,
+   "acn": 0,
+   "lei": 0
+  }
+ },
+ "benchmark": {
+  "n": 200,
+  "n_present": 188,
+  "n_absent": 12,
+  "outcomes": {
+   "resolved_correct": 171,
+   "abstained_present": 15,
+   "clarified_with_expected": 2,
+   "abstained_correct": 12
+  },
+  "resolved_accuracy": 0.91,
+  "resolved_wrong": 0,
+  "clarification_success": 1.0,
+  "n_clarified": 2,
+  "abstained_present": 15,
+  "absent_abstained": 12,
+  "false_resolve": 0,
+  "acceptable": 185,
+  "correct": 185,
+  "failure_stages": {
+   "below_threshold": 14,
+   "not_in_candidates": 1,
+   "ambiguous_gap": 1,
+   "not_top": 1
+  },
+  "by_kind": {
+   "exact": {
+    "n": 21,
+    "resolved_correct": 21,
+    "resolved_wrong": 0,
+    "clarified_with_expected": 0,
+    "clarified_without_expected": 0,
+    "abstained_present": 0,
+    "abstained_correct": 0,
+    "false_resolve": 0,
+    "stages": {}
+   },
+   "lower": {
+    "n": 21,
+    "resolved_correct": 20,
+    "resolved_wrong": 0,
+    "clarified_with_expected": 1,
+    "clarified_without_expected": 0,
+    "abstained_present": 0,
+    "abstained_correct": 0,
+    "false_resolve": 0,
+    "stages": {
+     "not_top": 1
+    }
+   },
+   "no_legal_form": {
+    "n": 21,
+    "resolved_correct": 21,
+    "resolved_wrong": 0,
+    "clarified_with_expected": 0,
+    "clarified_without_expected": 0,
+    "abstained_present": 0,
+    "abstained_correct": 0,
+    "false_resolve": 0,
+    "stages": {}
+   },
+   "typo": {
+    "n": 21,
+    "resolved_correct": 7,
+    "resolved_wrong": 0,
+    "clarified_with_expected": 0,
+    "clarified_without_expected": 0,
+    "abstained_present": 14,
+    "abstained_correct": 0,
+    "false_resolve": 0,
+    "stages": {
+     "below_threshold": 13,
+     "not_in_candidates": 1
+    }
+   },
+   "abn_spaced": {
+    "n": 21,
+    "resolved_correct": 21,
+    "resolved_wrong": 0,
+    "clarified_with_expected": 0,
+    "clarified_without_expected": 0,
+    "abstained_present": 0,
+    "abstained_correct": 0,
+    "false_resolve": 0,
+    "stages": {}
+   },
+   "acn_only": {
+    "n": 21,
+    "resolved_correct": 21,
+    "resolved_wrong": 0,
+    "clarified_with_expected": 0,
+    "clarified_without_expected": 0,
+    "abstained_present": 0,
+    "abstained_correct": 0,
+    "false_resolve": 0,
+    "stages": {}
+   },
+   "abbrev": {
+    "n": 21,
+    "resolved_correct": 21,
+    "resolved_wrong": 0,
+    "clarified_with_expected": 0,
+    "clarified_without_expected": 0,
+    "abstained_present": 0,
+    "abstained_correct": 0,
+    "false_resolve": 0,
+    "stages": {}
+   },
+   "extra_words": {
+    "n": 21,
+    "resolved_correct": 19,
+    "resolved_wrong": 0,
+    "clarified_with_expected": 1,
+    "clarified_without_expected": 0,
+    "abstained_present": 1,
+    "abstained_correct": 0,
+    "false_resolve": 0,
+    "stages": {
+     "below_threshold": 1,
+     "ambiguous_gap": 1
+    }
+   },
+   "trading_or_former": {
+    "n": 20,
+    "resolved_correct": 20,
+    "resolved_wrong": 0,
+    "clarified_with_expected": 0,
+    "clarified_without_expected": 0,
+    "abstained_present": 0,
+    "abstained_correct": 0,
+    "false_resolve": 0,
+    "stages": {}
+   },
+   "absent": {
+    "n": 12,
+    "resolved_correct": 0,
+    "resolved_wrong": 0,
+    "clarified_with_expected": 0,
+    "clarified_without_expected": 0,
+    "abstained_present": 0,
+    "abstained_correct": 12,
+    "false_resolve": 0,
+    "stages": {}
+   }
+  },
+  "p50_ms": 6.3,
+  "p95_ms": 1551.1,
+  "mean_ms": 287.6
+ },
+ "cases": [
+  {
+   "reference": "Commonwealth Bank of Australia",
+   "decision": "resolved",
+   "top": [
+    {
+     "name": "COMMONWEALTH BANK OF AUSTRALIA",
+     "key": "abn:48123123124",
+     "score": 0.95,
+     "match_type": "name_exact_norm",
+     "jev_p_same": null,
+     "jev_relationship": null
+    }
+   ],
+   "latency_ms": 5.2
+  },
+  {
+   "reference": "Commonwealth Superannuation Corporation",
+   "decision": "resolved",
+   "top": [
+    {
+     "name": "COMMONWEALTH SUPERANNUATION CORPORATION",
+     "key": "abn:48882817243",
+     "score": 0.95,
+     "match_type": "name_exact_norm",
+     "jev_p_same": null,
+     "jev_relationship": null
+    }
+   ],
+   "latency_ms": 3.2
+  },
+  {
+   "reference": "commonwealth bank",
+   "decision": "resolved",
+   "top": [
+    {
+     "name": "COMMONWEALTH BANK OF AUSTRALIA",
+     "key": "abn:48123123124",
+     "score": 0.95,
+     "match_type": "name_exact_norm",
+     "jev_p_same": null,
+     "jev_relationship": null
+    }
+   ],
+   "latency_ms": 2.6
+  },
+  {
+   "reference": "CBA",
+   "decision": "abstained",
+   "top": [
+    {
+     "name": "COMMONWEALTH BANK OF AUSTRALIA",
+     "key": "abn:48123123124",
+     "score": 0.72,
+     "match_type": "name_semantic",
+     "jev_p_same": 0.72,
+     "jev_relationship": "same"
+    },
+    {
+     "name": "CBA A320 AIRCRAFT NO1 PTY LTD",
+     "key": "acn:603957535",
+     "score": 0.32,
+     "match_type": "name_semantic",
+     "jev_p_same": 0.32,
+     "jev_relationship": "related"
+    },
+    {
+     "name": "CBA BUILDING SOLUTIONS PTY LTD",
+     "key": "abn:48618575581",
+     "score": 0.31,
+     "match_type": "name_semantic",
+     "jev_p_same": 0.31,
+     "jev_relationship": "same"
+    }
+   ],
+   "latency_ms": 1518.6
+  },
+  {
+   "reference": "Commonwealth Super Corp",
+   "decision": "abstained",
+   "top": [
+    {
+     "name": "COMMONWEALTH SUPERANNUATION CORPORATION",
+     "key": "abn:48882817243",
+     "score": 0.5,
+     "match_type": "name_semantic",
+     "jev_p_same": 0.5,
+     "jev_relationship": "same"
+    },
+    {
+     "name": "Commonwealth Bank Group Super",
+     "key": "abn:24248426878",
+     "score": 0.19,
+     "match_type": "name_semantic",
+     "jev_p_same": 0.19,
+     "jev_relationship": "related"
+    },
+    {
+     "name": "COMMONWEALTH PRIVATE LIMITED",
+     "key": "abn:30125238039",
+     "score": 0.14,
+     "match_type": "name_semantic",
+     "jev_p_same": 0.14,
+     "jev_relationship": "unrelated"
+    }
+   ],
+   "latency_ms": 919.5
+  }
+ ],
+ "timing": {
+  "label_links_s": 3351.0,
+  "recall_s": 1323.1,
+  "benchmark_s": 57.5
+ }
+}

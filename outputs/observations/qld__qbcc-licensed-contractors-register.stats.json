@@ -1,0 +1,329 @@
+{
+  "source_id": "qld:qbcc-licensed-contractors-register",
+  "extractor_version": "engine=0.1.2;config=qld:qbcc-licensed-contractors-register@v1;sha=6b3e139c91",
+  "input_rows": 205535,
+  "sampled_rows": 205535,
+  "sample": "random",
+  "seed": 7,
+  "observations": 2528954,
+  "stats": {
+    "records": 205535,
+    "filtered": 0,
+    "duplicate_ids": 0,
+    "observed_at_fallback": 205535,
+    "records_without_entity_claims": 0
+  },
+  "fields": {
+    "entity.legal_name": {
+      "applicable": 205535,
+      "produced": 205535,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "SHANE ANTHONY ROLFE",
+        "DAVID GLEN EDWARDS",
+        "NATHAN THOMPSON",
+        "TONY JOHN ROCHE"
+      ],
+      "raw_examples": [
+        "SHANE ANTHONY ROLFE",
+        "DAVID GLEN EDWARDS",
+        "NATHAN THOMPSON",
+        "TONY JOHN ROCHE"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 205535,
+      "produced": 205535,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "sole_trader",
+        "company"
+      ],
+      "raw_examples": [
+        "Individual",
+        "Company"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.full": {
+      "applicable": 205534,
+      "produced": 205534,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "4 CRESWICK CLOSE MANLY WEST QLD 4179",
+        "2 ROBA PLACE ASHMORE QLD 4214",
+        "12 Sunny St Palmview QLD 4553",
+        "11 Couldrey St Bardon QLD 4065"
+      ],
+      "raw_examples": [
+        "4 CRESWICK CLOSE MANLY WEST QLD 4179",
+        "2 ROBA PLACE ASHMORE QLD 4214",
+        "12 Sunny St Palmview QLD 4553",
+        "11 Couldrey St Bardon QLD 4065"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.locality": {
+      "applicable": 205534,
+      "produced": 205107,
+      "failed": 427,
+      "enum_violations": 0,
+      "fail_examples": [
+        "35 Production Avenue MOLENDINAR QLD 4214 QLD 4212",
+        "63 Winara Ave Waikanae Wellington 5036",
+        "20 George Young Street Auburn New South Wales 2144",
+        "20 George Young Street Auburn New South Wales 2144",
+        "1 Hulls Rd Mooball New South Wales 2483",
+        "1 Hulls Rd Mooball New South Wales 2483"
+      ],
+      "value_examples": [
+        "Manly West",
+        "Ashmore",
+        "Palmview",
+        "Bardon"
+      ],
+      "raw_examples": [
+        "4 CRESWICK CLOSE MANLY WEST QLD 4179",
+        "2 ROBA PLACE ASHMORE QLD 4214",
+        "12 Sunny St Palmview QLD 4553",
+        "11 Couldrey St Bardon QLD 4065"
+      ],
+      "fail_rate": 0.002,
+      "enum_violation_rate": 0.0
+    },
+    "address.state": {
+      "applicable": 205534,
+      "produced": 205406,
+      "failed": 128,
+      "enum_violations": 0,
+      "fail_examples": [
+        "63 Winara Ave Waikanae Wellington 5036",
+        "550 MASSEY ROAD MANGERE   AUCKLAND NZ ..",
+        "110A Norfolk Street St Clair Dunedin 9012",
+        "3 Deborah Court Andergrove Mackay 4740",
+        "3 Deborah Court Andergrove Mackay 4740",
+        "159 Torquay Street Kaikoura South Island 7300"
+      ],
+      "value_examples": [
+        "QLD",
+        "NSW",
+        "WA",
+        "SA"
+      ],
+      "raw_examples": [
+        "4 CRESWICK CLOSE MANLY WEST QLD 4179",
+        "23 FAIRWINDS AVE LAKEWOOD NSW 2443",
+        "3B Rivergum Ave Broome WA 6725",
+        "12 Simpson Avenue ENCOUNTER BAY SA 5211"
+      ],
+      "fail_rate": 0.001,
+      "enum_violation_rate": 0.0
+    },
+    "address.postcode": {
+      "applicable": 205534,
+      "produced": 205477,
+      "failed": 57,
+      "enum_violations": 0,
+      "fail_examples": [
+        "550 MASSEY ROAD MANGERE   AUCKLAND NZ ..",
+        "108 Estramina Rd Regents Park QLD 418",
+        "108 Estramina Rd Regents Park QLD 418",
+        "108 Estramina Rd Regents Park QLD 418",
+        "108 Estramina Rd Regents Park QLD 418",
+        "104 Chadwell Heath Lane\nChadwell Heath Romford ENG RM6"
+      ],
+      "value_examples": [
+        "4179",
+        "4214",
+        "4553",
+        "4065"
+      ],
+      "raw_examples": [
+        "4 CRESWICK CLOSE MANLY WEST QLD 4179",
+        "2 ROBA PLACE ASHMORE QLD 4214",
+        "12 Sunny St Palmview QLD 4553",
+        "11 Couldrey St Bardon QLD 4065"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.country": {
+      "applicable": 205535,
+      "produced": 205535,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "AU"
+      ],
+      "raw_examples": [
+        "4 CRESWICK CLOSE MANLY WEST QLD 4179"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "person.full_name": {
+      "applicable": 156991,
+      "produced": 156991,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "SHANE ANTHONY ROLFE",
+        "DAVID GLEN EDWARDS",
+        "NATHAN THOMPSON",
+        "TONY JOHN ROCHE"
+      ],
+      "raw_examples": [
+        "SHANE ANTHONY ROLFE",
+        "DAVID GLEN EDWARDS",
+        "NATHAN THOMPSON",
+        "TONY JOHN ROCHE"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "person.role": {
+      "applicable": 156991,
+      "produced": 156991,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "licensee"
+      ],
+      "raw_examples": [
+        "I"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.licence_number": {
+      "applicable": 205535,
+      "produced": 205535,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "1043557",
+        "1153146",
+        "1295044",
+        "709750"
+      ],
+      "raw_examples": [
+        "1043557",
+        "1153146",
+        "1295044",
+        "709750"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.licence_type": {
+      "applicable": 205535,
+      "produced": 205535,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "building",
+        "other"
+      ],
+      "raw_examples": [
+        "Nominee Supervisor",
+        "Fire Occupational"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.authorisations": {
+      "applicable": 205535,
+      "produced": 205535,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Plumbing and Drainage",
+        "Gasfitting",
+        "Builder Restricted to Kitchen, Bathroom and Laundry Installation",
+        "Builder - Low Rise"
+      ],
+      "raw_examples": [
+        "Plumbing and Drainage",
+        "Gasfitting",
+        "Builder Restricted to Kitchen, Bathroom and Laundry Installation",
+        "Builder - Low Rise"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.abn": {
+      "applicable": 112981,
+      "produced": 112001,
+      "failed": 980,
+      "enum_violations": 0,
+      "fail_examples": [
+        "92 839 560 926",
+        "79 894 597 045",
+        "84 101 835 364",
+        "45 779 036 042",
+        "45 779 036 042",
+        "45 779 036 042"
+      ],
+      "value_examples": [
+        "77341770421",
+        "26025458538",
+        "51562310991",
+        "34324073790"
+      ],
+      "raw_examples": [
+        "77 341 770 421",
+        "26 025 458 538",
+        "51 562 310 991",
+        "34 324 073 790"
+      ],
+      "fail_rate": 0.009,
+      "enum_violation_rate": 0.0
+    },
+    "entity.acn": {
+      "applicable": 48536,
+      "produced": 48237,
+      "failed": 299,
+      "enum_violations": 0,
+      "fail_examples": [
+        "633 596 696",
+        "633 596 696",
+        "634 403 891",
+        "974 536 684",
+        "974 536 684",
+        "669 790 822"
+      ],
+      "value_examples": [
+        "104844957",
+        "656987325",
+        "630813811",
+        "166544912"
+      ],
+      "raw_examples": [
+        "104 844 957",
+        "656 987 325",
+        "630 813 811",
+        "166 544 912"
+      ],
+      "fail_rate": 0.006,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.0,
+  "observed_at_fallback_rate": 1.0
+}

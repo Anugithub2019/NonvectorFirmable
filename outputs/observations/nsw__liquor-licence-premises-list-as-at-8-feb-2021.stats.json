@@ -1,0 +1,213 @@
+{
+  "source_id": "nsw:liquor-licence-premises-list-as-at-8-feb-2021",
+  "extractor_version": "engine=0.1.2;config=nsw:liquor-licence-premises-list-as-at-8-feb-2021@v1;sha=edde09bebc",
+  "input_rows": 18747,
+  "sampled_rows": 18747,
+  "sample": "random",
+  "seed": 7,
+  "observations": 143764,
+  "stats": {
+    "records": 18747,
+    "filtered": 0,
+    "duplicate_ids": 20,
+    "observed_at_fallback": 18747,
+    "records_without_entity_claims": 0
+  },
+  "fields": {
+    "entity.legal_name": {
+      "applicable": 6542,
+      "produced": 6542,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "CHARLESTOWN GOLF CLUB LTD",
+        "BAROOGA SPORTS CLUB LTD",
+        "MACLEAN-LOWER CLARENCE SERVICES CLUB LTD",
+        "FORSTER-TUNCURRY MEMORIAL SERVICES CLUB LTD"
+      ],
+      "raw_examples": [
+        "CHARLESTOWN GOLF CLUB LTD",
+        "BAROOGA SPORTS CLUB LTD",
+        "MACLEAN-LOWER CLARENCE SERVICES CLUB LTD",
+        "FORSTER-TUNCURRY MEMORIAL SERVICES CLUB LTD"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.trading_name": {
+      "applicable": 18747,
+      "produced": 18747,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Charlestown Golf Club Ltd",
+        "Barooga Sports Club Ltd",
+        "Maclean-Lower Clarence Services Club Ltd",
+        "Sporties Tuncurry"
+      ],
+      "raw_examples": [
+        "Charlestown Golf Club Ltd",
+        "Barooga Sports Club Ltd",
+        "Maclean-Lower Clarence Services Club Ltd",
+        "Sporties Tuncurry"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 6450,
+      "produced": 6450,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "company",
+        "incorporated_association",
+        "trust"
+      ],
+      "raw_examples": [
+        "CHARLESTOWN GOLF CLUB LTD",
+        "DENMAN CO OPERATIVE BOWLING CLUB INC",
+        "R & M Management P/L ATF Roxbury Hotel Trust"
+      ],
+      "abstained": 12297,
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.status": {
+      "applicable": 18747,
+      "produced": 18747,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "active",
+        "unknown"
+      ],
+      "raw_examples": [
+        "Current",
+        "Suspended"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.full": {
+      "applicable": 18747,
+      "produced": 18595,
+      "failed": 152,
+      "enum_violations": 0,
+      "fail_examples": [
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL"
+      ],
+      "value_examples": [
+        "1A Barker Ave",
+        "12 Burkinshaw St",
+        "36-38 River St",
+        "Beach St"
+      ],
+      "raw_examples": [
+        "1A Barker Ave",
+        "12 Burkinshaw St",
+        "36-38 River St",
+        "Beach St"
+      ],
+      "fail_rate": 0.008,
+      "enum_violation_rate": 0.0
+    },
+    "address.locality": {
+      "applicable": 18747,
+      "produced": 18595,
+      "failed": 152,
+      "enum_violations": 0,
+      "fail_examples": [
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL"
+      ],
+      "value_examples": [
+        "Hillsborough",
+        "Barooga",
+        "Maclean",
+        "Tuncurry"
+      ],
+      "raw_examples": [
+        "HILLSBOROUGH",
+        "BAROOGA",
+        "MACLEAN",
+        "TUNCURRY"
+      ],
+      "fail_rate": 0.008,
+      "enum_violation_rate": 0.0
+    },
+    "address.postcode": {
+      "applicable": 18747,
+      "produced": 18594,
+      "failed": 153,
+      "enum_violations": 0,
+      "fail_examples": [
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL"
+      ],
+      "value_examples": [
+        "2290",
+        "3644",
+        "2463",
+        "2428"
+      ],
+      "raw_examples": [
+        "2290",
+        "3644",
+        "2463",
+        "2428"
+      ],
+      "fail_rate": 0.008,
+      "enum_violation_rate": 0.0
+    },
+    "address.state": {
+      "applicable": 18747,
+      "produced": 18747,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "NSW"
+      ],
+      "raw_examples": [
+        "HILLSBOROUGH"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.country": {
+      "applicable": 18747,
+      "produced": 18747,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "AU"
+      ],
+      "raw_examples": [
+        "HILLSBOROUGH"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.001,
+  "observed_at_fallback_rate": 1.0
+}

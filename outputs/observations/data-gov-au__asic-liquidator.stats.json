@@ -1,0 +1,267 @@
+{
+  "source_id": "data.gov.au:asic-liquidator",
+  "extractor_version": "engine=0.1.2;config=data.gov.au:asic-liquidator@v1;sha=f9da15b69e",
+  "input_rows": 662,
+  "sampled_rows": 662,
+  "sample": "random",
+  "seed": 7,
+  "observations": 8282,
+  "stats": {
+    "records": 662,
+    "filtered": 0,
+    "duplicate_ids": 0,
+    "observed_at_fallback": 662,
+    "records_without_entity_claims": 662
+  },
+  "fields": {
+    "person.full_name": {
+      "applicable": 662,
+      "produced": 662,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "ABBOTT, LACHLAN CHARLES MACARTHUR",
+        "ABEYRATNE, JEREMY ROBERT",
+        "AGOSTINO, ANNA",
+        "ALBARRAN, RICHARD"
+      ],
+      "raw_examples": [
+        "ABBOTT, LACHLAN CHARLES MACARTHUR",
+        "ABEYRATNE, JEREMY ROBERT",
+        "AGOSTINO, ANNA",
+        "ALBARRAN, RICHARD"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "person.registration_number": {
+      "applicable": 662,
+      "produced": 662,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "480116",
+        "423914",
+        "548548",
+        "190669"
+      ],
+      "raw_examples": [
+        "480116",
+        "423914",
+        "548548",
+        "190669"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "person.role": {
+      "applicable": 662,
+      "produced": 662,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "liquidator"
+      ],
+      "raw_examples": [
+        "Liquidator"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.licence_number": {
+      "applicable": 662,
+      "produced": 662,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "480116",
+        "423914",
+        "548548",
+        "190669"
+      ],
+      "raw_examples": [
+        "480116",
+        "423914",
+        "548548",
+        "190669"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.licence_type": {
+      "applicable": 662,
+      "produced": 662,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "other"
+      ],
+      "raw_examples": [
+        "Liquidator"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.status": {
+      "applicable": 662,
+      "produced": 662,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "current",
+        "unknown"
+      ],
+      "raw_examples": [
+        "APPR",
+        "SUSP"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.start_date": {
+      "applicable": 662,
+      "produced": 662,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "2015-11-18",
+        "2012-08-14",
+        "2023-06-30",
+        "1999-08-19"
+      ],
+      "raw_examples": [
+        "18/11/2015",
+        "14/08/2012",
+        "30/06/2023",
+        "19/08/1999"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.locality": {
+      "applicable": 660,
+      "produced": 660,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Canberra",
+        "South Melbourne",
+        "Adelaide",
+        "Sydney"
+      ],
+      "raw_examples": [
+        "CANBERRA",
+        "SOUTH MELBOURNE",
+        "ADELAIDE",
+        "SYDNEY"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.state": {
+      "applicable": 660,
+      "produced": 660,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "ACT",
+        "VIC",
+        "SA",
+        "NSW"
+      ],
+      "raw_examples": [
+        "ACT",
+        "VIC",
+        "SA",
+        "NSW"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.postcode": {
+      "applicable": 660,
+      "produced": 660,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "2601",
+        "3205",
+        "5000",
+        "2000"
+      ],
+      "raw_examples": [
+        "2601",
+        "3205",
+        "5000",
+        "2000"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.country": {
+      "applicable": 662,
+      "produced": 662,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "AU",
+        "OTHER"
+      ],
+      "raw_examples": [
+        "Australia",
+        "International"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "related_party.name": {
+      "applicable": 503,
+      "produced": 503,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "KORDAMENTHA",
+        "CH ADVISORY PTY LTD",
+        "HALL CHADWICK",
+        "SMITH HANCOCK"
+      ],
+      "raw_examples": [
+        "KORDAMENTHA",
+        "CH ADVISORY PTY LTD",
+        "HALL CHADWICK",
+        "SMITH HANCOCK"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "related_party.relationship": {
+      "applicable": 503,
+      "produced": 503,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "employs"
+      ],
+      "raw_examples": [
+        "KORDAMENTHA"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.0,
+  "observed_at_fallback_rate": 1.0
+}

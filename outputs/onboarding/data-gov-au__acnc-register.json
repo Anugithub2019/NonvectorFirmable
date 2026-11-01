@@ -1,0 +1,190 @@
+{
+  "source_id": "data.gov.au:acnc-register",
+  "status": "done",
+  "error": null,
+  "steps_executed": 17,
+  "llm_calls": 9,
+  "tokens_in": 80634,
+  "tokens_out": 43088,
+  "usd": 0.5078,
+  "agent_wall_clock_secs": 196.6,
+  "inspect_attempts": 2,
+  "revisions": 2,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 1,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 2,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 3
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    },
+    {
+      "iteration": 1,
+      "node": "revise",
+      "changes": "Updated record envelope properties (observed_at, valid_from, valid_to) to comply with JSON schema requirements. Updated entity.trading_name mapping to split delimited values on commas/semicolons and strip administrative notes like 'Previously known as' and ABN references using regex_replace."
+    },
+    {
+      "iteration": 2,
+      "node": "revise",
+      "changes": "1. Corrected `entity.trading_name` regex pattern to remove notes like 'Previously known as', 'former name', and ABN fragments without matching rest-of-string (.*), preserving valid former names. 2. Updated `address.country` map_values transform with explicit default null to prevent non-Australian countries (e.g. Austria, Aruba) from defaulting to AU."
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 1.47,
+      "calls": 1,
+      "in": 349,
+      "out": 75,
+      "usd": 0.0003
+    },
+    {
+      "node": "download",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 6.36,
+      "calls": 1,
+      "in": 2253,
+      "out": 1035,
+      "usd": 0.0127
+    },
+    {
+      "node": "try_read",
+      "secs": 0.04,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 6.68,
+      "calls": 1,
+      "in": 4471,
+      "out": 1012,
+      "usd": 0.0158
+    },
+    {
+      "node": "try_read",
+      "secs": 0.03,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.51,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 54.68,
+      "calls": 1,
+      "in": 18124,
+      "out": 12749,
+      "usd": 0.1419
+    },
+    {
+      "node": "validate",
+      "secs": 11.65,
+      "calls": 1,
+      "in": 3949,
+      "out": 2147,
+      "usd": 0.0252
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 38.96,
+      "calls": 1,
+      "in": 21705,
+      "out": 9112,
+      "usd": 0.1146
+    },
+    {
+      "node": "validate",
+      "secs": 26.49,
+      "calls": 1,
+      "in": 3952,
+      "out": 5808,
+      "usd": 0.0582
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 38.3,
+      "calls": 1,
+      "in": 21922,
+      "out": 9110,
+      "usd": 0.1149
+    },
+    {
+      "node": "validate",
+      "secs": 11.4,
+      "calls": 1,
+      "in": 3909,
+      "out": 2040,
+      "usd": 0.0242
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "emit",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 9,
+  "config_path": "configs/data-gov-au__acnc-register.yaml"
+}

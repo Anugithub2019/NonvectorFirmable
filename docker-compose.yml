@@ -1,0 +1,60 @@
+# Neo4j for the resolved graph. `docker compose up -d`, then http://localhost:7474 (neo4j / firmable-graph).
+services:
+  neo4j:
+    image: neo4j:5.26-community
+    container_name: firmable-neo4j
+    ports:
+      - "7474:7474"   # browser
+      - "7687:7687"   # bolt
+    environment:
+      NEO4J_AUTH: neo4j/firmable-graph
+      NEO4J_server_memory_heap_max__size: 2G
+      NEO4J_server_memory_pagecache_size: 1G
+    volumes:
+      # a named volume, not a bind mount: Lucene (full-text index) cannot create lock files on
+      # macOS bind mounts, and the index silently fails
+      - neo4j_data:/data
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:7474"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  # Scratch Neo4j for the loader's integration tests (tests/test_loader.py): no volume, separate ports,
+  # so the tests never touch the real graph. `docker compose --profile test up -d neo4j-test`
+  neo4j-test:
+    profiles: ["test"]
+    image: neo4j:5.26-community
+    container_name: firmable-neo4j-test
+    ports:
+      - "7475:7474"
+      - "7688:7687"
+    environment:
+      NEO4J_AUTH: neo4j/firmable-graph
+      NEO4J_server_memory_heap_max__size: 512M
+      NEO4J_server_memory_pagecache_size: 256M
+
+  # The demo app. `docker compose --profile demo up` once data/firmable.duckdb and the graph exist.
+  demo:
+    profiles: ["demo"]
+    build:
+      context: .
+      dockerfile: demo/Dockerfile
+    container_name: firmable-demo
+    ports:
+      - "8501:8501"
+    environment:
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: firmable-graph
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+    volumes:
+      - ./data/firmable.duckdb:/app/data/firmable.duckdb:ro
+      - ./outputs:/app/outputs
+    depends_on:
+      neo4j:
+        condition: service_healthy
+
+volumes:
+  neo4j_data:

@@ -1,0 +1,64 @@
+{
+  "schema": null,
+  "parties": {
+    "nodes_created": 0,
+    "relationships_created": 0,
+    "properties_set": 7752096
+  },
+  "names": {
+    "nodes_created": 0,
+    "relationships_created": 0,
+    "properties_set": 3122528,
+    "hot_names_over_50": [
+      {
+        "name": "OF SYNOD OF DIOCESE OF BRISBANE",
+        "d": 136
+      },
+      {
+        "name": "THIS CHARITY HAS A SUB ENTITY",
+        "d": 56
+      },
+      {
+        "name": "OF DIOCESAN SYNOD OF NORTH QUEENSLAND",
+        "d": 51
+      }
+    ]
+  },
+  "source_records": {
+    "nodes_created": 0,
+    "relationships_created": 0,
+    "properties_set": 7875628
+  },
+  "licences": {
+    "nodes_created": 0,
+    "relationships_created": 0,
+    "properties_set": 2821598
+  },
+  "bans": {
+    "nodes_created": 0,
+    "relationships_created": 0,
+    "properties_set": 180
+  },
+  "related": {
+    "nodes_created": 0,
+    "relationships_created": 0,
+    "properties_set": 34960,
+    "unresolved_related_parties": 0
+  },
+  "reconcile": {
+    "edges_deleted": 7,
+    "nodes_deleted": 28461,
+    "orphan_names_deleted": 0,
+    "load_id": "20261101T094912Z-3b2fb9"
+  },
+  "timing": {
+    "schema": 0.1,
+    "parties": 27.3,
+    "names": 22.0,
+    "source_records": 26.3,
+    "licences": 8.4,
+    "bans": 0.1,
+    "related": 0.8,
+    "reconcile": 2.7
+  }
+}

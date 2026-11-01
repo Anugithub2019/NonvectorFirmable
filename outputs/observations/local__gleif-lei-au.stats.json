@@ -1,0 +1,287 @@
+{
+  "source_id": "local:gleif-lei-au",
+  "extractor_version": "engine=0.1.2;config=local:gleif-lei-au@v1;sha=9f6187f4c5",
+  "input_rows": 53604,
+  "sampled_rows": 53604,
+  "sample": "random",
+  "seed": 7,
+  "observations": 570008,
+  "stats": {
+    "records": 53604,
+    "filtered": 0,
+    "duplicate_ids": 0,
+    "observed_at_fallback": 0,
+    "records_without_entity_claims": 0
+  },
+  "fields": {
+    "entity.lei": {
+      "applicable": 53604,
+      "produced": 53604,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "037GETVS7WPFMPPA7255",
+        "043NKOKWBKLYFE6S8782",
+        "0C45RG70GW42XSBLJ131",
+        "0E8MS427R1B26UCPQ345"
+      ],
+      "raw_examples": [
+        "037GETVS7WPFMPPA7255",
+        "043NKOKWBKLYFE6S8782",
+        "0C45RG70GW42XSBLJ131",
+        "0E8MS427R1B26UCPQ345"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.legal_name": {
+      "applicable": 53604,
+      "produced": 53604,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "AQR R.C. EQUITY AUSTRALIA FUND",
+        "Wellington Global Research Equity Fund (Australia)",
+        "CITIGROUP PTY LIMITED",
+        "ADVANCE INTERNATIONAL FIXED INTEREST MULTI-BLEND FUND"
+      ],
+      "raw_examples": [
+        "AQR R.C. EQUITY AUSTRALIA FUND",
+        "Wellington Global Research Equity Fund (Australia)",
+        "CITIGROUP PTY LIMITED",
+        "ADVANCE INTERNATIONAL FIXED INTEREST MULTI-BLEND FUND"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.status": {
+      "applicable": 53604,
+      "produced": 53386,
+      "failed": 218,
+      "enum_violations": 0,
+      "fail_examples": [
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL",
+        "NULL"
+      ],
+      "value_examples": [
+        "active",
+        "unknown"
+      ],
+      "raw_examples": [
+        "ACTIVE",
+        "INACTIVE"
+      ],
+      "fail_rate": 0.004,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 48549,
+      "produced": 48549,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "company",
+        "trust",
+        "incorporated_association"
+      ],
+      "raw_examples": [
+        "CITIGROUP PTY LIMITED",
+        "COL HECTOR MACNEAL'S TESTAMENTARY TRUST",
+        "Adelaide Community Healthcare Alliance Incorporated"
+      ],
+      "abstained": 5055,
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.acn": {
+      "applicable": 36826,
+      "produced": 36787,
+      "failed": 39,
+      "enum_violations": 0,
+      "fail_examples": [
+        "798 345 624",
+        "975 787 909",
+        "559 236 982",
+        "165 948 985",
+        "001 270 179",
+        "936 722 406"
+      ],
+      "value_examples": [
+        "122673698",
+        "004325080",
+        "094108924",
+        "102616268"
+      ],
+      "raw_examples": [
+        "122 673 698",
+        "004 325 080",
+        "094 108 924",
+        "102 616 268"
+      ],
+      "fail_rate": 0.001,
+      "enum_violation_rate": 0.0
+    },
+    "address.full": {
+      "applicable": 53604,
+      "produced": 53604,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Level 12,Angel Place,123 Pitt Street",
+        "C/O Macquarie Investment Management Ltd,No. 50 Martin Place",
+        "2-26 PARK STREET",
+        "Collins Square, Level 15, 727 Collins Street"
+      ],
+      "raw_examples": [
+        "Level 12,Angel Place,123 Pitt Street",
+        "C/O Macquarie Investment Management Ltd,No. 50 Martin Place",
+        "2-26 PARK STREET",
+        "Collins Square, Level 15, 727 Collins Street"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.locality": {
+      "applicable": 53604,
+      "produced": 53604,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Sydney",
+        "SYDNEY",
+        "Docklands",
+        "Melbourne"
+      ],
+      "raw_examples": [
+        "Sydney",
+        "SYDNEY",
+        "Docklands",
+        "Melbourne"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.state": {
+      "applicable": 50506,
+      "produced": 50506,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "NSW",
+        "VIC",
+        "WA",
+        "QLD"
+      ],
+      "raw_examples": [
+        "AU-NSW",
+        "AU-VIC",
+        "AU-WA",
+        "AU-QLD"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.postcode": {
+      "applicable": 53582,
+      "produced": 53578,
+      "failed": 4,
+      "enum_violations": 0,
+      "fail_examples": [
+        "AUSTRALIA",
+        "WA5 H8Y",
+        "NSW",
+        "03144"
+      ],
+      "value_examples": [
+        "2000",
+        "3008",
+        "2060",
+        "3121"
+      ],
+      "raw_examples": [
+        "2000",
+        "3008",
+        "2060",
+        "3121"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.country": {
+      "applicable": 53604,
+      "produced": 53604,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "AU"
+      ],
+      "raw_examples": [
+        "AU"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.date_registered": {
+      "applicable": 45057,
+      "produced": 45057,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "1954-08-31T00:00:00",
+        "2000-08-21T00:00:00",
+        "2002-11-03T23:00:00",
+        "1982-01-19T23:00:00"
+      ],
+      "raw_examples": [
+        "1954-08-31T00:00:00Z",
+        "2000-08-21T00:00:00Z",
+        "2002-11-03T23:00:00Z",
+        "1982-01-19T23:00:00Z"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.abn": {
+      "applicable": 14147,
+      "produced": 14125,
+      "failed": 22,
+      "enum_violations": 0,
+      "fail_examples": [
+        "34 084 747 347",
+        "00 663 474 191",
+        "52 615 880 218",
+        "71 108 676 764",
+        "48 169 481 819",
+        "51 144 249 490"
+      ],
+      "value_examples": [
+        "86622680362",
+        "51069691676",
+        "51319818305",
+        "64961646568"
+      ],
+      "raw_examples": [
+        "86 622 680 362",
+        "51 069 691 676",
+        "51 319 818 305",
+        "64 961 646 568"
+      ],
+      "fail_rate": 0.002,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.0,
+  "observed_at_fallback_rate": 0.0
+}

@@ -1,0 +1,185 @@
+{
+  "source_id": "local:gleif-relationships",
+  "status": "done",
+  "error": null,
+  "steps_executed": 15,
+  "llm_calls": 30,
+  "tokens_in": 54243,
+  "tokens_out": 31839,
+  "usd": 0.3635,
+  "agent_wall_clock_secs": 133.1,
+  "inspect_attempts": 1,
+  "revisions": 3,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 2
+    },
+    {
+      "iteration": 1,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 2,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 2
+    },
+    {
+      "iteration": 3,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 1
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    },
+    {
+      "iteration": 1,
+      "node": "revise",
+      "changes": "Mapped entity.legal_name to child_lei to resolve blocking issue where no identifying field (legal_name/trading_name/abn/acn) was mapped. Removed empty related_party.valid_to field mapping to address zero-emission warning, keeping valid_to in record.valid_to envelope."
+    },
+    {
+      "iteration": 2,
+      "node": "revise",
+      "changes": "Removed mapping from child_lei to entity.legal_name to resolve blocking critic feedback, as LEIs are alphanumeric identifiers rather than legal names. Mapped valid_to to related_party.valid_to."
+    },
+    {
+      "iteration": 3,
+      "node": "revise",
+      "changes": "1. Mapped child_lei to entity.legal_name to resolve blocking issue 'no identifying field mapped'. 2. Moved valid_to to unmapped to fix 0-production warning. 3. Formatted transform parameters as valid args_json strings."
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "download",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 7.03,
+      "calls": 1,
+      "in": 1941,
+      "out": 896,
+      "usd": 0.011
+    },
+    {
+      "node": "try_read",
+      "secs": 0.02,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.04,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 20.22,
+      "calls": 1,
+      "in": 6390,
+      "out": 4342,
+      "usd": 0.0487
+    },
+    {
+      "node": "validate",
+      "secs": 2.19,
+      "calls": 5,
+      "in": 3022,
+      "out": 105,
+      "usd": 0.0001
+    },
+    {
+      "node": "revise",
+      "secs": 31.0,
+      "calls": 1,
+      "in": 8055,
+      "out": 6821,
+      "usd": 0.0735
+    },
+    {
+      "node": "validate",
+      "secs": 7.73,
+      "calls": 7,
+      "in": 6257,
+      "out": 979,
+      "usd": 0.0117
+    },
+    {
+      "node": "revise",
+      "secs": 21.04,
+      "calls": 1,
+      "in": 8108,
+      "out": 4594,
+      "usd": 0.0535
+    },
+    {
+      "node": "validate",
+      "secs": 1.57,
+      "calls": 5,
+      "in": 3022,
+      "out": 105,
+      "usd": 0.0001
+    },
+    {
+      "node": "revise",
+      "secs": 32.81,
+      "calls": 1,
+      "in": 8045,
+      "out": 6968,
+      "usd": 0.0748
+    },
+    {
+      "node": "validate",
+      "secs": 9.43,
+      "calls": 7,
+      "in": 6205,
+      "out": 1153,
+      "usd": 0.0132
+    },
+    {
+      "node": "review",
+      "secs": 42.09,
+      "calls": 1,
+      "in": 3198,
+      "out": 5876,
+      "usd": 0.0769
+    },
+    {
+      "node": "emit",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 10,
+  "config_path": "configs/local__gleif-relationships.yaml"
+}

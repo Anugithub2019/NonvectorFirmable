@@ -1,0 +1,267 @@
+{
+  "source_id": "qld:ehp-suitable-operator-register-sor-for-environmentally-relevant-activities-eras",
+  "extractor_version": "engine=0.1.2;config=qld:ehp-suitable-operator-register-sor-for-environmentally-relevant-activities-eras@v1;sha=708809aefe",
+  "input_rows": 15128,
+  "sampled_rows": 15128,
+  "sample": "random",
+  "seed": 7,
+  "observations": 144263,
+  "stats": {
+    "records": 15128,
+    "filtered": 0,
+    "duplicate_ids": 0,
+    "observed_at_fallback": 15128,
+    "records_without_entity_claims": 0
+  },
+  "fields": {
+    "entity.legal_name": {
+      "applicable": 15128,
+      "produced": 15128,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "\"OVER THE TOP\" ROOF RESTORATIONS PTY. LTD",
+        "$Uccess Pty Ltd",
+        "111 TRADING GROUP PTY LTD",
+        "1205 PTY LTD"
+      ],
+      "raw_examples": [
+        "\"OVER THE TOP\" ROOF RESTORATIONS PTY. LTD",
+        "$Uccess Pty Ltd",
+        "111 TRADING GROUP PTY LTD",
+        "1205 PTY LTD"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 15128,
+      "produced": 15128,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "company",
+        "sole_trader",
+        "incorporated_association",
+        "government"
+      ],
+      "raw_examples": [
+        "Corporation (Company)",
+        "An individual or Sole trader",
+        "Incorporated Association",
+        "Local Government Authority"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.acn": {
+      "applicable": 8087,
+      "produced": 7922,
+      "failed": 165,
+      "enum_violations": 0,
+      "fail_examples": [
+        "ACN 14631562957",
+        "ACN 10183534",
+        "ACN 89206324",
+        "ACN 000119434",
+        "ACN 10028850",
+        "ACN 8713791"
+      ],
+      "value_examples": [
+        "090444714",
+        "600137942",
+        "688234362",
+        "669387562"
+      ],
+      "raw_examples": [
+        "ACN 090444714",
+        "ACN 600137942",
+        "ACN 688234362",
+        "ACN 669387562"
+      ],
+      "fail_rate": 0.02,
+      "enum_violation_rate": 0.0
+    },
+    "entity.status": {
+      "applicable": 15128,
+      "produced": 15128,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "active"
+      ],
+      "raw_examples": [
+        "Registered"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.date_registered": {
+      "applicable": 15128,
+      "produced": 15128,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "2013-03-26",
+        "2014-12-18",
+        "2026-03-27",
+        "2024-10-15"
+      ],
+      "raw_examples": [
+        "2013-03-26 00:00:00",
+        "2014-12-18 00:00:00",
+        "2026-03-27 00:00:00",
+        "2024-10-15 00:00:00"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.full": {
+      "applicable": 15114,
+      "produced": 15114,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "BIRTINYA, QLD, 4575",
+        "KELSO, QLD, 4815",
+        "ROCKLEA, QLD, 4106",
+        "ORMOND, VIC, 3204"
+      ],
+      "raw_examples": [
+        "BIRTINYA, QLD, 4575",
+        "KELSO, QLD, 4815",
+        "ROCKLEA, QLD, 4106",
+        "ORMOND, VIC, 3204"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.locality": {
+      "applicable": 15114,
+      "produced": 15114,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Birtinya",
+        "Kelso",
+        "Rocklea",
+        "Ormond"
+      ],
+      "raw_examples": [
+        "BIRTINYA, QLD, 4575",
+        "KELSO, QLD, 4815",
+        "ROCKLEA, QLD, 4106",
+        "ORMOND, VIC, 3204"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.state": {
+      "applicable": 15114,
+      "produced": 15073,
+      "failed": 41,
+      "enum_violations": 0,
+      "fail_examples": [
+        "SLACKS CREEK, 4127",
+        "BRISBANE CITY, 4000",
+        "CALGARY, ALBERTA, T2P 0S8, CANADA",
+        "AUSTIN, TEXAS, 78733, USA",
+        "BURLEIGH HEADS, 4220",
+        "NOT DISCLOSED"
+      ],
+      "value_examples": [
+        "QLD",
+        "VIC",
+        "NSW",
+        "WA"
+      ],
+      "raw_examples": [
+        "BIRTINYA, QLD, 4575",
+        "ORMOND, VIC, 3204",
+        "SYDNEY, NSW, 2000",
+        "PERTH, WA, 6000"
+      ],
+      "fail_rate": 0.003,
+      "enum_violation_rate": 0.0
+    },
+    "address.postcode": {
+      "applicable": 15114,
+      "produced": 15100,
+      "failed": 14,
+      "enum_violations": 0,
+      "fail_examples": [
+        "CALGARY, ALBERTA, T2P 0S8, CANADA",
+        "AUSTIN, TEXAS, 78733, USA",
+        "NOT DISCLOSED",
+        "88131 LINDAU, , GERMANY",
+        "NEW ZEALAND",
+        "WOKING, GU22, UNITED KINGDOM"
+      ],
+      "value_examples": [
+        "4575",
+        "4815",
+        "4106",
+        "3204"
+      ],
+      "raw_examples": [
+        "BIRTINYA, QLD, 4575",
+        "KELSO, QLD, 4815",
+        "ROCKLEA, QLD, 4106",
+        "ORMOND, VIC, 3204"
+      ],
+      "fail_rate": 0.001,
+      "enum_violation_rate": 0.0
+    },
+    "address.country": {
+      "applicable": 15128,
+      "produced": 15128,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "AU"
+      ],
+      "raw_examples": [
+        null
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.abn": {
+      "applicable": 306,
+      "produced": 300,
+      "failed": 6,
+      "enum_violations": 0,
+      "fail_examples": [
+        "ABN 608719955",
+        "ABN 103344887",
+        "ABN 623650304",
+        "ABN 62088432642",
+        "ABN 151966362",
+        "ABN 000016446"
+      ],
+      "value_examples": [
+        "71374710707",
+        "61250757901",
+        "91677856067",
+        "80769308350"
+      ],
+      "raw_examples": [
+        "ABN 71374710707",
+        "ABN 61250757901",
+        "ABN 91677856067",
+        "ABN 80769308350"
+      ],
+      "fail_rate": 0.02,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.0,
+  "observed_at_fallback_rate": 1.0
+}

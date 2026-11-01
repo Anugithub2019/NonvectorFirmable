@@ -1,0 +1,255 @@
+{
+  "source_id": "data.gov.au:asic-liquidator",
+  "status": "done",
+  "error": null,
+  "steps_executed": 21,
+  "llm_calls": 83,
+  "tokens_in": 120856,
+  "tokens_out": 42052,
+  "usd": 0.5049,
+  "agent_wall_clock_secs": 185.0,
+  "inspect_attempts": 1,
+  "revisions": 5,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": false,
+      "n_blocking": 5,
+      "n_warnings": 7
+    },
+    {
+      "iteration": 1,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 0
+    },
+    {
+      "iteration": 2,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 7
+    },
+    {
+      "iteration": 3,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 5
+    },
+    {
+      "iteration": 4,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 5
+    },
+    {
+      "iteration": 5,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 8
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    },
+    {
+      "iteration": 1,
+      "node": "revise",
+      "changes": "Added explicit map_values and au_state transforms across entity.status, person.role, licence.licence_type, licence.status, address.country, and related_party.relationship to convert raw source codes to valid canonical ontology enum values."
+    },
+    {
+      "iteration": 2,
+      "node": "revise",
+      "changes": "Replaced invalid map_values usage on related_party.relationship with the constant transform specifying value 'member_of'."
+    },
+    {
+      "iteration": 3,
+      "node": "revise",
+      "changes": "Removed mappings to entity.legal_name and entity.status to avoid misclassifying individual practitioners as corporate entities. Added 'not_empty' condition on LIQ_FIRM for related_party fields so incomplete relationship claims are not emitted for independent practitioners."
+    },
+    {
+      "iteration": 4,
+      "node": "revise",
+      "changes": "1. Applied constant transform 'member_of' to related_party.relationship to ensure outputs match the canonical enum rather than passing raw text firm names. 2. Added mapping for entity.legal_name from LIQ_NAME in compliance with Rule 9a, resolving the warning regarding records producing no identifying claims. 3. Fixed record envelope schema formatting."
+    },
+    {
+      "iteration": 5,
+      "node": "revise",
+      "changes": "Removed entity.legal_name mapping per human reviewer request. Configured constant transform with 'employs' for related_party.relationship."
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "download",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 8.26,
+      "calls": 1,
+      "in": 1956,
+      "out": 1392,
+      "usd": 0.0155
+    },
+    {
+      "node": "try_read",
+      "secs": 0.03,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.04,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 26.86,
+      "calls": 1,
+      "in": 7581,
+      "out": 5815,
+      "usd": 0.0637
+    },
+    {
+      "node": "validate",
+      "secs": 2.98,
+      "calls": 15,
+      "in": 8132,
+      "out": 315,
+      "usd": 0.0003
+    },
+    {
+      "node": "revise",
+      "secs": 20.79,
+      "calls": 1,
+      "in": 11315,
+      "out": 4562,
+      "usd": 0.058
+    },
+    {
+      "node": "validate",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 21.06,
+      "calls": 1,
+      "in": 9338,
+      "out": 5027,
+      "usd": 0.0592
+    },
+    {
+      "node": "validate",
+      "secs": 12.27,
+      "calls": 16,
+      "in": 11782,
+      "out": 2221,
+      "usd": 0.0231
+    },
+    {
+      "node": "revise",
+      "secs": 22.06,
+      "calls": 1,
+      "in": 10955,
+      "out": 4990,
+      "usd": 0.0613
+    },
+    {
+      "node": "validate",
+      "secs": 1.91,
+      "calls": 13,
+      "in": 7064,
+      "out": 273,
+      "usd": 0.0003
+    },
+    {
+      "node": "review",
+      "secs": 9.53,
+      "calls": 1,
+      "in": 2939,
+      "out": 1185,
+      "usd": 0.0201
+    },
+    {
+      "node": "revise",
+      "secs": 20.84,
+      "calls": 1,
+      "in": 10687,
+      "out": 4976,
+      "usd": 0.0608
+    },
+    {
+      "node": "validate",
+      "secs": 9.36,
+      "calls": 15,
+      "in": 11355,
+      "out": 1410,
+      "usd": 0.016
+    },
+    {
+      "node": "review",
+      "secs": 7.26,
+      "calls": 1,
+      "in": 3171,
+      "out": 783,
+      "usd": 0.0157
+    },
+    {
+      "node": "revise",
+      "secs": 20.37,
+      "calls": 1,
+      "in": 10823,
+      "out": 4841,
+      "usd": 0.0598
+    },
+    {
+      "node": "validate",
+      "secs": 18.14,
+      "calls": 14,
+      "in": 10478,
+      "out": 3212,
+      "usd": 0.0319
+    },
+    {
+      "node": "review",
+      "secs": 9.4,
+      "calls": 1,
+      "in": 3280,
+      "out": 1050,
+      "usd": 0.0192
+    },
+    {
+      "node": "emit",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 15,
+  "config_path": "configs/data-gov-au__asic-liquidator.yaml"
+}

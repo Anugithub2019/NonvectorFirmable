@@ -1,0 +1,144 @@
+{
+  "source_id": "local:gleif-relationships",
+  "extractor_version": "engine=0.1.2;config=local:gleif-relationships@v1;sha=b6e79ce043",
+  "input_rows": 6489,
+  "sampled_rows": 6489,
+  "sample": "random",
+  "seed": 7,
+  "observations": 33757,
+  "stats": {
+    "records": 6489,
+    "filtered": 0,
+    "duplicate_ids": 0,
+    "observed_at_fallback": 6489,
+    "records_without_entity_claims": 0
+  },
+  "fields": {
+    "entity.legal_name": {
+      "applicable": 6489,
+      "produced": 6489,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "020BQJXAXCZNLKIN7326",
+        "0C45RG70GW42XSBLJ131",
+        "0E8MS427R1B26UCPQ345",
+        "16ISV45UFDE7WHQMRT91"
+      ],
+      "raw_examples": [
+        "020BQJXAXCZNLKIN7326",
+        "0C45RG70GW42XSBLJ131",
+        "0E8MS427R1B26UCPQ345",
+        "16ISV45UFDE7WHQMRT91"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.lei": {
+      "applicable": 6489,
+      "produced": 6489,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "020BQJXAXCZNLKIN7326",
+        "0C45RG70GW42XSBLJ131",
+        "0E8MS427R1B26UCPQ345",
+        "16ISV45UFDE7WHQMRT91"
+      ],
+      "raw_examples": [
+        "020BQJXAXCZNLKIN7326",
+        "0C45RG70GW42XSBLJ131",
+        "0E8MS427R1B26UCPQ345",
+        "16ISV45UFDE7WHQMRT91"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "related_party.lei": {
+      "applicable": 6489,
+      "produced": 6489,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "549300PFEWKNHRG25N08",
+        "CYSD4L2598RQ9BPPCB72",
+        "6SHGI4ZSSLCXXQSBB395",
+        "549300QDV080OJUFAE97"
+      ],
+      "raw_examples": [
+        "549300PFEWKNHRG25N08",
+        "CYSD4L2598RQ9BPPCB72",
+        "6SHGI4ZSSLCXXQSBB395",
+        "549300QDV080OJUFAE97"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "related_party.relationship": {
+      "applicable": 6489,
+      "produced": 6489,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "ultimately_owned_by",
+        "owned_by",
+        "other"
+      ],
+      "raw_examples": [
+        "IS_ULTIMATELY_CONSOLIDATED_BY",
+        "IS_DIRECTLY_CONSOLIDATED_BY",
+        "IS_FUND-MANAGED_BY"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "related_party.valid_from": {
+      "applicable": 6489,
+      "produced": 6489,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "2018-03-01",
+        "2017-07-12",
+        "2021-05-27",
+        "2024-07-01"
+      ],
+      "raw_examples": [
+        "2018-03-01",
+        "2017-07-12",
+        "2021-05-27",
+        "2024-07-01"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "related_party.percent": {
+      "applicable": 1312,
+      "produced": 1312,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "80.00",
+        "100.00",
+        "55.00",
+        "51.00"
+      ],
+      "raw_examples": [
+        "80.00",
+        "100.00",
+        "55.00",
+        "51.00"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.0,
+  "observed_at_fallback_rate": 1.0
+}

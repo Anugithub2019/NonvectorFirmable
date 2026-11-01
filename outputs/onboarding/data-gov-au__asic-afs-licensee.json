@@ -1,0 +1,166 @@
+{
+  "source_id": "data.gov.au:asic-afs-licensee",
+  "status": "done",
+  "error": null,
+  "steps_executed": 14,
+  "llm_calls": 44,
+  "tokens_in": 77814,
+  "tokens_out": 24529,
+  "usd": 0.2999,
+  "agent_wall_clock_secs": 2760.5,
+  "inspect_attempts": 1,
+  "revisions": 2,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 3
+    },
+    {
+      "iteration": 1,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 2,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 1
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    },
+    {
+      "iteration": 1,
+      "node": "revise",
+      "changes": "Added 'when' regex conditions on AFS_LIC_ABN_ACN for both entity.abn (matching 11 digits) and entity.acn (matching 9 digits). Previously entity.acn attempted to parse 11-digit ABNs as ACNs, causing 97% transform failures. Updated all transforms to use args_json formatting compliant with schema."
+    },
+    {
+      "iteration": 2,
+      "node": "revise",
+      "changes": "Updated mapping target for AFS_LIC_CONDITION from licence.conditions to licence.authorisations based on reviewer feedback, as the column content details authorisation scope rather than licence restrictions/conditions."
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "download",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 9.21,
+      "calls": 1,
+      "in": 1723,
+      "out": 1247,
+      "usd": 0.0138
+    },
+    {
+      "node": "try_read",
+      "secs": 0.03,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.13,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 20.34,
+      "calls": 1,
+      "in": 7790,
+      "out": 4498,
+      "usd": 0.0522
+    },
+    {
+      "node": "validate",
+      "secs": 19.81,
+      "calls": 12,
+      "in": 8933,
+      "out": 252,
+      "usd": 0.0004
+    },
+    {
+      "node": "revise",
+      "secs": 30.86,
+      "calls": 1,
+      "in": 10606,
+      "out": 6777,
+      "usd": 0.0769
+    },
+    {
+      "node": "validate",
+      "secs": 2639.08,
+      "calls": 13,
+      "in": 16026,
+      "out": 2692,
+      "usd": 0.033
+    },
+    {
+      "node": "review",
+      "secs": 6.88,
+      "calls": 1,
+      "in": 3166,
+      "out": 732,
+      "usd": 0.0151
+    },
+    {
+      "node": "revise",
+      "secs": 15.79,
+      "calls": 1,
+      "in": 10483,
+      "out": 3409,
+      "usd": 0.0464
+    },
+    {
+      "node": "validate",
+      "secs": 25.2,
+      "calls": 13,
+      "in": 15957,
+      "out": 3946,
+      "usd": 0.0441
+    },
+    {
+      "node": "review",
+      "secs": 9.25,
+      "calls": 1,
+      "in": 3130,
+      "out": 976,
+      "usd": 0.018
+    },
+    {
+      "node": "emit",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 9,
+  "config_path": "configs/data-gov-au__asic-afs-licensee.yaml"
+}

@@ -1,0 +1,193 @@
+{
+  "source_id": "local:gleif-lei-au",
+  "status": "done",
+  "error": null,
+  "steps_executed": 16,
+  "llm_calls": 63,
+  "tokens_in": 108694,
+  "tokens_out": 43670,
+  "usd": 0.5154,
+  "agent_wall_clock_secs": 202.7,
+  "inspect_attempts": 1,
+  "revisions": 3,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": false,
+      "n_blocking": 3,
+      "n_warnings": 3
+    },
+    {
+      "iteration": 1,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 2
+    },
+    {
+      "iteration": 2,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 3,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 2
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    },
+    {
+      "iteration": 1,
+      "node": "revise",
+      "changes": "1. Fixed entity.abn and entity.acn failure rates by adding 'when' regex conditions matching digit counts (11 digits for ABN, 9 digits for ACN). 2. Fixed related_party.relationship enum validation failure by applying a 'constant' transform set to 'successor_of'. 3. Updated field confidences accordingly."
+    },
+    {
+      "iteration": 2,
+      "node": "revise",
+      "changes": "Removed related_party.lei and related_party.relationship mappings for successor; added successor to unmapped per human reviewer feedback. Added creation_date mapping to entity.date_registered."
+    },
+    {
+      "iteration": 3,
+      "node": "revise",
+      "changes": "1. Unmapped 'other_names' column as it contains mixed former legal names, trading names, and trustee designations that cannot be safely disambiguated. 2. Changed date parsing transform for creation_date to parse_datetime as requested."
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "download",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 6.62,
+      "calls": 1,
+      "in": 2781,
+      "out": 974,
+      "usd": 0.0129
+    },
+    {
+      "node": "try_read",
+      "secs": 0.05,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.27,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 30.82,
+      "calls": 1,
+      "in": 10621,
+      "out": 6908,
+      "usd": 0.0781
+    },
+    {
+      "node": "validate",
+      "secs": 7.3,
+      "calls": 14,
+      "in": 8237,
+      "out": 294,
+      "usd": 0.0003
+    },
+    {
+      "node": "revise",
+      "secs": 39.92,
+      "calls": 1,
+      "in": 14438,
+      "out": 9025,
+      "usd": 0.1029
+    },
+    {
+      "node": "validate",
+      "secs": 25.64,
+      "calls": 15,
+      "in": 12656,
+      "out": 4640,
+      "usd": 0.0462
+    },
+    {
+      "node": "review",
+      "secs": 20.81,
+      "calls": 1,
+      "in": 4098,
+      "out": 2330,
+      "usd": 0.0362
+    },
+    {
+      "node": "revise",
+      "secs": 23.56,
+      "calls": 1,
+      "in": 14039,
+      "out": 5304,
+      "usd": 0.0688
+    },
+    {
+      "node": "validate",
+      "secs": 26.4,
+      "calls": 14,
+      "in": 12057,
+      "out": 4478,
+      "usd": 0.0449
+    },
+    {
+      "node": "revise",
+      "secs": 25.49,
+      "calls": 1,
+      "in": 14024,
+      "out": 5503,
+      "usd": 0.0706
+    },
+    {
+      "node": "validate",
+      "secs": 16.62,
+      "calls": 13,
+      "in": 11398,
+      "out": 3164,
+      "usd": 0.0332
+    },
+    {
+      "node": "review",
+      "secs": 9.39,
+      "calls": 1,
+      "in": 4345,
+      "out": 1050,
+      "usd": 0.0213
+    },
+    {
+      "node": "emit",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 11,
+  "config_path": "configs/local__gleif-lei-au.yaml"
+}

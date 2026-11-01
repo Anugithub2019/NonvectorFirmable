@@ -1,0 +1,182 @@
+{
+  "source_id": "data.gov.au:asic-banned-disqualified-org",
+  "extractor_version": "engine=0.1.2;config=data.gov.au:asic-banned-disqualified-org@v1;sha=edbda5ffa6",
+  "input_rows": 15,
+  "sampled_rows": 15,
+  "sample": "random",
+  "seed": 7,
+  "observations": 107,
+  "stats": {
+    "records": 15,
+    "filtered": 0,
+    "duplicate_ids": 0,
+    "observed_at_fallback": 15,
+    "records_without_entity_claims": 0
+  },
+  "fields": {
+    "entity.legal_name": {
+      "applicable": 15,
+      "produced": 15,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "AUSTRALIAN BUSINESS INSURANCE ADVISERS (ABIA) PTY LTD",
+        "BLACKBURNE & DIXON PTY LTD",
+        "BRANNELLY FINANCIAL PTY LTD",
+        "CHARTER FINANCE AND INSURANCE PTY LTD"
+      ],
+      "raw_examples": [
+        "AUSTRALIAN BUSINESS INSURANCE ADVISERS (ABIA)\u00a0PTY LTD",
+        "BLACKBURNE & DIXON PTY LTD",
+        "BRANNELLY FINANCIAL\u00a0PTY LTD",
+        "CHARTER FINANCE\u00a0AND INSURANCE\u00a0PTY LTD"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.acn": {
+      "applicable": 15,
+      "produced": 15,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "081402379",
+        "008876033",
+        "011021640",
+        "052177009"
+      ],
+      "raw_examples": [
+        "081402379",
+        "008876033",
+        "011021640",
+        "052177009"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 15,
+      "produced": 15,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "company"
+      ],
+      "raw_examples": [
+        "AUSTRALIAN BUSINESS INSURANCE ADVISERS (ABIA)\u00a0PTY LTD"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "ban.ban_type": {
+      "applicable": 15,
+      "produced": 15,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Australian Financial Services banning",
+        "Credit banning by a State or Territory",
+        "Credit Banning",
+        "Credit banning"
+      ],
+      "raw_examples": [
+        "Australian Financial Services banning",
+        "Credit banning by a State or Territory",
+        "Credit Banning",
+        "Credit banning"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "ban.start_date": {
+      "applicable": 15,
+      "produced": 15,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "2006-11-07",
+        "2001-04-10",
+        "2009-02-09",
+        "2003-07-31"
+      ],
+      "raw_examples": [
+        "07/11/2006",
+        "10/04/2001",
+        "09/02/2009",
+        "31/07/2003"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "ban.end_date": {
+      "applicable": 6,
+      "produced": 5,
+      "failed": 1,
+      "enum_violations": 0,
+      "fail_examples": [
+        "Permanent banning"
+      ],
+      "value_examples": [
+        "2008-11-07",
+        "2015-02-08",
+        "2018-12-16",
+        "2017-06-24"
+      ],
+      "raw_examples": [
+        "07/11/2008",
+        "08/02/2015",
+        "16/12/2018",
+        "24/06/2017"
+      ],
+      "fail_rate": 0.167,
+      "enum_violation_rate": 0.0
+    },
+    "ban.issuing_authority": {
+      "applicable": 15,
+      "produced": 15,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Australian Securities and Investments Commission"
+      ],
+      "raw_examples": [
+        "Banned and Disqualified Organisations"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "ban.reference": {
+      "applicable": 15,
+      "produced": 12,
+      "failed": 3,
+      "enum_violations": 0,
+      "fail_examples": [
+        "Not available",
+        "Not available",
+        "Not available"
+      ],
+      "value_examples": [
+        "http://asic.gov.au/online-services/search-asics-registers/additional-searches/register-of-persons-banned-from-engaging-in-a-credit-activity-under-a-law-of-a-state-or-territory/",
+        "http://download.asic.gov.au/media/1322179/Banning_order_MAI_Pacific_Pty_Ltd.pdf",
+        "http://download.asic.gov.au/media/2643136/australian-securities-and-investments-commission-v-monarch-fx-group-pty-ltd-in-the-matter-of-monarch-fx-group-pty-ltd-2014.pdf",
+        "http://download.asic.gov.au/media/1322185/Banning_order_Ray_Rentals_Pty_Ltd.pdf"
+      ],
+      "raw_examples": [
+        "http://asic.gov.au/online-services/search-asics-registers/additional-searches/register-of-persons-banned-from-engaging-in-a-credit-activity-under-a-law-of-a-state-or-territory/",
+        "http://download.asic.gov.au/media/1322179/Banning_order_MAI_Pacific_Pty_Ltd.pdf",
+        "http://download.asic.gov.au/media/2643136/australian-securities-and-investments-commission-v-monarch-fx-group-pty-ltd-in-the-matter-of-monarch-fx-group-pty-ltd-2014.pdf",
+        "http://download.asic.gov.au/media/1322185/Banning_order_Ray_Rentals_Pty_Ltd.pdf"
+      ],
+      "fail_rate": 0.2,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.0,
+  "observed_at_fallback_rate": 1.0
+}

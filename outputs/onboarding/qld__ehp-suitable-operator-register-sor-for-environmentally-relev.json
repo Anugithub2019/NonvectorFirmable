@@ -1,0 +1,193 @@
+{
+  "source_id": "qld:ehp-suitable-operator-register-sor-for-environmentally-relevant-activities-eras",
+  "status": "done",
+  "error": null,
+  "steps_executed": 16,
+  "llm_calls": 7,
+  "tokens_in": 34189,
+  "tokens_out": 33667,
+  "usd": 0.3543,
+  "agent_wall_clock_secs": 157.6,
+  "inspect_attempts": 1,
+  "revisions": 3,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 1,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 2,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 3,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 1
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    },
+    {
+      "iteration": 1,
+      "node": "revise",
+      "changes": "Added 'when' conditions to entity.abn and entity.acn field mappings so that Business Number is only evaluated against 'ABN' or 'ACN' respectively. This eliminates the 95% transform failure rate on entity.abn and resolves warnings on entity.acn. Formatted all transform parameters using args_json."
+    },
+    {
+      "iteration": 2,
+      "node": "revise",
+      "changes": "Mapped all 11 values of Entity Type (adding Local/State/Federal Government, Government Owned Corporation to government; Australian Registered Foreign Body to company; Co-operative, Body Corporate, Indigenous Corporation to other) per reviewer feedback. Removed 'when' clause on ABN and ACN transforms to allow direct checksum-based parsing."
+    },
+    {
+      "iteration": 3,
+      "node": "revise",
+      "changes": "Added 'when' condition on entity.abn (matches (?i)ABN) and entity.acn (matches (?i)ACN) for Business Number column to eliminate false transform failures when a row contains the other number type."
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "download",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 5.46,
+      "calls": 1,
+      "in": 1243,
+      "out": 773,
+      "usd": 0.0088
+    },
+    {
+      "node": "try_read",
+      "secs": 0.2,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.61,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 25.59,
+      "calls": 1,
+      "in": 5094,
+      "out": 5701,
+      "usd": 0.059
+    },
+    {
+      "node": "validate",
+      "secs": 0.82,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 24.69,
+      "calls": 1,
+      "in": 7450,
+      "out": 5669,
+      "usd": 0.0622
+    },
+    {
+      "node": "validate",
+      "secs": 18.48,
+      "calls": 1,
+      "in": 2682,
+      "out": 3491,
+      "usd": 0.0354
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 23.66,
+      "calls": 1,
+      "in": 7410,
+      "out": 5544,
+      "usd": 0.061
+    },
+    {
+      "node": "validate",
+      "secs": 0.65,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 42.78,
+      "calls": 1,
+      "in": 7576,
+      "out": 9767,
+      "usd": 0.0993
+    },
+    {
+      "node": "validate",
+      "secs": 14.66,
+      "calls": 1,
+      "in": 2734,
+      "out": 2722,
+      "usd": 0.0286
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "emit",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 7,
+  "config_path": "configs/qld__ehp-suitable-operator-register-sor-for-environmentally-relev.yaml"
+}

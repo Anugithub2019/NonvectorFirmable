@@ -1,0 +1,304 @@
+{
+  "source_id": "data.gov.au:asic-credit-licensee",
+  "extractor_version": "engine=0.1.2;config=data.gov.au:asic-credit-licensee@v1;sha=577f682079",
+  "input_rows": 4308,
+  "sampled_rows": 4308,
+  "sample": "random",
+  "seed": 7,
+  "observations": 52695,
+  "stats": {
+    "records": 4308,
+    "filtered": 0,
+    "duplicate_ids": 0,
+    "observed_at_fallback": 4308,
+    "records_without_entity_claims": 0
+  },
+  "fields": {
+    "entity.legal_name": {
+      "applicable": 4308,
+      "produced": 4308,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "RELI CAPITAL LTD",
+        "LA TROBE FINANCIAL ASSET MANAGEMENT LIMITED",
+        "GLOBAL MUTUAL FUNDS PTY LTD",
+        "PLANNING PARTNERS PTY. LTD."
+      ],
+      "raw_examples": [
+        "RELI CAPITAL LTD",
+        "LA TROBE FINANCIAL ASSET MANAGEMENT LIMITED",
+        "GLOBAL MUTUAL FUNDS PTY LTD",
+        "PLANNING PARTNERS PTY. LTD."
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 3905,
+      "produced": 3905,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "company",
+        "trust",
+        "incorporated_association"
+      ],
+      "raw_examples": [
+        "RELI CAPITAL LTD",
+        "BNY TRUST COMPANY OF AUSTRALIA LIMITED",
+        "FELLOWSHIP OF CHRISTIANS UNDERTAKING STEWARDSHIP INC"
+      ],
+      "abstained": 403,
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.abn": {
+      "applicable": 3846,
+      "produced": 3846,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "80005443292",
+        "27007332363",
+        "20090555436",
+        "64090069239"
+      ],
+      "raw_examples": [
+        "80005443292",
+        "27007332363",
+        "20090555436",
+        "64090069239"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.licence_number": {
+      "applicable": 4308,
+      "produced": 4308,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "219612",
+        "222213",
+        "222640",
+        "222835"
+      ],
+      "raw_examples": [
+        "219612",
+        "222213",
+        "222640",
+        "222835"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.licence_type": {
+      "applicable": 4308,
+      "produced": 4308,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "credit"
+      ],
+      "raw_examples": [
+        "Credit Licence"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.status": {
+      "applicable": 4308,
+      "produced": 4308,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "current",
+        "suspended"
+      ],
+      "raw_examples": [
+        "APPR",
+        "SUSP"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.start_date": {
+      "applicable": 4308,
+      "produced": 4308,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "2010-10-04",
+        "2011-03-16",
+        "2010-12-14",
+        "2011-02-28"
+      ],
+      "raw_examples": [
+        "04/10/2010",
+        "16/03/2011",
+        "14/12/2010",
+        "28/02/2011"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.conditions": {
+      "applicable": 4308,
+      "produced": 4308,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "This licence authorises the licensee to:~Engage in credit activities as a credit provider by:~carrying on a business of providing credit being credit the provision of which the National Credit Code applies to; and/or~being a credit provider under a credit contract; and/or~performing the obligations or exercising the rights of a credit provider in relation to a credit contract or proposed credit contract as the credit provider; and/or~providing credit assistance to a consumer which relates to a credit contract or proposed credit contract under which the licensee is or will be the credit provider; and/or~being a mortgagee under a mortgage that secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a mortgagee in relation to a mortgage or proposed mortgage which secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~being a beneficiary under a guarantee that guarantees obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a beneficiary under a guarantee or proposed guarantee which guarantees obligations under a credit contract under which the licensee is the credit provider; and/or~carrying on a business of providing consumer leases; and/or~being a lessor under a consumer lease; and/or~providing credit assistance to a consumer in relation to a consumer lease or proposed consumer lease for which the licensee is the lessor; and/or~performing the obligations or exercising the rights of a lessor in relation to the consumer lease as the lessor",
+        "This licence authorises the licensee to:~Engage in credit activities other than as a credit provider by:~providing a credit service where the licensee is not or will not be:~where the service relates to a credit contract or proposed credit contract - the credit provider under the contract; or~where the service relates to a consumer lease or proposed consumer lease - the lessor; and/or~performing the obligations or exercising the rights of a credit provider in relation to a credit contract or proposed credit contract under which the licensee is not or will not be the credit provider; and/or~performing the obligations or exercising the rights of a mortgagee in relation to a mortgage or proposed mortgage that secures or will secure obligations under a credit contract under which the licensee is not the credit provider; and/or~performing the obligations or exercising the rights of a beneficiary under a guarantee or proposed guarantee that guarantees obligations under a credit contract under which the licensee is not the credit provider; and/or~performing the obligations or exercising the rights of a lessor in relation to a consumer lease or proposed consumer lease where the licensee is not or will not be the lessor",
+        "This licence authorises the licensee to:~Engage in credit activities other than as a credit provider by:~providing a credit service where the licensee is not or will not be:~where the service relates to a credit contract or proposed credit contract - the credit provider under the contract; or~where the service relates to a consumer lease or proposed consumer lease - the lessor; and/or~performing the obligations or exercising the rights of a credit provider in relation to a credit contract or proposed credit contract under which the licensee is not or will not be the credit provider; and/or~performing the obligations or exercising the rights of a mortgagee in relation to a mortgage or proposed mortgage that secures or will secure obligations under a credit contract under which the licensee is not the credit provider; and/or~performing the obligations or exercising the rights of a beneficiary under a guarantee or proposed guarantee that guarantees obligations under a credit contract under which the licensee is not the credit provider; and/or~performing the obligations or exercising the rights of a lessor in relation to a consumer lease or proposed consumer lease where the licensee is not or will not be the lessor~Engage in credit activities as a credit provider by:~carrying on a business of providing credit being credit the provision of which the National Credit Code applies to; and/or~being a credit provider under a credit contract; and/or~performing the obligations or exercising the rights of a credit provider in relation to a credit contract or proposed credit contract as the credit provider; and/or~providing credit assistance to a consumer which relates to a credit contract or proposed credit contract under which the licensee is or will be the credit provider; and/or~being a mortgagee under a mortgage that secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a mortgagee in relation to a mortgage or proposed mortgage which secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~being a beneficiary under a guarantee that guarantees obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a beneficiary under a guarantee or proposed guarantee which guarantees obligations under a credit contract under which the licensee is the credit provider; and/or~carrying on a business of providing consumer leases; and/or~being a lessor under a consumer lease; and/or~providing credit assistance to a consumer in relation to a consumer lease or proposed consumer lease for which the licensee is the lessor; and/or~performing the obligations or exercising the rights of a lessor in relation to the consumer lease as the lessor",
+        "This licence authorises the licensee to:~Engage in credit activities as a credit provider by:~carrying on a business of providing credit being credit the provision of which the National Credit Code applies to; and/or~being a credit provider under a credit contract; and/or~performing the obligations or exercising the rights of a credit provider in relation to a credit contract or proposed credit contract as the credit provider; and/or~providing credit assistance to a consumer that relates to a credit contract or proposed credit contract under which the licensee is or will be the credit provider; and/or~being a mortgagee under a mortgage that secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a mortgagee in relation to a mortgage or proposed mortgage that secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~being a beneficiary under a guarantee that guarantees obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a beneficiary under a guarantee or proposed guarantee that guarantees obligations under a credit contract under which the licensee is the credit provider,~limited to:~credit activities engaged in by the licensee in accordance with the terms and conditions of:~a life policy within the meaning of the Life Insurance Act 1995 that was entered into before 1 July 2010 by the licensee; or~a document issued or given by the licensee in relation to a life policy within the meaning of the Life Insurance Act 1995 that was entered into before 1 July 2010 by the licensee"
+      ],
+      "raw_examples": [
+        "This licence authorises the licensee to:~Engage in credit activities as a credit provider by:~carrying on a business of providing credit being credit the provision of which the National Credit Code applies to; and/or~being a credit provider under a credit contract; and/or~performing the obligations or exercising the rights of a credit provider in relation to a credit contract or proposed credit contract as the credit provider; and/or~providing credit assistance to a consumer which relates to a credit contract or proposed credit contract under which the licensee is or will be the credit provider; and/or~being a mortgagee under a mortgage that secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a mortgagee in relation to a mortgage or proposed mortgage which secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~being a beneficiary under a guarantee that guarantees obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a beneficiary under a guarantee or proposed guarantee which guarantees obligations under a credit contract under which the licensee is the credit provider; and/or~carrying on a business of providing consumer leases; and/or~being a lessor under a consumer lease; and/or~providing credit assistance to a consumer in relation to a consumer lease or proposed consumer lease for which the licensee is the lessor; and/or~performing the obligations or exercising the rights of a lessor in relation to the consumer lease as the lessor",
+        "This licence authorises the licensee to:~Engage in credit activities other than as a credit provider by:~providing a credit service where the licensee is not or will not be:~where the service relates to a credit contract or proposed credit contract - the credit provider under the contract; or~where the service relates to a consumer lease or proposed consumer lease - the lessor; and/or~performing the obligations or exercising the rights of a credit provider in relation to a credit contract or proposed credit contract under which the licensee is not or will not be the credit provider; and/or~performing the obligations or exercising the rights of a mortgagee in relation to a mortgage or proposed mortgage that secures or will secure obligations under a credit contract under which the licensee is not the credit provider; and/or~performing the obligations or exercising the rights of a beneficiary under a guarantee or proposed guarantee that guarantees obligations under a credit contract under which the licensee is not the credit provider; and/or~performing the obligations or exercising the rights of a lessor in relation to a consumer lease or proposed consumer lease where the licensee is not or will not be the lessor",
+        "This licence authorises the licensee to:~Engage in credit activities other than as a credit provider by:~providing a credit service where the licensee is not or will not be:~where the service relates to a credit contract or proposed credit contract - the credit provider under the contract; or~where the service relates to a consumer lease or proposed consumer lease - the lessor; and/or~performing the obligations or exercising the rights of a credit provider in relation to a credit contract or proposed credit contract under which the licensee is not or will not be the credit provider; and/or~performing the obligations or exercising the rights of a mortgagee in relation to a mortgage or proposed mortgage that secures or will secure obligations under a credit contract under which the licensee is not the credit provider; and/or~performing the obligations or exercising the rights of a beneficiary under a guarantee or proposed guarantee that guarantees obligations under a credit contract under which the licensee is not the credit provider; and/or~performing the obligations or exercising the rights of a lessor in relation to a consumer lease or proposed consumer lease where the licensee is not or will not be the lessor~Engage in credit activities as a credit provider by:~carrying on a business of providing credit being credit the provision of which the National Credit Code applies to; and/or~being a credit provider under a credit contract; and/or~performing the obligations or exercising the rights of a credit provider in relation to a credit contract or proposed credit contract as the credit provider; and/or~providing credit assistance to a consumer which relates to a credit contract or proposed credit contract under which the licensee is or will be the credit provider; and/or~being a mortgagee under a mortgage that secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a mortgagee in relation to a mortgage or proposed mortgage which secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~being a beneficiary under a guarantee that guarantees obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a beneficiary under a guarantee or proposed guarantee which guarantees obligations under a credit contract under which the licensee is the credit provider; and/or~carrying on a business of providing consumer leases; and/or~being a lessor under a consumer lease; and/or~providing credit assistance to a consumer in relation to a consumer lease or proposed consumer lease for which the licensee is the lessor; and/or~performing the obligations or exercising the rights of a lessor in relation to the consumer lease as the lessor",
+        "This licence authorises the licensee to:~Engage in credit activities as a credit provider by:~carrying on a business of providing credit being credit the provision of which the National Credit Code applies to; and/or~being a credit provider under a credit contract; and/or~performing the obligations or exercising the rights of a credit provider in relation to a credit contract or proposed credit contract as the credit provider; and/or~providing credit assistance to a consumer that relates to a credit contract or proposed credit contract under which the licensee is or will be the credit provider; and/or~being a mortgagee under a mortgage that secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a mortgagee in relation to a mortgage or proposed mortgage that secures or will secure obligations under a credit contract under which the licensee is the credit provider; and/or~being a beneficiary under a guarantee that guarantees obligations under a credit contract under which the licensee is the credit provider; and/or~performing the obligations or exercising the rights of a beneficiary under a guarantee or proposed guarantee that guarantees obligations under a credit contract under which the licensee is the credit provider,~limited to:~credit activities engaged in by the licensee in accordance with the terms and conditions of:~a life policy within the meaning of the Life Insurance Act 1995 that was entered into before 1 July 2010 by the licensee; or~a document issued or given by the licensee in relation to a life policy within the meaning of the Life Insurance Act 1995 that was entered into before 1 July 2010 by the licensee"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.locality": {
+      "applicable": 4308,
+      "produced": 4308,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Leongatha",
+        "Melbourne",
+        "Mascot",
+        "Camberwell"
+      ],
+      "raw_examples": [
+        "LEONGATHA",
+        "MELBOURNE",
+        "MASCOT",
+        "CAMBERWELL"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.state": {
+      "applicable": 4308,
+      "produced": 4308,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "VIC",
+        "NSW",
+        "QLD",
+        "SA"
+      ],
+      "raw_examples": [
+        "VIC",
+        "NSW",
+        "QLD",
+        "SA"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.postcode": {
+      "applicable": 4308,
+      "produced": 4308,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "3953",
+        "3000",
+        "2020",
+        "3124"
+      ],
+      "raw_examples": [
+        "3953",
+        "3000",
+        "2020",
+        "3124"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.country": {
+      "applicable": 4308,
+      "produced": 4308,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "AU"
+      ],
+      "raw_examples": [
+        "VIC"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.trading_name": {
+      "applicable": 1471,
+      "produced": 1471,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "PLANNING PARTNERS",
+        "DISCOVERY FINANCIAL MANAGEMENT",
+        "PROFILE FINANCIAL SERVICES",
+        "STACKS FINANCE"
+      ],
+      "raw_examples": [
+        "PLANNING PARTNERS",
+        "DISCOVERY FINANCIAL MANAGEMENT",
+        "PROFILE FINANCIAL SERVICES",
+        "STACKS FINANCE"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.acn": {
+      "applicable": 462,
+      "produced": 393,
+      "failed": 69,
+      "enum_violations": 0,
+      "fail_examples": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "value_examples": [
+        "008819458",
+        "062448122",
+        "125456984",
+        "139124673"
+      ],
+      "raw_examples": [
+        "8819458",
+        "62448122",
+        "125456984",
+        "139124673"
+      ],
+      "fail_rate": 0.149,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.0,
+  "observed_at_fallback_rate": 1.0
+}

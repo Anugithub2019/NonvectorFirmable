@@ -1,0 +1,104 @@
+{
+  "source_id": "local:asic-companies-slice",
+  "status": "done",
+  "error": null,
+  "steps_executed": 9,
+  "llm_calls": 12,
+  "tokens_in": 19642,
+  "tokens_out": 12001,
+  "usd": 0.1364,
+  "agent_wall_clock_secs": 50.7,
+  "inspect_attempts": 1,
+  "revisions": 0,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 1
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "download",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 6.08,
+      "calls": 1,
+      "in": 1910,
+      "out": 836,
+      "usd": 0.0104
+    },
+    {
+      "node": "try_read",
+      "secs": 0.03,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.2,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 33.77,
+      "calls": 1,
+      "in": 7533,
+      "out": 7247,
+      "usd": 0.0765
+    },
+    {
+      "node": "validate",
+      "secs": 10.58,
+      "calls": 9,
+      "in": 7231,
+      "out": 1967,
+      "usd": 0.0202
+    },
+    {
+      "node": "review",
+      "secs": 15.33,
+      "calls": 1,
+      "in": 2968,
+      "out": 1951,
+      "usd": 0.0293
+    },
+    {
+      "node": "emit",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 4,
+  "config_path": "configs/local__asic-companies-slice.yaml"
+}

@@ -1,0 +1,174 @@
+{
+  "source_id": "local:abr-slice",
+  "status": "done",
+  "error": null,
+  "steps_executed": 15,
+  "llm_calls": 35,
+  "tokens_in": 68987,
+  "tokens_out": 25978,
+  "usd": 0.3246,
+  "agent_wall_clock_secs": 115.8,
+  "inspect_attempts": 1,
+  "revisions": 2,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 2
+    },
+    {
+      "iteration": 1,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 2,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 1
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    },
+    {
+      "iteration": 1,
+      "node": "revise",
+      "changes": "Removed mapping from abn_status_from to entity.date_registered to prevent misrepresenting status start dates as company registration dates. Updated regex in entity.trading_name split transform to split on pipe characters ('\\s*\\|\\s*')."
+    },
+    {
+      "iteration": 2,
+      "node": "revise",
+      "changes": "Corrected the split regex in entity.trading_name to split on pipe characters (\\s*\\|\\s*) instead of forward slashes."
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "download",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 7.84,
+      "calls": 1,
+      "in": 2571,
+      "out": 1242,
+      "usd": 0.015
+    },
+    {
+      "node": "try_read",
+      "secs": 0.03,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.24,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 29.29,
+      "calls": 1,
+      "in": 8970,
+      "out": 6566,
+      "usd": 0.0725
+    },
+    {
+      "node": "validate",
+      "secs": 14.57,
+      "calls": 10,
+      "in": 8725,
+      "out": 2400,
+      "usd": 0.0256
+    },
+    {
+      "node": "review",
+      "secs": 8.03,
+      "calls": 1,
+      "in": 3517,
+      "out": 769,
+      "usd": 0.0163
+    },
+    {
+      "node": "revise",
+      "secs": 15.38,
+      "calls": 1,
+      "in": 11417,
+      "out": 3587,
+      "usd": 0.0494
+    },
+    {
+      "node": "validate",
+      "secs": 20.16,
+      "calls": 9,
+      "in": 7937,
+      "out": 4061,
+      "usd": 0.0404
+    },
+    {
+      "node": "review",
+      "secs": 8.45,
+      "calls": 1,
+      "in": 3397,
+      "out": 1010,
+      "usd": 0.0189
+    },
+    {
+      "node": "revise",
+      "secs": 15.15,
+      "calls": 1,
+      "in": 11181,
+      "out": 3400,
+      "usd": 0.0474
+    },
+    {
+      "node": "validate",
+      "secs": 13.17,
+      "calls": 9,
+      "in": 7896,
+      "out": 2259,
+      "usd": 0.0241
+    },
+    {
+      "node": "review",
+      "secs": 7.04,
+      "calls": 1,
+      "in": 3376,
+      "out": 684,
+      "usd": 0.015
+    },
+    {
+      "node": "emit",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 10,
+  "config_path": "configs/local__abr-slice.yaml"
+}

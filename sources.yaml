@@ -1,0 +1,87 @@
+# The six sources chosen from output/shortlist.csv for Part 2.
+# This file only says WHICH datasets to onboard. How to read and map them is decided by the
+# agent at runtime (configs/*.yaml). `resource` pins a file when a dataset ships several
+# formats and we deliberately want the non-CSV one, to exercise the readers.
+sources:
+  # ---- Case-study-1 sources (kept: extra attachment sources for the graph) ----
+  - portal: data.gov.au          # ACNC — national charity register, ABN on every row
+    dataset_id: acnc-register
+    resource: null               # agent chooses (XLSX vs CSV)
+  - portal: qld                  # QBCC — licensed builders/contractors; many rows are individuals
+    dataset_id: qbcc-licensed-contractors-register
+  - portal: qld                  # QLD Treasury — awarded contracts; supplier name, no ABN
+    dataset_id: queensland-government-contracts-directory-awarded-contracts
+  - portal: data.gov.au          # ASIC — credit licensees; combined ABN/ACN column; TSV
+    dataset_id: asic-credit-licensee
+    resource: 3abf1383-c4e5-4c1a-8331-8434b17b6f10   # pin the TSV
+  - portal: nsw                  # Liquor & Gaming NSW — licensed premises, licence vs licensee name
+    dataset_id: liquor-licence-premises-list-as-at-8-feb-2021
+  - portal: qld                  # QLD DES — Suitable Operator Register; XLSX, "ACN 0904..." strings
+    dataset_id: ehp-suitable-operator-register-sor-for-environmentally-relevant-activities-eras
+
+# ---- Graph task: tiers per the market-graph case study --------------------------------------
+# tier 1 = identity backbone, tier 2 = keyed attachment (ABN/ACN some of the time),
+# tier 3 = name-only. `slice` entries are produced by src/firmable/ingest/slices.py from the
+# raw national files before onboarding (geographic + referenced-identifier slice).
+  - portal: data.gov.au          # ASIC AFS licensees: licence + authorisations; ABN/ACN column
+    dataset_id: asic-afs-licensee
+    tier: 2
+    resource: d98a113d-6b50-40e6-b65f-2612efc877f4
+  - portal: data.gov.au          # ASIC banned & disqualified organisations: ACN + ban dates
+    dataset_id: asic-banned-disqualified-org
+    tier: 2
+    resource: ced03961-e6f7-4263-895a-0fd1d7996043
+  - portal: data.gov.au          # ASIC registered liquidators: PEOPLE + their firm (name only)
+    dataset_id: asic-liquidator
+    tier: 2
+    resource: 02388d87-3f0b-48fd-bffa-c4a661962fc3
+  - portal: local                # ABR bulk extract, tier-1 slice (see src/firmable/ingest/slices.py)
+    dataset_id: abr-slice
+    tier: 1
+    local:
+      title: ABN Bulk Extract (sliced)
+      publisher: Australian Business Register (ATO)
+      licence: Creative Commons Attribution 3.0 Australia
+      file: data/raw/abr-slice/abr_slice.csv
+      description: >
+        Weekly ABR bulk extract (XML), streamed and flattened by src/firmable/ingest/abr.py, then sliced to
+        QLD active companies in the chosen postcode bands plus every record referenced by an attached source.
+        One row per ABN. other_names holds registered business/trading names joined by ' | '.
+  - portal: local                # ASIC company register, tier-1 slice
+    dataset_id: asic-companies-slice
+    tier: 1
+    local:
+      title: ASIC Company Dataset (sliced)
+      publisher: Australian Securities and Investments Commission (ASIC)
+      licence: Creative Commons Attribution 3.0 Australia
+      file: data/raw/asic-companies-slice/asic_companies_slice.csv
+      description: >
+        Weekly ASIC company register, sliced to ACNs in the ABR slice or referenced by attached sources.
+        Several rows per ACN: the current name row (Current Name Indicator = Y) and one row per former name
+        (indicator blank; Company Name is the former name, Current Name the present one).
+  - portal: local                # GLEIF level 1: who is who (LEI, legal name, registeredAs = ACN/ABN)
+    dataset_id: gleif-lei-au
+    tier: 2
+    local:
+      title: GLEIF LEI records, Australia (Level 1)
+      publisher: Global Legal Entity Identifier Foundation
+      licence: CC0 1.0 (GLEIF data is public domain)
+      file: data/raw/gleif/lei_au.csv
+      description: >
+        Every LEI record with an Australian legal address, from the GLEIF public API (src/firmable/ingest/gleif.py).
+        registered_as holds the local registry identifier (ACN or ABN, with spaces); other_names joined by ' | '.
+  - portal: local                # GLEIF level 2: who owns whom (direct / ultimate parent)
+    dataset_id: gleif-relationships
+    tier: 2
+    local:
+      title: GLEIF relationship records, Australia (Level 2)
+      publisher: Global Legal Entity Identifier Foundation
+      licence: CC0 1.0 (GLEIF data is public domain)
+      file: data/raw/gleif/relationships.csv
+      description: >
+        From the GLEIF golden-copy RR bulk file, filtered to rows touching an Australian LEI. child_lei is the
+        main entity (the one that IS consolidated / managed / a branch), parent_lei the related party.
+        relationship_type is one of IS_DIRECTLY_CONSOLIDATED_BY (parent owns child; percent may be given),
+        IS_ULTIMATELY_CONSOLIDATED_BY (ultimate parent), IS_FUND-MANAGED_BY (a fund and its manager: not
+        ownership), IS_INTERNATIONAL_BRANCH_OF (a branch of its head office). valid_from/valid_to are the
+        relationship period; status is always ACTIVE in the golden copy.

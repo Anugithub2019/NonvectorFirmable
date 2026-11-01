@@ -1,0 +1,166 @@
+{
+  "source_id": "local:asic-companies-slice",
+  "extractor_version": "engine=0.1.2;config=local:asic-companies-slice@v1;sha=21b7d30cb1",
+  "input_rows": 80188,
+  "sampled_rows": 80188,
+  "sample": "random",
+  "seed": 7,
+  "observations": 497771,
+  "stats": {
+    "records": 80188,
+    "filtered": 0,
+    "duplicate_ids": 6,
+    "observed_at_fallback": 80188,
+    "records_without_entity_claims": 0
+  },
+  "fields": {
+    "entity.legal_name": {
+      "applicable": 80188,
+      "produced": 80188,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "GRUNBLATT INVESTMENTS PTY LTD",
+        "AUSMEX TRADING AFFAIRS PTY. LTD.",
+        "WAKATAPU PTY LTD",
+        "AUSTRALIAN FOREST CONTRACTORS ASSOCIATION LIMITED"
+      ],
+      "raw_examples": [
+        "GRUNBLATT INVESTMENTS PTY LTD",
+        "AUSMEX TRADING AFFAIRS PTY. LTD.",
+        "WAKATAPU PTY LTD",
+        "AUSTRALIAN FOREST CONTRACTORS ASSOCIATION LIMITED"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.acn": {
+      "applicable": 80188,
+      "produced": 80188,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "102855854",
+        "102856404",
+        "102860604",
+        "102865430"
+      ],
+      "raw_examples": [
+        "102855854",
+        "102856404",
+        "102860604",
+        "102865430"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.abn": {
+      "applicable": 80188,
+      "produced": 78600,
+      "failed": 1588,
+      "enum_violations": 0,
+      "fail_examples": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "value_examples": [
+        "54102855854",
+        "97102856404",
+        "45102860604",
+        "35102865430"
+      ],
+      "raw_examples": [
+        "54102855854",
+        "97102856404",
+        "45102860604",
+        "35102865430"
+      ],
+      "fail_rate": 0.02,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 80188,
+      "produced": 80188,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "company"
+      ],
+      "raw_examples": [
+        "APTY"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.status": {
+      "applicable": 80188,
+      "produced": 80188,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "active",
+        "unknown",
+        "deregistered"
+      ],
+      "raw_examples": [
+        "REGD",
+        "EXAD",
+        "SOFF"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.date_registered": {
+      "applicable": 80188,
+      "produced": 80188,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "2002-11-18",
+        "2002-11-19",
+        "2002-11-20",
+        "2002-12-20"
+      ],
+      "raw_examples": [
+        "18/11/2002",
+        "19/11/2002",
+        "20/11/2002",
+        "20/12/2002"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.former_name": {
+      "applicable": 18231,
+      "produced": 18231,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "ARGYLE INVESTMENTS (QLD) PTY LTD",
+        "GOODWILL AUSTRALIA INVESTMENTS PTY. LTD.",
+        "SEVENTH-DAY ADVENTIST CHRISTIAN SCHOOLS (SOUTH QUEENSLAND) LTD",
+        "J & P CAMBRIA PTY LTD"
+      ],
+      "raw_examples": [
+        "ARGYLE INVESTMENTS (QLD) PTY LTD",
+        "GOODWILL AUSTRALIA INVESTMENTS PTY. LTD.",
+        "SEVENTH-DAY ADVENTIST CHRISTIAN SCHOOLS (SOUTH QUEENSLAND) LTD",
+        "J & P CAMBRIA PTY LTD"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.0,
+  "observed_at_fallback_rate": 1.0
+}

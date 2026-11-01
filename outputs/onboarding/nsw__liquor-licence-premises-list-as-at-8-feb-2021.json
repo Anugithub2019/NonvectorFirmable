@@ -1,0 +1,166 @@
+{
+  "source_id": "nsw:liquor-licence-premises-list-as-at-8-feb-2021",
+  "status": "done",
+  "error": null,
+  "steps_executed": 14,
+  "llm_calls": 7,
+  "tokens_in": 49995,
+  "tokens_out": 28782,
+  "usd": 0.3341,
+  "agent_wall_clock_secs": 138.9,
+  "inspect_attempts": 1,
+  "revisions": 2,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 2
+    },
+    {
+      "iteration": 1,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 2,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 1
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    },
+    {
+      "iteration": 1,
+      "node": "revise",
+      "changes": "1. Added mapping from Start date to entity.date_registered. 2. Added condition to entity.legal_name mapping so Licensee is only mapped when containing legal-form words (e.g. LTD, CLUB, INC). 3. Corrected transform args to JSON string args_json per schema."
+    },
+    {
+      "iteration": 2,
+      "node": "revise",
+      "changes": "Removed entity.date_registered mapping from 'Start date' to resolve blocking validation failure. Kept legal form filter on entity.legal_name per human reviewer feedback."
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "download",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 6.19,
+      "calls": 1,
+      "in": 2146,
+      "out": 927,
+      "usd": 0.0116
+    },
+    {
+      "node": "try_read",
+      "secs": 0.03,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.18,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 29.81,
+      "calls": 1,
+      "in": 10360,
+      "out": 6920,
+      "usd": 0.0778
+    },
+    {
+      "node": "validate",
+      "secs": 12.62,
+      "calls": 1,
+      "in": 3792,
+      "out": 2255,
+      "usd": 0.026
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 25.44,
+      "calls": 1,
+      "in": 12771,
+      "out": 5574,
+      "usd": 0.0693
+    },
+    {
+      "node": "validate",
+      "secs": 11.23,
+      "calls": 1,
+      "in": 4062,
+      "out": 1931,
+      "usd": 0.0235
+    },
+    {
+      "node": "revise",
+      "secs": 32.62,
+      "calls": 1,
+      "in": 12939,
+      "out": 7122,
+      "usd": 0.0835
+    },
+    {
+      "node": "validate",
+      "secs": 20.75,
+      "calls": 1,
+      "in": 3925,
+      "out": 4053,
+      "usd": 0.0424
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "emit",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 7,
+  "config_path": "configs/nsw__liquor-licence-premises-list-as-at-8-feb-2021.yaml"
+}

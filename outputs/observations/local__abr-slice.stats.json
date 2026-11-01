@@ -1,0 +1,190 @@
+{
+  "source_id": "local:abr-slice",
+  "extractor_version": "engine=0.1.2;config=local:abr-slice@v1;sha=fb619400b8",
+  "input_rows": 64484,
+  "sampled_rows": 64484,
+  "sample": "random",
+  "seed": 7,
+  "observations": 486213,
+  "stats": {
+    "records": 64484,
+    "filtered": 0,
+    "duplicate_ids": 0,
+    "observed_at_fallback": 0,
+    "records_without_entity_claims": 0
+  },
+  "fields": {
+    "entity.abn": {
+      "applicable": 64484,
+      "produced": 64484,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "12127798412",
+        "12128193297",
+        "12128746538",
+        "12128970034"
+      ],
+      "raw_examples": [
+        "12127798412",
+        "12128193297",
+        "12128746538",
+        "12128970034"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.status": {
+      "applicable": 64484,
+      "produced": 64484,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "active",
+        "deregistered"
+      ],
+      "raw_examples": [
+        "ACT",
+        "CAN"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 64484,
+      "produced": 64484,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "company",
+        "unknown",
+        "trust",
+        "sole_trader"
+      ],
+      "raw_examples": [
+        "Australian Private Company",
+        "Fixed Unit Trust",
+        "Discretionary Trading Trust",
+        "Individual/Sole Trader"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.legal_name": {
+      "applicable": 64484,
+      "produced": 64484,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "MOTORO CAPITAL PTY LTD",
+        "BRABUS BENEFICIARY PTY LTD",
+        "CMBA PTY LTD",
+        "CSE H2 OPERATIONS PTY LTD"
+      ],
+      "raw_examples": [
+        "MOTORO CAPITAL PTY LTD",
+        "BRABUS BENEFICIARY PTY LTD",
+        "CMBA PTY LTD",
+        "CSE H2 OPERATIONS PTY LTD"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.acn": {
+      "applicable": 60858,
+      "produced": 60858,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "127798412",
+        "128193297",
+        "128746538",
+        "128970034"
+      ],
+      "raw_examples": [
+        "127798412",
+        "128193297",
+        "128746538",
+        "128970034"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.state": {
+      "applicable": 64460,
+      "produced": 64460,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "NSW",
+        "QLD",
+        "VIC",
+        "WA"
+      ],
+      "raw_examples": [
+        "NSW",
+        "QLD",
+        "VIC",
+        "WA"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.postcode": {
+      "applicable": 64471,
+      "produced": 64466,
+      "failed": 5,
+      "enum_violations": 0,
+      "fail_examples": [
+        "59200",
+        "EC2Y 9HU",
+        "L6H 0C3",
+        "0000",
+        "W1J8LA"
+      ],
+      "value_examples": [
+        "2020",
+        "4006",
+        "4011",
+        "4000"
+      ],
+      "raw_examples": [
+        "2020",
+        "4006",
+        "4011",
+        "4000"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.trading_name": {
+      "applicable": 19449,
+      "produced": 19449,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Myfootdr Granda Pty Ltd",
+        "RCPSA",
+        "STUART PETROLEUM COOPER BASIN OIL PTY LTD",
+        "Create Possibilities Pty Ltd"
+      ],
+      "raw_examples": [
+        "Myfootdr Granda Pty Ltd",
+        "RCPSA",
+        "STUART PETROLEUM COOPER BASIN OIL PTY LTD",
+        "Create Possibilities Pty Ltd"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.0,
+  "observed_at_fallback_rate": 0.0
+}

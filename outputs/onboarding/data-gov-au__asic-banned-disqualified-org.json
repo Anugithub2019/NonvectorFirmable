@@ -1,0 +1,104 @@
+{
+  "source_id": "data.gov.au:asic-banned-disqualified-org",
+  "status": "done",
+  "error": null,
+  "steps_executed": 9,
+  "llm_calls": 3,
+  "tokens_in": 10085,
+  "tokens_out": 5904,
+  "usd": 0.0718,
+  "agent_wall_clock_secs": 24.9,
+  "inspect_attempts": 1,
+  "revisions": 0,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 0
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "download",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 5.13,
+      "calls": 1,
+      "in": 2117,
+      "out": 732,
+      "usd": 0.0098
+    },
+    {
+      "node": "try_read",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 19.72,
+      "calls": 1,
+      "in": 6866,
+      "out": 4209,
+      "usd": 0.0482
+    },
+    {
+      "node": "validate",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "review",
+      "secs": 9.34,
+      "calls": 1,
+      "in": 1102,
+      "out": 963,
+      "usd": 0.0138
+    },
+    {
+      "node": "emit",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 3,
+  "config_path": "configs/data-gov-au__asic-banned-disqualified-org.yaml"
+}

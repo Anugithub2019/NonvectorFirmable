@@ -1,0 +1,306 @@
+{
+  "source_id": "qld:queensland-government-contracts-directory-awarded-contracts",
+  "status": "done",
+  "error": null,
+  "steps_executed": 26,
+  "llm_calls": 12,
+  "tokens_in": 65587,
+  "tokens_out": 64130,
+  "usd": 0.6756,
+  "agent_wall_clock_secs": 518.5,
+  "inspect_attempts": 2,
+  "revisions": 6,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": false,
+      "n_blocking": 2,
+      "n_warnings": 0
+    },
+    {
+      "iteration": 1,
+      "passed": false,
+      "n_blocking": 2,
+      "n_warnings": 0
+    },
+    {
+      "iteration": 2,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 3,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 1
+    },
+    {
+      "iteration": 4,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 3
+    },
+    {
+      "iteration": 5,
+      "passed": false,
+      "n_blocking": 4,
+      "n_warnings": 0
+    },
+    {
+      "iteration": 6,
+      "passed": false,
+      "n_blocking": 3,
+      "n_warnings": 0
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    },
+    {
+      "iteration": 1,
+      "node": "revise",
+      "changes": "Included CSV overflow columns unnamed_7, unnamed_8, unnamed_9, and unnamed_10 in source_columns for address.full, address.state, and address.postcode, as unquoted commas in CSV rows caused city, state, and postcode values to break across these extra columns. Added null_if to strip placeholder values like 'n/a'. Removed unnamed_7..10 from unmapped list as they are now mapped."
+    },
+    {
+      "iteration": 2,
+      "node": "revise",
+      "changes": "Added 'when' matching conditions to address.postcode and address.state to restrict extraction to records containing valid Australian postcodes and state identifiers respectively. This resolves the 12% postcode and 70% state transform failures caused by international addresses."
+    },
+    {
+      "iteration": 3,
+      "node": "revise",
+      "changes": "Fixed address.full by adding regex_replace transform to remove procurement process terms (e.g. 'Limited Offer Process', 'Selective') originating from unnamed_7 column before collapsing whitespace. Fixed entity.legal_name warning by adding regex_replace and strip transforms to clean trailing hyphens and punctuation."
+    },
+    {
+      "iteration": 4,
+      "node": "revise",
+      "changes": "1) Rebuilt address.full using only 'Supplier Address' to fix text duplication blocking issue. 2) Restricted address.country emission with a condition requiring an Australian state or postcode match, ensuring overseas suppliers are not wrongly mapped as AU. 3) Added mapping for entity.trading_name when 't/a' is present in Supplier Name and stripped 't/a' portions from entity.legal_name. 4) Lowered confidence on entity name fields to reflect 40-character source truncation."
+    },
+    {
+      "iteration": 5,
+      "node": "revise",
+      "changes": "1. Added regex_extract to entity.trading_name to extract only the trading name after 't/a'. 2. Added condition on address.full to prevent emitting full addresses when Supplier Address contains only a 4-digit postcode. 3. Formatted all transform parameters into strict JSON strings in args_json."
+    },
+    {
+      "iteration": 6,
+      "node": "revise",
+      "changes": "1. Corrected regex escaping in entity.trading_name when condition to (?i)\\bt/a\\b so it correctly matches 't/a' rows.\n2. Removed over-restrictive when conditions on address.postcode and address.state, allowing au_postcode and au_state transforms to run cleanly across address columns.\n3. Updated address.country when condition regex to correctly match Australian states/territories or 'Australia' without double-escaping issues.\n4. Restricted address.full source_columns to Supplier Address only per reviewer feedback."
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "download",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 7.12,
+      "calls": 1,
+      "in": 1859,
+      "out": 1175,
+      "usd": 0.0134
+    },
+    {
+      "node": "try_read",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 7.79,
+      "calls": 1,
+      "in": 2632,
+      "out": 1276,
+      "usd": 0.0154
+    },
+    {
+      "node": "try_read",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.12,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 21.72,
+      "calls": 1,
+      "in": 6088,
+      "out": 4447,
+      "usd": 0.0492
+    },
+    {
+      "node": "validate",
+      "secs": 0.14,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 117.62,
+      "calls": 1,
+      "in": 8039,
+      "out": 9682,
+      "usd": 0.0992
+    },
+    {
+      "node": "validate",
+      "secs": 0.14,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 179.46,
+      "calls": 1,
+      "in": 8130,
+      "out": 8376,
+      "usd": 0.0876
+    },
+    {
+      "node": "validate",
+      "secs": 9.74,
+      "calls": 1,
+      "in": 2123,
+      "out": 1724,
+      "usd": 0.0187
+    },
+    {
+      "node": "revise",
+      "secs": 27.21,
+      "calls": 1,
+      "in": 7714,
+      "out": 5723,
+      "usd": 0.0631
+    },
+    {
+      "node": "validate",
+      "secs": 15.8,
+      "calls": 1,
+      "in": 2179,
+      "out": 3081,
+      "usd": 0.031
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 29.8,
+      "calls": 1,
+      "in": 7968,
+      "out": 6451,
+      "usd": 0.07
+    },
+    {
+      "node": "validate",
+      "secs": 17.47,
+      "calls": 1,
+      "in": 2362,
+      "out": 3350,
+      "usd": 0.0337
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 25.47,
+      "calls": 1,
+      "in": 8299,
+      "out": 5855,
+      "usd": 0.0651
+    },
+    {
+      "node": "validate",
+      "secs": 0.12,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 58.61,
+      "calls": 1,
+      "in": 8194,
+      "out": 12990,
+      "usd": 0.1292
+    },
+    {
+      "node": "validate",
+      "secs": 0.15,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "review",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "emit",
+      "secs": 0.0,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 12,
+  "config_path": "configs/qld__queensland-government-contracts-directory-awarded-contracts.yaml"
+}

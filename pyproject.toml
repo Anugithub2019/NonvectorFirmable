@@ -1,0 +1,35 @@
+[project]
+name = "firmable-ingest"
+version = "0.1.0"
+description = "Agentic schema inference and canonical mapping for public business datasets"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.2",
+    "langgraph-checkpoint-sqlite>=2.0",
+    "google-genai>=1.0",
+    "pydantic>=2.6",
+    "httpx>=0.27",
+    "pandas>=2.2",
+    "openpyxl>=3.1",
+    "pyyaml>=6.0",
+    "rich>=13.7",
+    "python-dotenv>=1.0",
+    "xlrd>=2.0.2",
+    "lxml>=6.1.3",
+    "duckdb>=2.0.0",
+    "neo4j>=6.4.1",
+    "streamlit>=1.66.1",
+    "rapidfuzz>=3.14.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/firmable"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

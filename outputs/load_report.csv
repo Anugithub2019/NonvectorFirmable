@@ -1,0 +1,14 @@
+source,records_in,nodes_out,edges_out,records_rejected,top_rejection_reason
+data.gov.au:acnc-register,66341,132641,142023,395,no_candidate_in_block
+data.gov.au:asic-afs-licensee,6541,13082,19623,1,below_threshold
+data.gov.au:asic-banned-disqualified-org,15,30,45,0,
+data.gov.au:asic-credit-licensee,4308,8616,14395,69,below_threshold
+data.gov.au:asic-liquidator,662,1518,2489,662,person_name_only
+local:abr-slice,64484,128968,165938,0,
+local:asic-companies-slice,80188,142146,159862,0,
+local:gleif-lei-au,53604,107135,107160,1,identifier_conflict
+local:gleif-relationships,6489,12139,12978,0,
+nsw:liquor-licence-premises-list-as-at-8-feb-2021,18747,24158,18280,6102,below_threshold
+qld:ehp-suitable-operator-register-sor-for-environmentally-relevant-activities-eras,15128,30245,30253,6871,person_name_only
+qld:qbcc-licensed-contractors-register,205535,353965,508221,88815,person_name_only
+qld:queensland-government-contracts-directory-awarded-contracts,45752,56059,56223,36563,below_threshold

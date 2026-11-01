@@ -1,0 +1,181 @@
+{
+  "source_id": "qld:queensland-government-contracts-directory-awarded-contracts",
+  "extractor_version": "engine=0.1.2;config=qld:queensland-government-contracts-directory-awarded-contracts@v1;sha=c6512afa1a",
+  "input_rows": 45752,
+  "sampled_rows": 45752,
+  "sample": "random",
+  "seed": 7,
+  "observations": 187512,
+  "stats": {
+    "records": 45752,
+    "filtered": 0,
+    "duplicate_ids": 8089,
+    "observed_at_fallback": 1553,
+    "records_without_entity_claims": 1
+  },
+  "fields": {
+    "entity.legal_name": {
+      "applicable": 45751,
+      "produced": 45751,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "DAMIAN BONOMO",
+        "BRIDGET JONES",
+        "INNOVATIVE PROJECT SERVICES",
+        "DELOITTE TOUCHE TOHMATSU"
+      ],
+      "raw_examples": [
+        "DAMIAN BONOMO",
+        "BRIDGET JONES T/A WAVELENGTH RESEARCH &",
+        "INNOVATIVE PROJECT SERVICES",
+        "DELOITTE TOUCHE TOHMATSU"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 27985,
+      "produced": 27985,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "company",
+        "trust",
+        "incorporated_association"
+      ],
+      "raw_examples": [
+        "PREMIS SOLUTIONS PTY LTD",
+        "THE TRUSTEE FOR THE GALLOWAY MCLEAN TRUS",
+        "MACROGEN INC"
+      ],
+      "abstained": 17766,
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.full": {
+      "applicable": 45491,
+      "produced": 45491,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "63 FELIX STREET, WOOLOOWIN QLD 4030",
+        "17 GLENROSA STREET, RED HILL QLD 4059",
+        "48 BEACH STREET, KIPPA RING QLD 4021",
+        "PO BOX 1463, BRISBANE QLD 4001"
+      ],
+      "raw_examples": [
+        "63 FELIX STREET, WOOLOOWIN    QLD   4030",
+        "17 GLENROSA STREET, RED HILL    QLD   4059",
+        "48 BEACH STREET, KIPPA RING    QLD   4021",
+        "PO BOX 1463, BRISBANE    QLD   4001"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.postcode": {
+      "applicable": 45661,
+      "produced": 40187,
+      "failed": 5474,
+      "enum_violations": 0,
+      "fail_examples": [
+        "Beijing Branch Office Twin Towers East , 10th Floor B 12 Jianguomenwai Avenue Beijing  100022 China",
+        "Center GMbH Tierjartewstr 15-17  Heidelberg  69121 Germany",
+        "290 Congress Street 4th Floor  Boston MA 02210 United States",
+        "Unit 18 Titan Drive   Peterborough  PE1 5XN United Kingdom",
+        "333 W River Park Drive   Provo UT 84604 United States",
+        "Agency ta ACIAR Sweet Potato Project Makinono Street Section 22, Lot 10 West Goroka  441 Papua New Guinea"
+      ],
+      "value_examples": [
+        "4030",
+        "4059",
+        "4021",
+        "4001"
+      ],
+      "raw_examples": [
+        "63 FELIX STREET, WOOLOOWIN    QLD   4030",
+        "17 GLENROSA STREET, RED HILL    QLD   4059",
+        "48 BEACH STREET, KIPPA RING    QLD   4021",
+        "PO BOX 1463, BRISBANE    QLD   4001"
+      ],
+      "fail_rate": 0.12,
+      "enum_violation_rate": 0.0
+    },
+    "address.state": {
+      "applicable": 45661,
+      "produced": 14207,
+      "failed": 31454,
+      "enum_violations": 0,
+      "fail_examples": [
+        "1773 W 200 N Kaysville   UT USA 84037 United States",
+        "Beijing Branch Office Twin Towers East , 10th Floor B 12 Jianguomenwai Avenue Beijing  100022 China",
+        "6216 Paysphere Circle   Chicago ILL 60674 United States",
+        "6216 Paysphere Circle   Chicago ILL 60674 United States",
+        "Center GMbH Tierjartewstr 15-17  Heidelberg  69121 Germany",
+        "1001, 254 Beotkkot-ro Geumcheon-gu   Seoul  153-781 Korea, Republic Of"
+      ],
+      "value_examples": [
+        "QLD",
+        "NSW",
+        "VIC",
+        "ACT"
+      ],
+      "raw_examples": [
+        "63 FELIX STREET, WOOLOOWIN    QLD   4030",
+        "GPO BOX 3868, SYDNEY    NSW   2001",
+        "46 Middleton Street   Highett VIC 3190 Australia",
+        "GPO Box 1559   CANBERRA ACT 2601 Australia"
+      ],
+      "fail_rate": 0.689,
+      "enum_violation_rate": 0.0
+    },
+    "address.country": {
+      "applicable": 13559,
+      "produced": 13559,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "AU"
+      ],
+      "raw_examples": [
+        "63 FELIX STREET, WOOLOOWIN    QLD   4030"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.trading_name": {
+      "applicable": 1210,
+      "produced": 332,
+      "failed": 878,
+      "enum_violations": 0,
+      "fail_examples": [
+        "BURLEIGH MARR DISTRIBUTIONS PTY LTD T/A",
+        "AUSTRALIA EDUCATION VICTORIA PTY LTD T/A",
+        "AUSTRALIA EDUCATION VICTORIA PTY LTD T/A",
+        "BALKIN FAMILY TRUST, THE TRUSTEE FOR T/A",
+        "BALKIN FAMILY TRUST, THE TRUSTEE FOR T/A",
+        "THE TRUSTEE FOR PEACE AVIATION TRUST T/A"
+      ],
+      "value_examples": [
+        "WAVELENGTH RESEARCH &",
+        "ORIGIN",
+        "ELITE CHE",
+        "OMD"
+      ],
+      "raw_examples": [
+        "BRIDGET JONES T/A WAVELENGTH RESEARCH &",
+        "ORIGIN ENERGY RETAIL LIMITED T/A ORIGIN",
+        "IONICS AUSTRALASIA PTY LTD T/A ELITE CHE",
+        "OPTIMUM MEDIA DIRECTION PTY LTD T/A OMD"
+      ],
+      "fail_rate": 0.726,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.177,
+  "observed_at_fallback_rate": 0.034
+}

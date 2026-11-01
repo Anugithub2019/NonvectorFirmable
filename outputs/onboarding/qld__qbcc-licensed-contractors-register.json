@@ -1,0 +1,255 @@
+{
+  "source_id": "qld:qbcc-licensed-contractors-register",
+  "status": "done",
+  "error": null,
+  "steps_executed": 21,
+  "llm_calls": 82,
+  "tokens_in": 124080,
+  "tokens_out": 61711,
+  "usd": 0.6876,
+  "agent_wall_clock_secs": 279.8,
+  "inspect_attempts": 1,
+  "revisions": 5,
+  "validation_history": [
+    {
+      "iteration": 0,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 3
+    },
+    {
+      "iteration": 1,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 5
+    },
+    {
+      "iteration": 2,
+      "passed": true,
+      "n_blocking": 0,
+      "n_warnings": 5
+    },
+    {
+      "iteration": 3,
+      "passed": false,
+      "n_blocking": 2,
+      "n_warnings": 0
+    },
+    {
+      "iteration": 4,
+      "passed": false,
+      "n_blocking": 1,
+      "n_warnings": 4
+    },
+    {
+      "iteration": 5,
+      "passed": false,
+      "n_blocking": 2,
+      "n_warnings": 3
+    }
+  ],
+  "changes_log": [
+    {
+      "iteration": 0,
+      "node": "propose",
+      "changes": "initial proposal"
+    },
+    {
+      "iteration": 1,
+      "node": "revise",
+      "changes": "Added map_values transform on person.role to map raw 'I' to canonical enum value 'licensee', fixing the blocking enum validation failure. Corrected record envelope properties and schema structure."
+    },
+    {
+      "iteration": 2,
+      "node": "revise",
+      "changes": "Added condition Licence Type CODE = 'C' to entity.legal_name and entity.entity_type to prevent individual names from emitting as corporate legal names. Populated explicit value mappings for licence.licence_type from Licence Grade (mapping occupational non-building licences to 'other'). Updated transform parameter keys to args_json string representations to conform strictly with schema specification."
+    },
+    {
+      "iteration": 3,
+      "node": "revise",
+      "changes": "Removed restriction on entity.legal_name so it extracts across all rows including individual licensees per ontology guidance. Added address.locality mapping using au_locality transform. Updated entity.entity_type mapping to map 'Individual' to 'sole_trader' alongside 'Company' to 'company'."
+    },
+    {
+      "iteration": 4,
+      "node": "revise",
+      "changes": "1. Removed when condition on entity.legal_name so it extracts for all rows regardless of licence type code. 2. Replaced non-existent transform op au_locality with supported regex_extract + title_case ops. 3. Formatted args_json correctly as valid JSON string in licence.licence_type transform. 4. Updated observed_at/valid_from/valid_to structure to match schema requirements."
+    },
+    {
+      "iteration": 5,
+      "node": "revise",
+      "changes": "Removed conditions from entity.legal_name so it extracts for all rows as required by ontology v0.2 rules. Expanded address.locality regex to include CRESCENT, CRES, CIRCUIT, CIR, ESPLANADE, ESP, and AVENUE designators to fix extraction blocking errors. Adjusted target confidence levels to accurately reflect field mappings."
+    }
+  ],
+  "steps": [
+    {
+      "node": "resolve",
+      "secs": 1.55,
+      "calls": 1,
+      "in": 342,
+      "out": 93,
+      "usd": 0.0003
+    },
+    {
+      "node": "download",
+      "secs": 0.05,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "inspect",
+      "secs": 8.6,
+      "calls": 1,
+      "in": 2119,
+      "out": 1456,
+      "usd": 0.0163
+    },
+    {
+      "node": "try_read",
+      "secs": 0.03,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "profile",
+      "secs": 0.62,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "propose",
+      "secs": 34.44,
+      "calls": 1,
+      "in": 7251,
+      "out": 7628,
+      "usd": 0.0795
+    },
+    {
+      "node": "validate",
+      "secs": 3.93,
+      "calls": 13,
+      "in": 7502,
+      "out": 273,
+      "usd": 0.0003
+    },
+    {
+      "node": "revise",
+      "secs": 21.18,
+      "calls": 1,
+      "in": 10246,
+      "out": 4903,
+      "usd": 0.0595
+    },
+    {
+      "node": "validate",
+      "secs": 18.78,
+      "calls": 14,
+      "in": 11127,
+      "out": 3217,
+      "usd": 0.0323
+    },
+    {
+      "node": "revise",
+      "secs": 32.8,
+      "calls": 1,
+      "in": 10361,
+      "out": 7554,
+      "usd": 0.0835
+    },
+    {
+      "node": "validate",
+      "secs": 18.89,
+      "calls": 14,
+      "in": 10874,
+      "out": 2960,
+      "usd": 0.0295
+    },
+    {
+      "node": "review",
+      "secs": 15.73,
+      "calls": 1,
+      "in": 2963,
+      "out": 1764,
+      "usd": 0.0271
+    },
+    {
+      "node": "revise",
+      "secs": 31.39,
+      "calls": 1,
+      "in": 10497,
+      "out": 7238,
+      "usd": 0.0809
+    },
+    {
+      "node": "validate",
+      "secs": 0.42,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    },
+    {
+      "node": "revise",
+      "secs": 33.93,
+      "calls": 1,
+      "in": 9016,
+      "out": 7668,
+      "usd": 0.0825
+    },
+    {
+      "node": "validate",
+      "secs": 21.42,
+      "calls": 15,
+      "in": 11940,
+      "out": 3827,
+      "usd": 0.0379
+    },
+    {
+      "node": "review",
+      "secs": 11.18,
+      "calls": 1,
+      "in": 3377,
+      "out": 1099,
+      "usd": 0.0199
+    },
+    {
+      "node": "revise",
+      "secs": 32.73,
+      "calls": 1,
+      "in": 10981,
+      "out": 7641,
+      "usd": 0.0852
+    },
+    {
+      "node": "validate",
+      "secs": 18.98,
+      "calls": 15,
+      "in": 11945,
+      "out": 3436,
+      "usd": 0.0344
+    },
+    {
+      "node": "review",
+      "secs": 9.55,
+      "calls": 1,
+      "in": 3539,
+      "out": 954,
+      "usd": 0.0185
+    },
+    {
+      "node": "emit",
+      "secs": 0.01,
+      "calls": 0,
+      "in": 0,
+      "out": 0,
+      "usd": 0.0
+    }
+  ],
+  "llm_steps": 16,
+  "config_path": "configs/qld__qbcc-licensed-contractors-register.yaml"
+}

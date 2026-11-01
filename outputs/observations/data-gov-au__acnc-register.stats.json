@@ -1,0 +1,281 @@
+{
+  "source_id": "data.gov.au:acnc-register",
+  "extractor_version": "engine=0.1.2;config=data.gov.au:acnc-register@v1;sha=3b32f320ca",
+  "input_rows": 66514,
+  "sampled_rows": 66514,
+  "sample": "random",
+  "seed": 7,
+  "observations": 595135,
+  "stats": {
+    "records": 66514,
+    "filtered": 0,
+    "duplicate_ids": 35,
+    "observed_at_fallback": 66514,
+    "records_without_entity_claims": 210
+  },
+  "fields": {
+    "entity.abn": {
+      "applicable": 65907,
+      "produced": 65905,
+      "failed": 2,
+      "enum_violations": 0,
+      "fail_examples": [
+        "91111111273",
+        "91111111272"
+      ],
+      "value_examples": [
+        "20613885410",
+        "45629238500",
+        "72886162186",
+        "57328293880"
+      ],
+      "raw_examples": [
+        "20613885410",
+        "45629238500",
+        "72886162186",
+        "57328293880"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.legal_name": {
+      "applicable": 66298,
+      "produced": 66298,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Marradhali Aboriginal Corporation",
+        "Margate Family Op Shop Trust",
+        "Jonahs Wings",
+        "Donnybrook Mens Shed Incorporated"
+      ],
+      "raw_examples": [
+        "Marradhali Aboriginal Corporation",
+        "Margate Family Op Shop Trust",
+        "Jonahs Wings",
+        "Donnybrook Mens Shed Incorporated"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 46159,
+      "produced": 46159,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "company",
+        "trust",
+        "incorporated_association"
+      ],
+      "raw_examples": [
+        "Marradhali Aboriginal Corporation",
+        "Margate Family Op Shop Trust",
+        "Donnybrook Mens Shed Incorporated"
+      ],
+      "abstained": 20139,
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.website": {
+      "applicable": 43854,
+      "produced": 43748,
+      "failed": 106,
+      "enum_violations": 0,
+      "fail_examples": [
+        "Instagram",
+        "none",
+        "tbc",
+        "facebook/malleewren",
+        "https://ORIC  ICN#7411",
+        "www.facebook.com/nhw greater shepparton"
+      ],
+      "value_examples": [
+        "www.marradhali.com.au",
+        "https://www.facebook.com/margateopshop",
+        "www.jonahswings.com.au",
+        "https://armadale.wa.bahai.org.au"
+      ],
+      "raw_examples": [
+        "www.marradhali.com.au",
+        "https://www.facebook.com/margateopshop/",
+        "www.jonahswings.com.au",
+        "https://armadale.wa.bahai.org.au/"
+      ],
+      "fail_rate": 0.002,
+      "enum_violation_rate": 0.0
+    },
+    "entity.date_registered": {
+      "applicable": 66247,
+      "produced": 66247,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "2023-10-11",
+        "2024-02-28",
+        "2024-07-22",
+        "2024-06-21"
+      ],
+      "raw_examples": [
+        "11/10/2023",
+        "28/02/2024",
+        "22/07/2024",
+        "21/06/2024"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.full": {
+      "applicable": 59646,
+      "produced": 59646,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "73 Taylor Street",
+        "32 Baynes St",
+        "44 Reigate Rd",
+        "Egan Park"
+      ],
+      "raw_examples": [
+        "73 Taylor Street",
+        "32 Baynes St",
+        "44 Reigate Rd",
+        "Egan Park"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.locality": {
+      "applicable": 59633,
+      "produced": 59633,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Dubbo",
+        "Margate",
+        "Highton",
+        "Donnybrook"
+      ],
+      "raw_examples": [
+        "Dubbo",
+        "Margate",
+        "Highton",
+        "DONNYBROOK"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.state": {
+      "applicable": 59600,
+      "produced": 59595,
+      "failed": 5,
+      "enum_violations": 0,
+      "fail_examples": [
+        "Bali",
+        "Mentone",
+        "Australia Capital Territory",
+        "Australia Indian Ocean Territories",
+        "4344"
+      ],
+      "value_examples": [
+        "NSW",
+        "QLD",
+        "VIC",
+        "WA"
+      ],
+      "raw_examples": [
+        "NSW",
+        "QLD",
+        "VIC",
+        "WA"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.postcode": {
+      "applicable": 59695,
+      "produced": 59672,
+      "failed": 23,
+      "enum_violations": 0,
+      "fail_examples": [
+        "200",
+        "139658",
+        "800",
+        "31051",
+        "872",
+        "33132"
+      ],
+      "value_examples": [
+        "2830",
+        "4019",
+        "3216",
+        "6239"
+      ],
+      "raw_examples": [
+        "2830",
+        "4019",
+        "3216",
+        "6239"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.country": {
+      "applicable": 58638,
+      "produced": 58616,
+      "failed": 22,
+      "enum_violations": 0,
+      "fail_examples": [
+        "Austria",
+        "Aruba",
+        "Victoria",
+        "0419032014",
+        "Singapore",
+        "Austria"
+      ],
+      "value_examples": [
+        "AU"
+      ],
+      "raw_examples": [
+        "Australia"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.trading_name": {
+      "applicable": 7137,
+      "produced": 7107,
+      "failed": 30,
+      "enum_violations": 0,
+      "fail_examples": [
+        "Previously known as ABN 56187531098",
+        "Previously known as ABN 92891591625",
+        "Previously known as ABN 15696944721",
+        "Previously known as ABN 89497784003",
+        "Previously known as ABN 63600265549",
+        "Previously known as ABN 33134183180"
+      ],
+      "value_examples": [
+        "Donnybrook Men's Shed Inc.",
+        "Shiv Temple Geelong",
+        "Shiva Art Centre",
+        "The Geelong Hindu Society"
+      ],
+      "raw_examples": [
+        "Donnybrook Men's Shed Inc.",
+        "Shiv Temple Geelong, Shiva Art Centre, The Geelong Hindu Society",
+        "Shiv Temple Geelong, Shiva Art Centre, The Geelong Hindu Society",
+        "Shiv Temple Geelong, Shiva Art Centre, The Geelong Hindu Society"
+      ],
+      "fail_rate": 0.004,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.001,
+  "observed_at_fallback_rate": 1.0
+}

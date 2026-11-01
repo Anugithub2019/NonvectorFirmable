@@ -1,0 +1,261 @@
+{
+  "source_id": "data.gov.au:asic-afs-licensee",
+  "extractor_version": "engine=0.1.2;config=data.gov.au:asic-afs-licensee@v1;sha=6919c31301",
+  "input_rows": 6541,
+  "sampled_rows": 6541,
+  "sample": "random",
+  "seed": 7,
+  "observations": 71711,
+  "stats": {
+    "records": 6541,
+    "filtered": 0,
+    "duplicate_ids": 0,
+    "observed_at_fallback": 6541,
+    "records_without_entity_claims": 0
+  },
+  "fields": {
+    "entity.legal_name": {
+      "applicable": 6541,
+      "produced": 6541,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "IPIB PTY LTD",
+        "IMC PACIFIC PTY LTD",
+        "TRILOGY GROUP AUSTRALIA PTY LTD",
+        "HAWKESBRIDGE CAPITAL PTY LIMITED"
+      ],
+      "raw_examples": [
+        "IPIB PTY LTD",
+        "IMC PACIFIC PTY LTD",
+        "TRILOGY GROUP AUSTRALIA PTY LTD",
+        "HAWKESBRIDGE CAPITAL PTY LIMITED"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.entity_type": {
+      "applicable": 6438,
+      "produced": 6438,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "company",
+        "trust",
+        "incorporated_association"
+      ],
+      "raw_examples": [
+        "IPIB PTY LTD",
+        "AUSTRALIAN RETIREMENT TRUST PTY LTD",
+        "VIRGINIA SURETY COMPANY, INC."
+      ],
+      "abstained": 103,
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.abn": {
+      "applicable": 6344,
+      "produced": 6344,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "85007186003",
+        "89099273846",
+        "80078111654",
+        "96091160879"
+      ],
+      "raw_examples": [
+        "85007186003",
+        "89099273846",
+        "80078111654",
+        "96091160879"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.locality": {
+      "applicable": 6497,
+      "produced": 6497,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "Southbank",
+        "Sydney",
+        "Tooradin",
+        "Balwyn"
+      ],
+      "raw_examples": [
+        "SOUTHBANK",
+        "SYDNEY",
+        "TOORADIN",
+        "BALWYN"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.state": {
+      "applicable": 6497,
+      "produced": 6497,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "VIC",
+        "NSW",
+        "WA",
+        "SA"
+      ],
+      "raw_examples": [
+        "VIC",
+        "NSW",
+        "WA",
+        "SA"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.postcode": {
+      "applicable": 6497,
+      "produced": 6497,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "3006",
+        "2000",
+        "3980",
+        "3103"
+      ],
+      "raw_examples": [
+        "3006",
+        "2000",
+        "3980",
+        "3103"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "address.country": {
+      "applicable": 6541,
+      "produced": 6541,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "AU",
+        "OTHER"
+      ],
+      "raw_examples": [
+        "Australia",
+        "International"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.licence_number": {
+      "applicable": 6541,
+      "produced": 6541,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "218600",
+        "218678",
+        "218770",
+        "219140"
+      ],
+      "raw_examples": [
+        "218600",
+        "218678",
+        "218770",
+        "219140"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.licence_type": {
+      "applicable": 6541,
+      "produced": 6541,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "afs"
+      ],
+      "raw_examples": [
+        "218600"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.start_date": {
+      "applicable": 6540,
+      "produced": 6540,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "2002-05-02",
+        "2002-04-26",
+        "2002-08-22",
+        "2002-06-13"
+      ],
+      "raw_examples": [
+        "02/05/2002",
+        "26/04/2002",
+        "22/08/2002",
+        "13/06/2002"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "licence.authorisations": {
+      "applicable": 6538,
+      "produced": 6538,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "\"This licence authorises the licensee to carry on a financial services business to:\"~\"(a) provide financial product advice for the following classes of financial products:\"~\"(i) general insurance products; and\"~\"(b) deal in a financial product by:\"~\"(i) applying for, acquiring, varying or disposing of a financial product on behalf of another person in respect of the following classes of products:\"~\"(A) general insurance products;\"~\"to retail and wholesale clients.\"",
+        "\"This licence authorises the licensee to carry on a financial services business to:\"~\"(a) deal in a financial product by:\"~\"(i) issuing, applying for, acquiring, varying or disposing of a financial product in respect of the following classes of financial products:\"~\"(A) derivatives; and\"~\"(B) foreign exchange contracts; and\"~\"(b) make a market for the following financial products:\"~\"(i) foreign exchange contracts;\"~\"(ii) derivatives; and\"~\"(iii) limited to financial products other than:\"~\"(A) derivatives;\"~\"(B) foreign exchange contracts; and\"~\"(C) debentures, stocks or bonds issued or proposed to be issued by a government and/or debentures issued by any other body;\"~\"to wholesale clients.\"",
+        "\"This licence authorises the licensee to carry on a financial services business to:\"~\"(a) provide general financial product advice to retail clients for the following classes of financial products:\"~\"(i) deposit and payment products limited to:\"~\"(A) basic deposit products;\"~\"(B) deposit products other than basic deposit products;\"~\"(ii) derivatives;\"~\"(iii) foreign exchange contracts restricted to foreign exchange contracts utilised for the management of financial risk (hedging) which only have the purposes of:\"~\"(A) management or mitigation of the financial consequences of particular circumstances happening; or\"~\"(B) avoiding or limiting the financial consequences of fluctuations in the rate of exchange of foreign currency;\"~\"(iv) debentures, stocks or bonds issued or proposed to be issued by a government;\"~\"(v) life products including:\"~\"(A) investment life insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds; and\"~\"(B) life risk insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds;\"~\"(vi) interests in managed investment schemes including:\"~\"(A) investor directed portfolio services;\"~\"(vii) retirement savings accounts (\"RSA\") products (within the meaning of the Retirement Savings Account Act 1997);\"~\"(viii securities;\"~\"(ix) standard margin lending facility; and\"~\"(x) superannuation; and\"~\"(b) provide financial product advice to wholesale clients for the following classes of financial products:\"~\"(i) deposit and payment products limited to:\"~\"(A) basic deposit products;\"~\"(B) deposit products other than basic deposit products;\"~\"(ii) derivatives;\"~\"(iii) foreign exchange contracts restricted to foreign exchange contracts utilised for the management of financial risk (hedging) which only have the purposes of:\"~\"(A) management or mitigation of the financial consequences of particular circumstances happening; or\"~\"(B) avoiding or limiting the financial consequences of fluctuations in the rate of exchange of foreign currency;\"~\"(iv) debentures, stocks or bonds issued or proposed to be issued by a government;\"~\"(v) life products including:\"~\"(A) investment life insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds; and\"~\"(B) life risk insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds;\"~\"(vi) interests in managed investment schemes including:\"~\"(A) investor directed portfolio services;\"~\"(vii) retirement savings accounts (\"RSA\") products (within the meaning of the Retirement Savings Account Act 1997);\"~\"(viii securities;\"~\"(ix) standard margin lending facility; and\"~\"(x) superannuation;\"~\"(c) deal in a financial product to retail and wholesale clients by:\"~\"(i) issuing, applying for, acquiring, varying or disposing of a financial product in respect of the following classes of financial products:\"~\"(A) derivatives; and\"~\"(B) interests in managed investment schemes limited to:\"~\"(1) own managed investment scheme only; and\"~\"(ii) applying for, acquiring, varying or disposing of a financial product on behalf of another person in respect of the following classes of products:\"~\"(A) deposit and payment products limited to:\"~\"(1) basic deposit products;\"~\"(2) deposit products other than basic deposit products;\"~\"(B) derivatives;\"~\"(C) foreign exchange contracts restricted to foreign exchange contracts utilised for the management of financial risk (hedging) which only have the purposes of:\"~\"(1) management or mitigation of the financial consequences of particular circumstances happening; or\"~\"(2) avoiding or limiting the financial consequences of fluctuations in the rate of exchange of foreign currency\"~\"(D) debentures, stocks or bonds issued or proposed to be issued by a government;\"~\"(E) life products including:\"~\"(1) investment life insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds; and\"~\"(2) life risk insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds;\"~\"(F) interests in managed investment schemes including:\"~\"(1) investor directed portfolio services;\"~\"(G) retirement savings accounts (\"RSA\") products (within the meaning of the Retirement Savings Account Act 1997);\"~\"(H) securities;\"~\"(I) standard margin lending facility; and\"~\"(J) superannuation; and\"~\"(d) provide the following custodial or depository services to retail and wholesale clients:\"~\"(i) operate custodial or depository services other than investor directed portfolio services.\"",
+        "\"This licence authorises the licensee to carry on a financial services business to:\"~\"(a) provide financial product advice for the following classes of financial products:\"~\"(i) interests in managed investment schemes; and\"~\"(ii) securities; and\"~\"(b) deal in a financial product by:\"~\"(i) issuing, applying for, acquiring, varying or disposing of a financial product in respect of the following classes of financial products:\"~\"(A) interests in managed investment schemes; and\"~\"(B) securities; and\"~\"(ii) applying for, acquiring, varying or disposing of a financial product on behalf of another person in respect of the following classes of products:\"~\"(A) interests in managed investment schemes; and\"~\"(B) securities;\"~\"to wholesale clients.\""
+      ],
+      "raw_examples": [
+        "\"This licence authorises the licensee to carry on a financial services business to:\"~\"(a) provide financial product advice for the following classes of financial products:\"~\"(i) general insurance products; and\"~\"(b) deal in a financial product by:\"~\"(i) applying for, acquiring, varying or disposing of a financial product on behalf of another person in respect of the following classes of products:\"~\"(A) general insurance products;\"~\"to retail and wholesale clients.\"",
+        "\"This licence authorises the licensee to carry on a financial services business to:\"~\"(a) deal in a financial product by:\"~\"(i) issuing, applying for, acquiring, varying or disposing of a financial product in respect of the following classes of financial products:\"~\"(A) derivatives; and\"~\"(B) foreign exchange contracts; and\"~\"(b) make a market for the following financial products:\"~\"(i) foreign exchange contracts;\"~\"(ii) derivatives; and\"~\"(iii) limited to financial products other than:\"~\"(A) derivatives;\"~\"(B) foreign exchange contracts; and\"~\"(C) debentures, stocks or bonds issued or proposed to be issued by a government and/or debentures issued by any other body;\"~\"to wholesale clients.\"",
+        "\"This licence authorises the licensee to carry on a financial services business to:\"~\"(a) provide general financial product advice to retail clients for the following classes of financial products:\"~\"(i) deposit and payment products limited to:\"~\"(A) basic deposit products;\"~\"(B) deposit products other than basic deposit products;\"~\"(ii) derivatives;\"~\"(iii) foreign exchange contracts restricted to foreign exchange contracts utilised for the management of financial risk (hedging) which only have the purposes of:\"~\"(A) management or mitigation of the financial consequences of particular circumstances happening; or\"~\"(B) avoiding or limiting the financial consequences of fluctuations in the rate of exchange of foreign currency;\"~\"(iv) debentures, stocks or bonds issued or proposed to be issued by a government;\"~\"(v) life products including:\"~\"(A) investment life insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds; and\"~\"(B) life risk insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds;\"~\"(vi) interests in managed investment schemes including:\"~\"(A) investor directed portfolio services;\"~\"(vii) retirement savings accounts (\"RSA\") products (within the meaning of the Retirement Savings Account Act 1997);\"~\"(viii securities;\"~\"(ix) standard margin lending facility; and\"~\"(x) superannuation; and\"~\"(b) provide financial product advice to wholesale clients for the following classes of financial products:\"~\"(i) deposit and payment products limited to:\"~\"(A) basic deposit products;\"~\"(B) deposit products other than basic deposit products;\"~\"(ii) derivatives;\"~\"(iii) foreign exchange contracts restricted to foreign exchange contracts utilised for the management of financial risk (hedging) which only have the purposes of:\"~\"(A) management or mitigation of the financial consequences of particular circumstances happening; or\"~\"(B) avoiding or limiting the financial consequences of fluctuations in the rate of exchange of foreign currency;\"~\"(iv) debentures, stocks or bonds issued or proposed to be issued by a government;\"~\"(v) life products including:\"~\"(A) investment life insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds; and\"~\"(B) life risk insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds;\"~\"(vi) interests in managed investment schemes including:\"~\"(A) investor directed portfolio services;\"~\"(vii) retirement savings accounts (\"RSA\") products (within the meaning of the Retirement Savings Account Act 1997);\"~\"(viii securities;\"~\"(ix) standard margin lending facility; and\"~\"(x) superannuation;\"~\"(c) deal in a financial product to retail and wholesale clients by:\"~\"(i) issuing, applying for, acquiring, varying or disposing of a financial product in respect of the following classes of financial products:\"~\"(A) derivatives; and\"~\"(B) interests in managed investment schemes limited to:\"~\"(1) own managed investment scheme only; and\"~\"(ii) applying for, acquiring, varying or disposing of a financial product on behalf of another person in respect of the following classes of products:\"~\"(A) deposit and payment products limited to:\"~\"(1) basic deposit products;\"~\"(2) deposit products other than basic deposit products;\"~\"(B) derivatives;\"~\"(C) foreign exchange contracts restricted to foreign exchange contracts utilised for the management of financial risk (hedging) which only have the purposes of:\"~\"(1) management or mitigation of the financial consequences of particular circumstances happening; or\"~\"(2) avoiding or limiting the financial consequences of fluctuations in the rate of exchange of foreign currency\"~\"(D) debentures, stocks or bonds issued or proposed to be issued by a government;\"~\"(E) life products including:\"~\"(1) investment life insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds; and\"~\"(2) life risk insurance products as well as any products issued by a Registered Life Insurance Company that are backed by one or more of its statutory funds;\"~\"(F) interests in managed investment schemes including:\"~\"(1) investor directed portfolio services;\"~\"(G) retirement savings accounts (\"RSA\") products (within the meaning of the Retirement Savings Account Act 1997);\"~\"(H) securities;\"~\"(I) standard margin lending facility; and\"~\"(J) superannuation; and\"~\"(d) provide the following custodial or depository services to retail and wholesale clients:\"~\"(i) operate custodial or depository services other than investor directed portfolio services.\"",
+        "\"This licence authorises the licensee to carry on a financial services business to:\"~\"(a) provide financial product advice for the following classes of financial products:\"~\"(i) interests in managed investment schemes; and\"~\"(ii) securities; and\"~\"(b) deal in a financial product by:\"~\"(i) issuing, applying for, acquiring, varying or disposing of a financial product in respect of the following classes of financial products:\"~\"(A) interests in managed investment schemes; and\"~\"(B) securities; and\"~\"(ii) applying for, acquiring, varying or disposing of a financial product on behalf of another person in respect of the following classes of products:\"~\"(A) interests in managed investment schemes; and\"~\"(B) securities;\"~\"to wholesale clients.\""
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    },
+    "entity.acn": {
+      "applicable": 196,
+      "produced": 196,
+      "failed": 0,
+      "enum_violations": 0,
+      "fail_examples": [],
+      "value_examples": [
+        "063564045",
+        "002646764",
+        "099041835",
+        "103484082"
+      ],
+      "raw_examples": [
+        "063564045",
+        "002646764",
+        "099041835",
+        "103484082"
+      ],
+      "fail_rate": 0.0,
+      "enum_violation_rate": 0.0
+    }
+  },
+  "duplicate_id_rate": 0.0,
+  "observed_at_fallback_rate": 1.0
+}
