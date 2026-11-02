@@ -9,6 +9,8 @@ Public Australian business registers → an agent-built ingestion layer → a re
   [`ontology/NOTES.md`](ontology/NOTES.md). The write-up: [`WRITEUP.md`](WRITEUP.md).
 - Measurements: [`outputs/evaluation.md`](outputs/evaluation.md),
   [`outputs/performance.md`](outputs/performance.md), [`outputs/graph_queries.md`](outputs/graph_queries.md).
+  A verbatim live run of the agent (clear match → ambiguous match → evidence-backed answer → dataset export,
+  repeated for reproducibility): [`outputs/rehearsal.md`](outputs/rehearsal.md).
 
 ## Run it from a clean checkout (< 10 minutes to a working demo on the shipped outputs)
 
@@ -75,11 +77,11 @@ Downloads are done by the onboarding agent (CKAN resources) except the ABR zips 
 | **Per-field confidence**: Jev (decision model) gives P(mapping correct) per field, blind to the proposer | |
 | **Semantic matching**: Jev gives P(same party) for the top candidates | exact identifier joins; blocking; arbitration rule |
 | **Routing and guidance**: Jev decides what the user wants and whether it is specific enough; Gemini writes the clarifying question | |
-| **Intelligent agent**: tool-calling over the graph API | the tools themselves, caps, read-only Cypher guard (writes incl. INSERT refused by pattern and by READ transaction; name filtering refused so Cypher cannot bypass `resolve`), **and the control flow**: an ambiguous/abstained resolve halts the turn in code; typed tools accept only resolved, user-chosen or previously shown keys; the budget counts real calls and seconds |
+| **Intelligent agent**: tool-calling over the graph API | the tools themselves, caps, read-only Cypher controls (mutating keywords and non-allowlisted procedures refused on comment-stripped text, READ transaction, server-side timeout; name filtering refused so Cypher is not a side door around `resolve`; application-level checks, see `docs/ARCHITECTURE.md` §5), **and the control flow**: an ambiguous/abstained resolve halts the turn in code; typed tools accept only resolved, user-chosen or previously shown keys; the budget counts real calls and seconds |
 | **Data retriever**: natural language → typed projection spec | spec validation (invalid columns/filters rejected, never dropped), restatement generated from the validated spec, SQL with total ordering, pinned `as_of` + data generation, hashing, export |
 
-Which guarantees are enforced by code (with the test that proves each) and which remain prompt
-behaviour is tabled in `docs/ARCHITECTURE.md` §5.
+Which controls are enforced by code (with the test that proves each) and which remain prompt
+behaviour is tabled in `docs/ARCHITECTURE.md` §5. They are application-level controls, not a security boundary.
 
 ## Sources
 

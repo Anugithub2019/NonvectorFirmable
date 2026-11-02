@@ -171,9 +171,15 @@ stateDiagram-v2
     export --> [*] : CSV + Parquet + spec.json (as_of, data generation, matched/exported, hash)
 ```
 
-What the code enforces versus what the prompt asks for (the distinction a reviewer should check):
+What the code enforces versus what the prompt asks for (the distinction a reviewer should check).
+These are **application-level controls**: each is enforced in code and pinned by the test named in the
+last column, and the tests say exactly what each control catches. The two Cypher guards are pattern
+and allowlist checks on the query text; they are not a claim that no Cypher text can evade them. The
+database-side boundary is the READ access mode plus the server-side transaction timeout, and Neo4j
+Community has no per-user read-only role, so a read replica or a role-restricted deployment is the
+production answer, not a longer regex.
 
-| Guarantee | Enforced by | Proof |
+| Control | Enforced by | Proof |
 |---|---|---|
 | An ambiguous or abstained `resolve` ends the turn; the model cannot pick | `Agent.intelligent` returns on the decision; reply text is written by code | `tests/test_agent.py::test_ambiguous_resolve_halts…` |
 | `entity` / `ultimate_parent` / `within_hops(of_key)` only on resolved, user-chosen or previously shown keys | key gate in `Agent._call`; Cypher rows never unlock keys | `…::test_typed_tools_refuse_keys…`, `…cypher_keys_are_not` |
