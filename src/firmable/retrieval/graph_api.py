@@ -46,7 +46,7 @@ _FORBIDDEN = re.compile(r"\b(CREATE|MERGE|DELETE|DETACH|SET|REMOVE|DROP|CALL\s+d
 
 class GraphAPI:
     def __init__(self, duck_path: Path = DUCKDB, read_only: bool = True):
-        self.driver = GraphDatabase.driver(URI, auth=AUTH)
+        self.driver = GraphDatabase.driver(URI, auth=AUTH, notifications_disabled_classifications=["DEPRECATION"])
         self.duck_path = Path(duck_path)
         self.con = duckdb.connect(str(duck_path), read_only=read_only)
         self._generation: str | None = None

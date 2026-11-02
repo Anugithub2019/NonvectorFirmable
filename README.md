@@ -12,6 +12,10 @@ Public Australian business registers → an agent-built ingestion layer → a re
 
 ## Run it from a clean checkout (< 10 minutes to a working demo on the shipped outputs)
 
+One command: `cp .env.example .env`, fill in the two keys, then `./scripts/demo.sh` (Docker Desktop and uv
+installed). It runs the steps below and opens the demo at http://localhost:8501; re-runs skip the finished
+steps, `--rebuild` redoes them. Step by step:
+
 ```bash
 # 0. prerequisites: Docker Desktop running, uv (https://docs.astral.sh/uv/), a Gemini key, an OpenRouter key (for Jev)
 cp .env.example .env            # then fill GOOGLE_API_KEY and OPENROUTER_API_KEY
@@ -22,7 +26,7 @@ docker compose up -d            # Neo4j 5 community at http://localhost:7474 (ne
 
 # 2. the data. EITHER load the shipped outputs (fast)…
 uv run python -m firmable graph store     # observations -> DuckDB (data/firmable.duckdb)
-uv run python -m firmable graph resolve   # links, abstentions, parties  (~minutes; uses Jev)
+uv run python -m firmable graph resolve   # links, abstentions, parties (30 s to a few min with the shipped Jev score cache; see note)
 uv run python -m firmable graph load      # DuckDB -> Neo4j, reconciling load (stamps + sweeps stale nodes/edges)
 
 # …OR rebuild everything from the public sources (≈ 1 h incl. 1 GB ABR download; see "Full rebuild")
@@ -33,6 +37,15 @@ uv run streamlit run demo/app.py                     # the demo (http://localhos
 uv run python -m firmable evaluate                   # labels, recall test, 200-reference benchmark, reports
 uv run pytest -q                                     # tests: transforms, resolver, agent control flow, projections, store history (loader test needs `docker compose --profile test up -d neo4j-test`)
 ```
+
+Measured on a fresh clone (macOS, Docker Desktop): `uv sync` seconds · `graph store` 11 s · `graph resolve` 30 s to a few minutes ·
+`graph load` 1 min 40 s · `pytest` 33 passed (34 with the scratch Neo4j for the loader test). **`graph resolve` is fast only because the Jev pair-score cache
+ships in the repo** (`data/cache/jev_pairs.jsonl`, 12 MB, the one committed file under `data/`). Candidate blocking is
+not fully deterministic, so each run still scores a few hundred to a couple of thousand new pairs (cents). Without the
+cache the semantic path makes ≈ 63k decision-model calls: about an hour and ≈ $2 of OpenRouter credit. If you have no
+OpenRouter key, `graph resolve --no-jev` runs offline and free; it skips only the 729 semantic links. A run
+appends to `outputs/usage.jsonl` and rewrites `outputs/resolution_report.json`, so `git status` is dirty afterwards,
+and the party/abstention counts can differ from the tables below by a handful (blocking is not fully deterministic).
 
 The demo pages (sidebar): **Chat** (mode toggle: auto / intelligent / retriever; example prompts; the input stays pinned at the bottom and the newest answer scrolls into view), **Resolve** (ranked candidates,
 match type, score, evidence, the Cypher that found them), **Entity** (identifiers, source records,
@@ -157,7 +170,7 @@ outputs/       load_report.csv, links.jsonl.gz, abstentions.jsonl.gz, evaluation
                (the large JSONL files ship gzipped; `graph resolve` regenerates the plain ones)
 labels/        links_sample.jsonl (model labels), dirty_references.jsonl, recall test rows
 tests/         transforms, resolver, agent control flow (mocked), graph API (live), loader reconciliation (scratch Neo4j), store history
-data/          (git-ignored) raw downloads, abr parquet, firmable.duckdb; Neo4j data lives in the docker volume neo4j_data
+data/          (git-ignored except cache/jev_pairs.jsonl) raw downloads, abr parquet, firmable.duckdb; Neo4j data lives in the docker volume neo4j_data
 ```
 
 ## Known issues

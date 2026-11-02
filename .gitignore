@@ -9,10 +9,15 @@
 __pycache__/
 data/*.duckdb
 data/*.duckdb.wal
-data/cache/
+# the Jev pair-score cache ships so `graph resolve` is ~30 s and free on a fresh clone (see README)
+data/cache/*
+!data/cache/jev_pairs.jsonl
 data/raw/
 outputs/abstentions.jsonl
 outputs/links.jsonl
 outputs/observations/*.jsonl
 outputs/projections/
 outputs/resolve_results.jsonl
+data/.demo.lock
+data/.resolved
+data/.loaded

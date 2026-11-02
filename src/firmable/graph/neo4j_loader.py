@@ -49,7 +49,7 @@ REL_EDGE = {"owned_by": ("OWNS", "parent->child"), "owns": ("OWNS", "child->pare
 class Loader:
     def __init__(self, con: duckdb.DuckDBPyConnection, uri: str = URI, auth: tuple[str, str] = AUTH):
         self.con = con
-        self.driver = GraphDatabase.driver(uri, auth=auth)
+        self.driver = GraphDatabase.driver(uri, auth=auth, notifications_disabled_classifications=["DEPRECATION"])
         self.load_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid.uuid4().hex[:6]
         self.report_path = OUTPUTS / "load_report.csv"
         self.report: dict[str, dict] = defaultdict(lambda: {"records_in": 0, "nodes_out": 0, "edges_out": 0,
