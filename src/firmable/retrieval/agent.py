@@ -35,27 +35,35 @@ from pydantic import BaseModel, Field
 from rapidfuzz.distance import JaroWinkler
 
 from .. import llm
-from .graph_api import GraphAPI
+from .graph_api import GraphAPI, strip_comments
 
 MAX_TOOL_CALLS = 8      # real tool invocations per turn (several may happen in one model step)
 MAX_TURN_SECONDS = 90   # wall-clock budget for the tool loop
 CLARIFY_BELOW = 0.30    # ask only when the decision model is fairly sure the request cannot be acted on
 GATED_TOOLS = ("entity", "ultimate_parent", "within_hops")
 # Name-bearing things an agent-written query must not filter or search on: the Party display name, the
-# Name node's text/normalised form, the full-text index over them, and case-folding functions (only ever
-# used to compare names). Names may appear in the final RETURN clause (to show them), nowhere else.
-_NAME_TOKEN = re.compile(r"(display_name|\.text\b|normalised|fulltext|toLower\s*\(|toUpper\s*\()", re.I)
+# Name node's text/normalised form (as `.text` or an inline `{text: ...}` map), the full-text index, and
+# case-folding functions (only ever used to compare names). Names may be *shown* in the final RETURN
+# clause; they may not be filtered there either (list comprehensions, CASE, predicates, comparisons).
+_NAME_TOKEN = re.compile(r"(display_name|\btext\b|normalised|fulltext|toLower\s*\(|toUpper\s*\()", re.I)
 _LAST_RETURN = re.compile(r"\bRETURN\b(?!.*\bRETURN\b)", re.I | re.S)
+_RETURN_FILTERING = re.compile(
+    r"(\bWHERE\b|\bIN\b|\bCASE\b|\bCONTAINS\b|STARTS\s+WITH|ENDS\s+WITH|=~|<>|=|<|>|\{|"
+    r"\b(any|all|none|single|filter|reduce|exists|size|count)\s*\()", re.I)
 
 
 def _name_filtered(query: str) -> bool:
-    """True when the query uses a name anywhere other than its final RETURN clause: in a WHERE, an
-    inline property map {display_name: ...}, an IN list, a WITH ... AS alias (laundering the name into a
-    new variable), a toLower()/toUpper() wrapper or the full-text procedure. Such a query finds entities
-    by name without `resolve`, which is exactly what the resolution gate exists to prevent."""
-    m = _LAST_RETURN.search(query)
-    head = query[:m.start()] if m else query
-    return bool(_NAME_TOKEN.search(head))
+    """True when the query could find or select entities by name without `resolve`. Checked on the
+    comment-stripped text. Refused: a name token anywhere before the final RETURN (WHERE, inline property
+    maps, IN lists, WITH ... AS aliases, MATCH patterns), and a name token inside the RETURN clause when
+    that clause also filters (a list comprehension or predicate function, CASE, WHERE, a comparison, a
+    pattern operator or a map projection). Allowed: plain RETURN/ORDER BY of name fields."""
+    q = strip_comments(query)
+    m = _LAST_RETURN.search(q)
+    head, ret = (q[:m.start()], q[m.start():]) if m else (q, "")
+    if _NAME_TOKEN.search(head):
+        return True
+    return bool(_NAME_TOKEN.search(ret) and _RETURN_FILTERING.search(ret))
 
 ROUTE_Q = {
     "intent": {

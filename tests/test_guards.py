@@ -23,14 +23,33 @@ from firmable.retrieval import graph_api as G
     "CALL db.clearQueryCaches()",
     "ALTER DATABASE neo4j SET ACCESS READ WRITE",
     "LOAD CSV FROM 'file:///x.csv' AS row RETURN row",
+    "CALL /* comment */ db.createLabel('X')",                      # comment between keyword and procedure
+    "CALL // c\n db.createLabel('X')",
+    "CALL db.createLabel('X')",                                     # not on the allowlist
+    "CALL dbms.components() YIELD name RETURN name",
+    "CALL apoc.load.json('file:///x') YIELD value RETURN value",
+    "MATCH (n) /* x */ DELETE /* y */ n",
+    "USE system MATCH (n) RETURN n",
 ])
 def test_write_guard_refuses_every_mutating_form(q):
-    assert G._FORBIDDEN.search(q), q
+    assert G.write_refusal(q), q
 
 
-def test_write_guard_lets_reads_through():
-    q = "MATCH (p:Party {key: $k})-[:HOLDS]->(l:Licence) RETURN l.licence_type, l.status ORDER BY l.start_date"
-    assert not G._FORBIDDEN.search(q)
+@pytest.mark.parametrize("q", [
+    "MATCH (p:Party {key: $k})-[:HOLDS]->(l:Licence) RETURN l.licence_type, l.status ORDER BY l.start_date",
+    "CALL db.labels() YIELD label RETURN label",                    # allowlisted read procedure
+    "CALL { MATCH (n:Party) RETURN n LIMIT 1 } RETURN count(*)",    # subquery, not a procedure
+    "MATCH (n) // CREATE in a comment is harmless\nRETURN count(n)",
+    "MATCH (p:Party) WHERE p.website = 'http://x.com' RETURN p.key",  # `//` inside a literal is not a comment
+])
+def test_write_guard_lets_reads_through(q):
+    assert G.write_refusal(q) is None, q
+
+
+def test_comment_stripping_respects_string_literals():
+    assert G.strip_comments("RETURN 'a//b' // tail").strip() == "RETURN 'a//b'"
+    assert G.strip_comments("RETURN '/* not a comment */', 1 /* real */").strip() == "RETURN '/* not a comment */', 1"
+    assert G.strip_comments("RETURN `we//ird`").strip() == "RETURN `we//ird`"
 
 
 # ----------------------------------------------------------------------------- name gate
@@ -44,6 +63,16 @@ def test_write_guard_lets_reads_through():
     "CALL db.index.fulltext.queryNodes('name_text', 'acme') YIELD node MATCH (p)-[:KNOWN_AS]->(node) RETURN p.key",
     "MATCH (p:Party) WHERE p.display_name =~ '(?i)acme.*' RETURN p.key",
     "MATCH (p:Party) WHERE toUpper(p.display_name) = 'ACME' RETURN p.key",
+    "MATCH (p:Party)-[:KNOWN_AS]->(n:Name {text: 'ACME PTY LTD'}) RETURN p.key",           # inline map, no dot
+    "MATCH (p:Party)-[:KNOWN_AS]->(n:Name {normalised: 'ACME PTY LTD'}) RETURN p.key",
+    "MATCH (p:Party) RETURN [x IN collect(p) WHERE x.display_name CONTAINS 'ACME' | x.key]",  # filtering inside RETURN
+    "MATCH (p:Party) RETURN CASE WHEN p.display_name = 'ACME PTY LTD' THEN p.key END",
+    "MATCH (p:Party) RETURN p.key, p.display_name = 'ACME PTY LTD' AS hit",
+    "MATCH (p:Party) RETURN p.key, any(x IN [p.display_name] WHERE x STARTS WITH 'ACME')",
+    "MATCH (p:Party) RETURN p{.key, .display_name}",                                            # map projection
+    "MATCH (p:Party) WHERE /* c */ p.display_name = 'ACME' RETURN p.key",
+    "MATCH (p:Party) WHERE 'a//' = 'a' OR p.display_name CONTAINS 'ACME' RETURN p.key",         # // inside a literal
+    "MATCH (p:Party) WHERE p.display_name CONTAINS 'ACME' RETURN p.key // RETURN",              # fake RETURN in comment
 ])
 def test_name_lookups_are_refused_in_every_spelling(q):
     assert A._name_filtered(q), q
@@ -53,6 +82,8 @@ def test_name_lookups_are_refused_in_every_spelling(q):
     "MATCH (p:Party {key: $k})-[:KNOWN_AS]->(n:Name) RETURN p.display_name, n.text ORDER BY n.text",
     "MATCH (p:Party {key: 'abn:1'})-[:OWNS]->(c:Party) RETURN c.key, c.display_name",
     "MATCH (p:Party) WHERE p.status = 'active' AND p.state = 'QLD' RETURN count(p)",
+    "MATCH (p:Party {key: $k}) RETURN p.key, p.display_name /* shown, not filtered */ ORDER BY p.display_name",
+    "MATCH (p:Party {key: $k})-[:KNOWN_AS]->(n:Name) RETURN collect(n.text) AS names",
 ])
 def test_names_may_be_returned_but_not_filtered(q):
     assert not A._name_filtered(q), q

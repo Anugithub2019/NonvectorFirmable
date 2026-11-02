@@ -43,8 +43,50 @@ CYPHER_TIMEOUT_S = 15          # ... and for agent-written Cypher
 EXPORT_MAX_ROWS = 100_000
 _FORBIDDEN = re.compile(
     r"\b(CREATE|INSERT|MERGE|DELETE|DETACH|SET|REMOVE|DROP|FOREACH|ALTER|GRANT|DENY|REVOKE|TERMINATE"
-    r"|START\s+DATABASE|STOP\s+DATABASE|USE\s+system|CALL\s+dbms|CALL\s+db\.(create|drop|clear|alter|checkpoint|resample)\w*"
-    r"|CALL\s+tx\.|CALL\s+apoc\.(?!text)|LOAD\s+CSV)\b", re.I)
+    r"|START\s+DATABASE|STOP\s+DATABASE|USE\s+\w+|LOAD\s+CSV)\b", re.I)
+# Procedures an agent query may CALL. An allowlist, not a denylist: anything else (db.create*, dbms.*,
+# tx.*, apoc.*, ...) is refused by name. `CALL { ... }` subqueries are not procedures and pass here; their
+# body is still subject to the keyword check above.
+READ_PROCEDURES = frozenset({
+    "db.labels", "db.relationshipTypes", "db.propertyKeys", "db.schema.visualization",
+    "db.schema.nodeTypeProperties", "db.schema.relTypeProperties", "db.index.fulltext.queryNodes",
+    "db.index.fulltext.queryRelationships",
+})
+_PROC_CALL = re.compile(r"\bCALL\s+([A-Za-z_][\w.]*)", re.I)
+
+
+def strip_comments(query: str) -> str:
+    """Remove `// ...` and `/* ... */` comments without touching string literals or backtick identifiers,
+    so a guard cannot be split by a comment (CALL /* x */ db.createLabel) nor fooled by a `//` inside a
+    string ('http://...' would otherwise swallow the rest of the line, hiding a predicate after it)."""
+    out, i, n = [], 0, len(query)
+    while i < n:
+        ch = query[i]
+        if ch in ("'", '"', "`"):                       # literal or quoted identifier: copy verbatim
+            j = i + 1
+            while j < n and query[j] != ch:
+                j += 2 if query[j] == "\\" and ch != "`" else 1
+            out.append(query[i:j + 1]); i = j + 1
+        elif query.startswith("//", i):
+            j = query.find("\n", i); i = n if j < 0 else j   # keep the newline as a separator
+        elif query.startswith("/*", i):
+            j = query.find("*/", i + 2); out.append(" "); i = n if j < 0 else j + 2
+        else:
+            out.append(ch); i += 1
+    return "".join(out)
+
+
+def write_refusal(query: str) -> str | None:
+    """Why an agent-written query is refused as a write, or None if it may run read-only. Checked on the
+    comment-stripped text; the READ access mode and transaction timeout are the second line."""
+    q = strip_comments(query)
+    m = _FORBIDDEN.search(q)
+    if m:
+        return f"refused: only read queries are allowed ({m.group(0).upper()})"
+    for proc in _PROC_CALL.findall(q):
+        if proc not in READ_PROCEDURES:
+            return f"refused: procedure {proc} is not on the read-only allowlist {sorted(READ_PROCEDURES)}"
+    return None
 
 
 class GraphAPI:
@@ -265,8 +307,9 @@ class GraphAPI:
         """Agent-written Cypher, read-only. Writes are refused by pattern AND by using a read transaction,
         and the query runs under a server-side transaction timeout. Neo4j Community has no per-user
         read-only role, so these are the boundary; a read replica would be the production one."""
-        if _FORBIDDEN.search(query):
-            return {"error": "refused: only read queries are allowed", "query": query}
+        refusal = write_refusal(query)
+        if refusal:
+            return {"error": refusal, "query": query}
         t0 = time.time()
         with self.driver.session(default_access_mode="READ") as s:
             try:
