@@ -26,7 +26,11 @@ echo "== python env";  uv sync
 echo "== neo4j";       docker compose up -d --wait neo4j
 
 BUILT=data/.resolved        # written only after store + resolve both succeeded
+LOADED=data/.loaded         # written only after a load completed; an interrupted load leaves a partial graph
 if [ "$REBUILD" = 1 ] || [ ! -f data/firmable.duckdb ] || [ ! -f "$BUILT" ]; then
+  # invalidate first: a build that fails part-way must leave NO marker, so the next run redoes it
+  # rather than skipping it. The graph marker goes too, since a rebuilt store needs a fresh load.
+  rm -f "$BUILT" "$LOADED"
   echo "== duckdb store";  uv run python -m firmable graph store
   echo "== resolve";       uv run python -m firmable graph resolve    # seconds to a few minutes with the shipped Jev cache
   date -u +%Y-%m-%dT%H:%M:%SZ > "$BUILT"
@@ -34,10 +38,10 @@ else
   echo "== duckdb store already built, skipping (use --rebuild to redo)"
 fi
 
-LOADED=data/.loaded         # written only after a load completed; an interrupted load leaves a partial graph
 PARTIES=$(docker compose exec -T neo4j cypher-shell -u neo4j -p firmable-graph --format plain \
           "MATCH (p:Party) RETURN count(p)" 2>/dev/null | tail -1 || echo 0)
 if [ "$REBUILD" = 1 ] || [ ! -f "$LOADED" ] || [ "${PARTIES:-0}" = "0" ]; then
+  rm -f "$LOADED"
   echo "== neo4j load";  uv run python -m firmable graph load         # ~1.5 min
   date -u +%Y-%m-%dT%H:%M:%SZ > "$LOADED"
 else

@@ -128,7 +128,7 @@ def test_cypher_name_lookup_is_refused_before_resolution(monkeypatch):
     api = FakeAPI({})
     _script(monkeypatch, [_fc("read_cypher", query="MATCH (p:Party) WHERE p.display_name CONTAINS 'ACME' RETURN p.key"), _text("x")])
     res = A.Agent(api).intelligent("find acme", [])
-    assert res["trace"][0]["gated"] == "name_predicate_before_resolve"
+    assert res["trace"][0]["gated"] == "name_filter_in_cypher"
     assert api.calls == []
 
 

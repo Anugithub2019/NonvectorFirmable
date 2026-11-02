@@ -34,6 +34,7 @@ AGENT_VERSION = "onboard-0.1.0"
 MAX_DOWNLOAD = 300 * 1024 * 1024
 N_TRAIN, N_HOLDOUT, SEED = 300, 1000, 13
 MAX_INSPECT_ATTEMPTS, MAX_REVISIONS = 3, 3
+MAX_REVIEW_REJECTIONS = 2   # reviewer rejections that reopen the agent; a rejection after that fails the run
 TABULAR = {"CSV", "TSV", "XLSX", "XLS", "JSON", "GEOJSON"}
 
 
@@ -555,7 +556,9 @@ the mapping is wrong: reject with the fix (often: the column belongs to a differ
 field, e.g. licence.conditions instead of licence.authorisations) unless you can state
 precisely why the signal is mistaken.
 Reject with concrete instructions when the agent can fix it. You may reject at most twice
-per source; on the final round, approve with your residual concerns listed.
+per source. On the final round (two rejections already) a further rejection ENDS the run as
+failed and nothing is emitted: approve only if the mapping is right, never because the rounds
+ran out. A failed run is a correct outcome for a mapping that is still wrong.
 
 Conventions you must respect (they are ontology rules, not the agent's choice):
 - entity.legal_name ALWAYS carries the main subject's name, even when the subject is a natural
@@ -605,12 +608,18 @@ def model_review(state: dict) -> dict:
     d = llm.structured(REVIEW_PROMPT.format(n_rejections=n_rej, review=screen[:30000], enums=enums,
                                             ops=transforms.catalogue()),
                        ReviewDecision, model=llm.PRO, tag=_tag(state, "model_review"))
-    action = d.action if n_rej < 2 else "approve"
-    decision = {"action": action, "note": d.note, "concerns": d.concerns,
+    action = d.action
+    decision = {"action": action, "note": d.note, "concerns": d.concerns, "round": n_rej + 1,
                 "reviewer": f"model:{llm.PRO}", "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
     upd: dict = {"decision": decision}
     if action == "approve":
         upd["status"] = "approved"
+    elif n_rej >= MAX_REVIEW_REJECTIONS:
+        # the rounds are a budget for the agent, not a path to approval: a mapping the reviewer still
+        # rejects after the last revision fails the run, it is never approved by exhaustion
+        upd["human_feedback"] = state.get("human_feedback", []) + [d.note]
+        upd["status"] = "failed_review_rejected_after_max_revisions"
+        upd["error"] = f"reviewer rejected the mapping on round {n_rej + 1}: {d.note[:300]}"
     else:
         upd["human_feedback"] = state.get("human_feedback", []) + [d.note]
         upd["status"] = "revising_after_review"

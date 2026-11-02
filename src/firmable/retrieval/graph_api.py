@@ -41,7 +41,10 @@ TRAVERSAL_RELS = "OWNS|AFFILIATED_WITH|RELATED_TO"   # never KNOWN_AS (shared na
 QUERY_TIMEOUT_S = 30           # server-side transaction timeout for typed queries
 CYPHER_TIMEOUT_S = 15          # ... and for agent-written Cypher
 EXPORT_MAX_ROWS = 100_000
-_FORBIDDEN = re.compile(r"\b(CREATE|MERGE|DELETE|DETACH|SET|REMOVE|DROP|CALL\s+dbms|CALL\s+apoc\.(?!text)|LOAD\s+CSV)\b", re.I)
+_FORBIDDEN = re.compile(
+    r"\b(CREATE|INSERT|MERGE|DELETE|DETACH|SET|REMOVE|DROP|FOREACH|ALTER|GRANT|DENY|REVOKE|TERMINATE"
+    r"|START\s+DATABASE|STOP\s+DATABASE|USE\s+system|CALL\s+dbms|CALL\s+db\.(create|drop|clear|alter|checkpoint|resample)\w*"
+    r"|CALL\s+tx\.|CALL\s+apoc\.(?!text)|LOAD\s+CSV)\b", re.I)
 
 
 class GraphAPI:
@@ -359,26 +362,11 @@ class GraphAPI:
         # relative-date filters are evaluated against a pinned date so a re-run reproduces the table
         spec = dict(spec)
         spec["as_of"] = spec.get("as_of") or datetime.now(timezone.utc).date().isoformat()
-        where, params = [], []
-        for f in spec.get("filters") or []:
-            c, op, v = f.get("column"), (f.get("op") or "=").lower(), f.get("value")
-            if op in ("=", "!=", ">", "<", ">=", "<="):
-                where.append(f'"{c}" {op} ?'); params.append(v)
-            elif op == "contains":
-                where.append(f'upper(CAST("{c}" AS VARCHAR)) LIKE ?'); params.append(f"%{str(v).upper()}%")
-            elif op == "in":
-                where.append(f'"{c}" IN ({",".join("?" * len(v))})'); params += v
-            elif op == "is_null":
-                where.append(f'"{c}" IS NULL')
-            elif op == "not_null":
-                where.append(f'"{c}" IS NOT NULL')
-            elif op == "within_days":  # date column within the N days before as_of
-                where.append(f'TRY_CAST("{c}" AS DATE) >= CAST(? AS DATE) - INTERVAL (?) DAY')
-                params += [spec["as_of"], int(v)]
+        where, params = _filter_clauses(spec.get("filters") or [], spec["as_of"])
         gf = spec.get("graph_filter")
         graph_note = None
         if gf:
-            keys = self._graph_keys(gf)
+            keys = self._graph_keys(gf, spec["as_of"])   # the graph predicate is pinned to the same date as the filters
             self.con.execute("CREATE OR REPLACE TEMP TABLE gf_keys AS SELECT * FROM (VALUES " +
                              (",".join("(?)" for _ in keys) if keys else "(NULL)") + ") t(key)", keys or [])
             where.append('"party_key" IN (SELECT key FROM gf_keys)')
@@ -423,17 +411,48 @@ class GraphAPI:
                            "content_sha1": content_hash})
         return result
 
-    def _graph_keys(self, gf: dict) -> list[str] | None:
+    def _graph_keys(self, gf: dict, as_of: str | None = None) -> list[str] | None:
+        """Keys satisfying a graph predicate, evaluated at `as_of` (the spec's pinned date): the traversal
+        follows only edges current at that date and `has_owner`/`has_subsidiary` count only OWNS edges
+        current at that date, so a saved spec re-run later selects the same parties."""
         kind = gf.get("kind")
+        as_of = as_of or datetime.now(timezone.utc).date().isoformat()
         if kind == "within_hops_of_ban":
-            return [r["key"] for r in self.within_hops(int(gf.get("hops", 2)), limit=100000)["results"]]
+            return [r["key"] for r in self.within_hops(int(gf.get("hops", 2)), limit=100000, as_of=as_of)["results"]]
         if kind == "within_hops_of_key":
-            return [r["key"] for r in self.within_hops(int(gf.get("hops", 1)), of_key=gf.get("key"), limit=100000)["results"]]
+            return [r["key"] for r in self.within_hops(int(gf.get("hops", 1)), of_key=gf.get("key"), limit=100000,
+                                                       as_of=as_of)["results"]]
+        current = "WHERE o.valid_to IS NULL OR toString(o.valid_to) > $as_of"
         if kind == "has_owner":
-            return [r["key"] for r in self._run("MATCH (:Party)-[:OWNS]->(p:Party) RETURN DISTINCT p.key AS key")]
+            return [r["key"] for r in self._run(f"MATCH (:Party)-[o:OWNS]->(p:Party) {current} RETURN DISTINCT p.key AS key",
+                                                as_of=as_of)]
         if kind == "has_subsidiary":
-            return [r["key"] for r in self._run("MATCH (p:Party)-[:OWNS]->(:Party) RETURN DISTINCT p.key AS key")]
+            return [r["key"] for r in self._run(f"MATCH (p:Party)-[o:OWNS]->(:Party) {current} RETURN DISTINCT p.key AS key",
+                                                as_of=as_of)]
         return None
+
+
+def _filter_clauses(filters: list[dict], as_of: str) -> tuple[list[str], list]:
+    """Spec filters -> (SQL predicates, parameters). `within_days N` means the N days up to and including
+    `as_of`: a date after as_of is NOT within the last N days, so the window is bounded on both sides."""
+    where, params = [], []
+    for f in filters:
+        c, op, v = f.get("column"), (f.get("op") or "=").lower(), f.get("value")
+        if op in ("=", "!=", ">", "<", ">=", "<="):
+            where.append(f'"{c}" {op} ?'); params.append(v)
+        elif op == "contains":
+            where.append(f'upper(CAST("{c}" AS VARCHAR)) LIKE ?'); params.append(f"%{str(v).upper()}%")
+        elif op == "in":
+            where.append(f'"{c}" IN ({",".join("?" * len(v))})'); params += v
+        elif op == "is_null":
+            where.append(f'"{c}" IS NULL')
+        elif op == "not_null":
+            where.append(f'"{c}" IS NOT NULL')
+        elif op == "within_days":
+            where.append(f'(TRY_CAST("{c}" AS DATE) >= CAST(? AS DATE) - INTERVAL (?) DAY '
+                         f'AND TRY_CAST("{c}" AS DATE) <= CAST(? AS DATE))')
+            params += [as_of, int(v), as_of]
+    return where, params
 
 
 def _cand(r: dict, score: float, match_type: str, evidence: dict, path: str) -> dict:

@@ -177,7 +177,11 @@ What the code enforces versus what the prompt asks for (the distinction a review
 |---|---|---|
 | An ambiguous or abstained `resolve` ends the turn; the model cannot pick | `Agent.intelligent` returns on the decision; reply text is written by code | `tests/test_agent.py::test_ambiguous_resolve_halts…` |
 | `entity` / `ultimate_parent` / `within_hops(of_key)` only on resolved, user-chosen or previously shown keys | key gate in `Agent._call`; Cypher rows never unlock keys | `…::test_typed_tools_refuse_keys…`, `…cypher_keys_are_not` |
-| No name lookup via Cypher before a resolve | `_NAME_PREDICATE` guard | `…::test_cypher_name_lookup_is_refused…` |
+| No entity lookup by name via Cypher, before or after a resolve: names may appear in RETURN only (WHERE, inline maps, IN lists, WITH aliases, toLower/toUpper and the full-text index are all refused) | `_name_filtered` gate in `Agent._call` | `tests/test_guards.py::test_name_lookups_are_refused_in_every_spelling`, `…::test_name_gate_applies_after_a_resolve_too` |
+| Cypher cannot write: CREATE, INSERT, MERGE, SET, DELETE, FOREACH, admin commands and write procedures refused by pattern, and the transaction is READ | `_FORBIDDEN` + READ access mode | `tests/test_guards.py::test_write_guard_refuses_every_mutating_form` |
+| `within_days N` is the N days up to and including `as_of`: dates after `as_of` are excluded | `_filter_clauses` | `tests/test_guards.py::test_within_days_is_really_two_sided_in_duckdb` |
+| A graph-filtered export evaluates its graph predicate at the spec's pinned `as_of` (traversal edges and OWNS edges current at that date) | `GraphAPI._graph_keys(gf, as_of)` | `tests/test_guards.py::test_graph_filter_is_evaluated_at_the_saved_as_of` |
+| A mapping the model reviewer still rejects on the final round fails the run; rounds are never converted into approval | `model_review` → `failed_review_rejected_after_max_revisions` → END | `tests/test_guards.py::test_final_round_rejection_fails_the_run…`, `…::test_failed_review_ends_the_graph_without_emit` |
 | Tool budget = real calls and seconds, not loop iterations | `budget` counter | `…::test_budget_counts_real_calls…` |
 | Invalid projection spec rejected, not narrowed; restatement derived from the validated spec | `GraphAPI.validate_projection`, `restate()` | `…::test_invalid_spec_is_rejected…`, `…restatement_is_generated…` |
 | Export reports matched vs exported vs truncated; order total; `as_of` pinned; data generation stamped | `GraphAPI.projection` | `tests/test_graph_api.py::test_export_reports_matched…` |

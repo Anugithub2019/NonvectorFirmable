@@ -71,11 +71,11 @@ Downloads are done by the onboarding agent (CKAN resources) except the ABR zips 
 | Agentic (a model decides at runtime) | Deterministic (code) |
 |---|---|
 | **Onboarding a source**: inspect the file (format, sheet, header row, encoding), profile columns, propose a mapping to the ontology, validate it by running the real extractor on 1,000 unseen rows, read the failures, revise (≤3), submit for review. A new source needs no code. | the extractor (config + file → observations); the transform library the agent composes from; checksums; slicing |
-| **Approval**: a higher-tier model (Gemini 3.1 Pro) reads the same review screen a human would and approves or rejects with instructions (`provenance.approved_by`) | static checks on every proposal (unknown columns, enum violations, bad args) |
+| **Approval**: a higher-tier model (Gemini 3.1 Pro) reads the same review screen a human would and approves or rejects with instructions (`provenance.approved_by`); at most two rejections reopen the agent, a third fails the run (no approval by exhaustion) | static checks on every proposal (unknown columns, enum violations, bad args) |
 | **Per-field confidence**: Jev (decision model) gives P(mapping correct) per field, blind to the proposer | |
 | **Semantic matching**: Jev gives P(same party) for the top candidates | exact identifier joins; blocking; arbitration rule |
 | **Routing and guidance**: Jev decides what the user wants and whether it is specific enough; Gemini writes the clarifying question | |
-| **Intelligent agent**: tool-calling over the graph API | the tools themselves, caps, read-only Cypher guard, **and the control flow**: an ambiguous/abstained resolve halts the turn in code; typed tools accept only resolved, user-chosen or previously shown keys; the budget counts real calls and seconds |
+| **Intelligent agent**: tool-calling over the graph API | the tools themselves, caps, read-only Cypher guard (writes incl. INSERT refused by pattern and by READ transaction; name filtering refused so Cypher cannot bypass `resolve`), **and the control flow**: an ambiguous/abstained resolve halts the turn in code; typed tools accept only resolved, user-chosen or previously shown keys; the budget counts real calls and seconds |
 | **Data retriever**: natural language → typed projection spec | spec validation (invalid columns/filters rejected, never dropped), restatement generated from the validated spec, SQL with total ordering, pinned `as_of` + data generation, hashing, export |
 
 Which guarantees are enforced by code (with the test that proves each) and which remain prompt

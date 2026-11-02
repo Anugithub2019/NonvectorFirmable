@@ -41,7 +41,21 @@ MAX_TOOL_CALLS = 8      # real tool invocations per turn (several may happen in 
 MAX_TURN_SECONDS = 90   # wall-clock budget for the tool loop
 CLARIFY_BELOW = 0.30    # ask only when the decision model is fairly sure the request cannot be acted on
 GATED_TOOLS = ("entity", "ultimate_parent", "within_hops")
-_NAME_PREDICATE = re.compile(r"(display_name|\.text|normalised)\s*(=|<>|CONTAINS|STARTS\s+WITH|ENDS\s+WITH|=~)", re.I)
+# Name-bearing things an agent-written query must not filter or search on: the Party display name, the
+# Name node's text/normalised form, the full-text index over them, and case-folding functions (only ever
+# used to compare names). Names may appear in the final RETURN clause (to show them), nowhere else.
+_NAME_TOKEN = re.compile(r"(display_name|\.text\b|normalised|fulltext|toLower\s*\(|toUpper\s*\()", re.I)
+_LAST_RETURN = re.compile(r"\bRETURN\b(?!.*\bRETURN\b)", re.I | re.S)
+
+
+def _name_filtered(query: str) -> bool:
+    """True when the query uses a name anywhere other than its final RETURN clause: in a WHERE, an
+    inline property map {display_name: ...}, an IN list, a WITH ... AS alias (laundering the name into a
+    new variable), a toLower()/toUpper() wrapper or the full-text procedure. Such a query finds entities
+    by name without `resolve`, which is exactly what the resolution gate exists to prevent."""
+    m = _LAST_RETURN.search(query)
+    head = query[:m.start()] if m else query
+    return bool(_NAME_TOKEN.search(head))
 
 ROUTE_Q = {
     "intent": {
@@ -119,6 +133,9 @@ Rules:
   Never assert a ban, licence or ownership that a tool result does not contain.
 - A wrong link is worse than no link: if two entities could be meant, say which one you used and why.
 - Prefer the typed tools; use `read_cypher` only for questions the typed tools cannot express.
+  `read_cypher` refuses any query that filters, searches or matches on a name (display_name, Name.text or
+  normalised, the full-text index, toLower/toUpper), before or after a resolve: find the entity with
+  `resolve`, then query by its key. Names may appear in the RETURN clause only.
   The graph: (:Party:Organisation|:Person {key, display_name, abn, acn, lei, state, postcode, entity_type, status})
   -[:KNOWN_AS {kind}]->(:Name {normalised, text}); (:SourceRecord)-[:RESOLVED_TO {match_type, confidence}]->(:Party);
   (:Party)-[:HOLDS]->(:Licence {licence_id, licence_type, status, start_date, end_date}); (:Party)-[:SUBJECT_OF]->(:Ban {ban_type, start_date, end_date});
@@ -278,9 +295,11 @@ class Agent:
             if name == "within_hops":
                 return self.api.within_hops(int(args.get("hops", 2)), args.get("of_key"))
             if name == "read_cypher":
-                if not allowed and _NAME_PREDICATE.search(args["query"]):
-                    return {"error": "refused: looking entities up by name must go through resolve(reference)",
-                            "gate": "name_predicate_before_resolve"}
+                if _name_filtered(args["query"]):
+                    return {"error": "refused: Cypher may not filter, search or match on names (display_name, Name.text/"
+                                     "normalised, the full-text index, toLower/toUpper). Find the entity with "
+                                     "resolve(reference), then query by key; names may appear in the RETURN clause only",
+                            "gate": "name_filter_in_cypher"}
                 return self.api.read_cypher(args["query"])
             if name == "schema_summary":
                 return self.api.schema_summary()
